@@ -1,0 +1,112 @@
+{
+  "ckpt_path": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_smoke_route_env_sinkhorn_0719_add_k3_prediction_environment_sinkhorn_gaussian_seed2024/best_val_model.pth",
+  "output_dir": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_smoke_route_env_sinkhorn_0719_add_k3_prediction_environment_sinkhorn_gaussian_seed2024/route_diagnosis_smoke",
+  "counts": {
+    "train_total": 1680,
+    "train_workday": 1200,
+    "train_holiday": 480,
+    "train_workday_holiday_ratio": 2.5,
+    "val_total": 274,
+    "val_workday": 178,
+    "val_holiday": 96,
+    "test_total": 546,
+    "test_workday": 354,
+    "test_holiday": 192,
+    "train_shuffle": false,
+    "train_chronological_for_env_sinkhorn_temporal": true
+  },
+  "missing_keys": [],
+  "unexpected_keys": [],
+  "rows": [
+    {
+      "split": "train",
+      "method": "centroid",
+      "expert_acc": 0.875,
+      "n": 16
+    },
+    {
+      "split": "train",
+      "method": "gaussian",
+      "expert_acc": 0.9375,
+      "n": 16
+    },
+    {
+      "split": "train",
+      "method": "knn_5",
+      "expert_acc": 0.875,
+      "n": 16
+    },
+    {
+      "split": "val",
+      "method": "centroid",
+      "expert_acc": 0.875,
+      "n": 16
+    },
+    {
+      "split": "val",
+      "method": "gaussian",
+      "expert_acc": 0.6875,
+      "n": 16
+    },
+    {
+      "split": "val",
+      "method": "knn_5",
+      "expert_acc": 0.9375,
+      "n": 16
+    },
+    {
+      "split": "test_mixed",
+      "method": "centroid",
+      "expert_acc": 1.0,
+      "n": 16
+    },
+    {
+      "split": "test_mixed",
+      "method": "gaussian",
+      "expert_acc": 0.625,
+      "n": 16
+    },
+    {
+      "split": "test_mixed",
+      "method": "knn_5",
+      "expert_acc": 1.0,
+      "n": 16
+    },
+    {
+      "split": "test_workday",
+      "method": "centroid",
+      "expert_acc": 1.0,
+      "n": 16
+    },
+    {
+      "split": "test_workday",
+      "method": "gaussian",
+      "expert_acc": 0.625,
+      "n": 16
+    },
+    {
+      "split": "test_workday",
+      "method": "knn_5",
+      "expert_acc": 1.0,
+      "n": 16
+    },
+    {
+      "split": "test_holiday",
+      "method": "centroid",
+      "expert_acc": 0.8125,
+      "n": 16
+    },
+    {
+      "split": "test_holiday",
+      "method": "gaussian",
+      "expert_acc": 0.625,
+      "n": 16
+    },
+    {
+      "split": "test_holiday",
+      "method": "knn_5",
+      "expert_acc": 0.8125,
+      "n": 16
+    }
+  ]
+}

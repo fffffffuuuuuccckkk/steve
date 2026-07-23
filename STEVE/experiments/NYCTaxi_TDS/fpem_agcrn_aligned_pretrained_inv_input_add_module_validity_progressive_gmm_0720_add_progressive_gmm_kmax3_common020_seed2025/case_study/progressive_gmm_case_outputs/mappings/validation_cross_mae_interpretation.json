@@ -1,0 +1,18 @@
+{
+  "identity_mapping_is_same_as_hungarian": false,
+  "identity_total_validation_mae": 23.08286373937628,
+  "hungarian_total_validation_mae": 23.07365507493632,
+  "independent_total_validation_mae": 23.07365507493632,
+  "identity_minus_hungarian_validation_mae": 0.009208664439960046,
+  "row_best_expert": {
+    "0": 2,
+    "1": 0,
+    "2": 1
+  },
+  "independent_and_hungarian_agree": true,
+  "cluster_preference_margin_second_minus_best": [
+    0.006666729705130159,
+    0.0006706834306093867,
+    0.0018712513042213885
+  ]
+}

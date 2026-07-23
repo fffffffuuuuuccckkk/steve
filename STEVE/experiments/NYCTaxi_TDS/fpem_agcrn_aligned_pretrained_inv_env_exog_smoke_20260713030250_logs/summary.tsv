@@ -1,0 +1,2 @@
+name	seed	status	run_name	test_avg_mae	test_workday_mae	test_holiday_mae	env_day_acc	env_hour_acc	env_rush_acc	inv_day_acc	effective_expert_number	expert0_soft_usage	expert1_soft_usage	expert2_soft_usage	expert0_hard_count	expert1_hard_count	expert2_hard_count	max_expert_usage_ratio	fpem_env_use_exogenous	env_exogenous_available	env_exogenous_feature_dim	env_exogenous_embedding_norm	detail
+env_exogenous_on	2025	FAIL	fpem_agcrn_aligned_pretrained_inv_env_exog_smoke_20260713030250_env_exogenous_on_seed2025	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	exit_code=120

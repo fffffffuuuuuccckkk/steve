@@ -1,0 +1,1696 @@
+{
+  "checkpoint": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2024/best_val_model.pth",
+  "exp_dir": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2024",
+  "route_eval_dir": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_online_route_eval/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2024",
+  "output_dir": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2024/case_study/progressive_gmm_case_outputs",
+  "seed": 2024,
+  "git_commit": "1b38ed8ad03fdc47198d62e51385df04248f4751",
+  "dataset": "NYCTaxi_TDS",
+  "counts": {
+    "train_total": 1680,
+    "train_workday": 1200,
+    "train_holiday": 480,
+    "train_workday_holiday_ratio": 2.5,
+    "val_total": 274,
+    "val_workday": 178,
+    "val_holiday": 96,
+    "test_total": 546,
+    "test_workday": 354,
+    "test_holiday": 192,
+    "train_shuffle": true,
+    "train_chronological_for_env_sinkhorn_temporal": false
+  },
+  "active_k": 3,
+  "fpem_env_progressive_lambda_common": 0.2,
+  "pretrained_invariant_checkpoint": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/pure_agcrn_seed2024/best_val_model.pth",
+  "three_seed_shared_pretrained_invariant_backbone": true,
+  "identity_mapping": {
+    "0": 0,
+    "1": 1,
+    "2": 2
+  },
+  "hungarian_mapping": {
+    "0": 2,
+    "1": 1,
+    "2": 0
+  },
+  "independent_mapping": {
+    "0": 2,
+    "1": 0,
+    "2": 0
+  },
+  "best_fixed_expert_id": 0,
+  "routing_summary": [
+    {
+      "seed": 2024,
+      "checkpoint": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2024/best_val_model.pth",
+      "best_epoch": 99,
+      "routing_method": "best_fixed",
+      "deployable": true,
+      "uses_test_target": false,
+      "active_experts_per_sample": 1,
+      "test_mixed_mae": 8.209775924682617,
+      "test_workday_mae": 8.17289924621582,
+      "test_holiday_mae": 8.273725509643555,
+      "test_avg_mae": 8.223312377929688,
+      "test_mape": 0.13061460852622986,
+      "oracle_hard_mae": 8.19513988494873,
+      "router_regret": 0.014636039733886719,
+      "routing_usage_per_expert": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "effective_expert_number": 1.0,
+      "routing_entropy": 5.52620422318571e-11,
+      "random_trials": [],
+      "random_mae_mean": null,
+      "random_mae_std": null,
+      "random_mae_min": null,
+      "random_mae_max": null,
+      "mapping_source": "not_used",
+      "gmm_fit_source": "not_used",
+      "best_fixed_source": "validation",
+      "test_target_used_by": "oracle_only",
+      "best_fixed_expert_id": 0,
+      "validation_expert_mae": [
+        8.84150218963623,
+        8.843021392822266,
+        8.844137191772461
+      ]
+    },
+    {
+      "seed": 2024,
+      "checkpoint": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2024/best_val_model.pth",
+      "best_epoch": 99,
+      "routing_method": "random_uniform_top1",
+      "deployable": true,
+      "uses_test_target": false,
+      "active_experts_per_sample": 1,
+      "test_mixed_mae": 8.215362215042115,
+      "test_workday_mae": 8.178292846679687,
+      "test_holiday_mae": 8.27964482307434,
+      "test_avg_mae": 8.228968834877014,
+      "test_mape": 0.13096899092197417,
+      "oracle_hard_mae": 8.19513988494873,
+      "router_regret": 0.020222330093384144,
+      "routing_usage_per_expert": [
+        0.3363552987575531,
+        0.3272893726825714,
+        0.3363552987575531
+      ],
+      "effective_expert_number": 2.999752681769571,
+      "routing_entropy": 1.0496352653071062,
+      "random_trials": [
+        {
+          "trial_seed": 22284721,
+          "routing_method": "random_uniform_top1",
+          "test_mixed_mae": 8.216108322143555,
+          "test_workday_mae": 8.178119659423828,
+          "test_holiday_mae": 8.281986236572266,
+          "test_avg_mae": 8.230052947998047,
+          "test_mape": 0.1310146600008011,
+          "routing_usage_per_expert": [
+            0.29487180709838867,
+            0.30402931571006775,
+            0.40109890699386597
+          ],
+          "effective_expert_number": 2.969849605588889,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22284722,
+          "routing_method": "random_uniform_top1",
+          "test_mixed_mae": 8.21672248840332,
+          "test_workday_mae": 8.18012809753418,
+          "test_holiday_mae": 8.280180931091309,
+          "test_avg_mae": 8.230154514312744,
+          "test_mape": 0.13097494840621948,
+          "routing_usage_per_expert": [
+            0.34065935015678406,
+            0.36263737082481384,
+            0.2967033088207245
+          ],
+          "effective_expert_number": 2.989749923110338,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22284723,
+          "routing_method": "random_uniform_top1",
+          "test_mixed_mae": 8.21458911895752,
+          "test_workday_mae": 8.177295684814453,
+          "test_holiday_mae": 8.279261589050293,
+          "test_avg_mae": 8.228278636932373,
+          "test_mape": 0.1309782862663269,
+          "routing_usage_per_expert": [
+            0.3351648449897766,
+            0.3223443329334259,
+            0.3424908518791199
+          ],
+          "effective_expert_number": 2.999061634291227,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22284724,
+          "routing_method": "random_uniform_top1",
+          "test_mixed_mae": 8.21456241607666,
+          "test_workday_mae": 8.177005767822266,
+          "test_holiday_mae": 8.279690742492676,
+          "test_avg_mae": 8.22834825515747,
+          "test_mape": 0.13091832399368286,
+          "routing_usage_per_expert": [
+            0.34065935015678406,
+            0.31684982776641846,
+            0.3424908518791199
+          ],
+          "effective_expert_number": 2.998143501558557,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22284725,
+          "routing_method": "random_uniform_top1",
+          "test_mixed_mae": 8.21467399597168,
+          "test_workday_mae": 8.177507400512695,
+          "test_holiday_mae": 8.279125213623047,
+          "test_avg_mae": 8.228316307067871,
+          "test_mape": 0.13094598054885864,
+          "routing_usage_per_expert": [
+            0.3461538553237915,
+            0.3241758346557617,
+            0.32967033982276917
+          ],
+          "effective_expert_number": 2.9988284129492824,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22284726,
+          "routing_method": "random_uniform_top1",
+          "test_mixed_mae": 8.214943885803223,
+          "test_workday_mae": 8.178282737731934,
+          "test_holiday_mae": 8.278519630432129,
+          "test_avg_mae": 8.228401184082031,
+          "test_mape": 0.13089004158973694,
+          "routing_usage_per_expert": [
+            0.3351648449897766,
+            0.35347986221313477,
+            0.311355322599411
+          ],
+          "effective_expert_number": 2.995973827987397,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22284727,
+          "routing_method": "random_uniform_top1",
+          "test_mixed_mae": 8.215914726257324,
+          "test_workday_mae": 8.179259300231934,
+          "test_holiday_mae": 8.27947998046875,
+          "test_avg_mae": 8.229369640350342,
+          "test_mape": 0.13102497160434723,
+          "routing_usage_per_expert": [
+            0.35347986221313477,
+            0.32600733637809753,
+            0.3205128312110901
+          ],
+          "effective_expert_number": 2.9972179247823925,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22284728,
+          "routing_method": "random_uniform_top1",
+          "test_mixed_mae": 8.21556568145752,
+          "test_workday_mae": 8.178366661071777,
+          "test_holiday_mae": 8.280076026916504,
+          "test_avg_mae": 8.22922134399414,
+          "test_mape": 0.13094329833984375,
+          "routing_usage_per_expert": [
+            0.31501832604408264,
+            0.34065935015678406,
+            0.3443223536014557
+          ],
+          "effective_expert_number": 2.997685678222834,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22284729,
+          "routing_method": "random_uniform_top1",
+          "test_mixed_mae": 8.215518951416016,
+          "test_workday_mae": 8.178364753723145,
+          "test_holiday_mae": 8.279949188232422,
+          "test_avg_mae": 8.229156970977783,
+          "test_mape": 0.1309528946876526,
+          "routing_usage_per_expert": [
+            0.3571428656578064,
+            0.33882784843444824,
+            0.30402931571006775
+          ],
+          "effective_expert_number": 2.9933970405632397,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22284730,
+          "routing_method": "random_uniform_top1",
+          "test_mixed_mae": 8.215035438537598,
+          "test_workday_mae": 8.17850399017334,
+          "test_holiday_mae": 8.278386116027832,
+          "test_avg_mae": 8.228445053100586,
+          "test_mape": 0.1309913545846939,
+          "routing_usage_per_expert": [
+            0.3424908518791199,
+            0.30219781398773193,
+            0.3553113639354706
+          ],
+          "effective_expert_number": 2.9930018781320333,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22284731,
+          "routing_method": "random_uniform_top1",
+          "test_mixed_mae": 8.215639114379883,
+          "test_workday_mae": 8.17923641204834,
+          "test_holiday_mae": 8.278764724731445,
+          "test_avg_mae": 8.229000568389893,
+          "test_mape": 0.13098791241645813,
+          "routing_usage_per_expert": [
+            0.3956044018268585,
+            0.29304030537605286,
+            0.311355322599411
+          ],
+          "effective_expert_number": 2.9738180565696744,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22284732,
+          "routing_method": "random_uniform_top1",
+          "test_mixed_mae": 8.215391159057617,
+          "test_workday_mae": 8.177576065063477,
+          "test_holiday_mae": 8.280964851379395,
+          "test_avg_mae": 8.229270458221436,
+          "test_mape": 0.13099507987499237,
+          "routing_usage_per_expert": [
+            0.32600733637809753,
+            0.31501832604408264,
+            0.3589743673801422
+          ],
+          "effective_expert_number": 2.995336903234419,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22284733,
+          "routing_method": "random_uniform_top1",
+          "test_mixed_mae": 8.214417457580566,
+          "test_workday_mae": 8.175971031188965,
+          "test_holiday_mae": 8.281086921691895,
+          "test_avg_mae": 8.22852897644043,
+          "test_mape": 0.13093718886375427,
+          "routing_usage_per_expert": [
+            0.3076923191547394,
+            0.35164836049079895,
+            0.34065935015678406
+          ],
+          "effective_expert_number": 2.9952439389536774,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22284734,
+          "routing_method": "random_uniform_top1",
+          "test_mixed_mae": 8.215692520141602,
+          "test_workday_mae": 8.178810119628906,
+          "test_holiday_mae": 8.279650688171387,
+          "test_avg_mae": 8.229230403900146,
+          "test_mape": 0.13092659413814545,
+          "routing_usage_per_expert": [
+            0.3333333432674408,
+            0.3351648449897766,
+            0.331501841545105
+          ],
+          "effective_expert_number": 2.9999698104147683,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22284735,
+          "routing_method": "random_uniform_top1",
+          "test_mixed_mae": 8.21537971496582,
+          "test_workday_mae": 8.178354263305664,
+          "test_holiday_mae": 8.279582023620605,
+          "test_avg_mae": 8.228968143463135,
+          "test_mape": 0.1309712678194046,
+          "routing_usage_per_expert": [
+            0.35347986221313477,
+            0.31501832604408264,
+            0.331501841545105
+          ],
+          "effective_expert_number": 2.996658083240789,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22284736,
+          "routing_method": "random_uniform_top1",
+          "test_mixed_mae": 8.215646743774414,
+          "test_workday_mae": 8.179539680480957,
+          "test_holiday_mae": 8.27825927734375,
+          "test_avg_mae": 8.228899478912354,
+          "test_mape": 0.1309489607810974,
+          "routing_usage_per_expert": [
+            0.3003663122653961,
+            0.3589743673801422,
+            0.34065935015678406
+          ],
+          "effective_expert_number": 2.99182545817098,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22284737,
+          "routing_method": "random_uniform_top1",
+          "test_mixed_mae": 8.21584415435791,
+          "test_workday_mae": 8.17874526977539,
+          "test_holiday_mae": 8.280179977416992,
+          "test_avg_mae": 8.229462623596191,
+          "test_mape": 0.13093815743923187,
+          "routing_usage_per_expert": [
+            0.35164836049079895,
+            0.32600733637809753,
+            0.3223443329334259
+          ],
+          "effective_expert_number": 2.9977255039199,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22284738,
+          "routing_method": "random_uniform_top1",
+          "test_mixed_mae": 8.215079307556152,
+          "test_workday_mae": 8.178049087524414,
+          "test_holiday_mae": 8.279296875,
+          "test_avg_mae": 8.228672981262207,
+          "test_mape": 0.13100235164165497,
+          "routing_usage_per_expert": [
+            0.3333333432674408,
+            0.32967033982276917,
+            0.3369963467121124
+          ],
+          "effective_expert_number": 2.9998792416590243,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22284739,
+          "routing_method": "random_uniform_top1",
+          "test_mixed_mae": 8.215316772460938,
+          "test_workday_mae": 8.17908763885498,
+          "test_holiday_mae": 8.278139114379883,
+          "test_avg_mae": 8.228613376617432,
+          "test_mape": 0.13105888664722443,
+          "routing_usage_per_expert": [
+            0.3369963467121124,
+            0.3131868243217468,
+            0.34981685876846313
+          ],
+          "effective_expert_number": 2.996874041422525,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22284740,
+          "routing_method": "random_uniform_top1",
+          "test_mixed_mae": 8.215202331542969,
+          "test_workday_mae": 8.177653312683105,
+          "test_holiday_mae": 8.280316352844238,
+          "test_avg_mae": 8.228984832763672,
+          "test_mape": 0.13097865879535675,
+          "routing_usage_per_expert": [
+            0.32783883810043335,
+            0.31684982776641846,
+            0.3553113639354706
+          ],
+          "effective_expert_number": 2.9964947049718558,
+          "routing_entropy": 5.52620422318571e-11
+        }
+      ],
+      "random_mae_mean": 8.228968834877014,
+      "random_mae_std": 0.0005400511240786423,
+      "random_mae_min": 8.228278636932373,
+      "random_mae_max": 8.230154514312744,
+      "mapping_source": "not_used",
+      "gmm_fit_source": "not_used",
+      "best_fixed_source": "not_used",
+      "test_target_used_by": "oracle_only"
+    },
+    {
+      "seed": 2024,
+      "checkpoint": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2024/best_val_model.pth",
+      "best_epoch": 99,
+      "routing_method": "random_prior_top1",
+      "deployable": true,
+      "uses_test_target": false,
+      "active_experts_per_sample": 1,
+      "test_mixed_mae": 8.215391969680786,
+      "test_workday_mae": 8.178734540939331,
+      "test_holiday_mae": 8.27896008491516,
+      "test_avg_mae": 8.228847312927247,
+      "test_mape": 0.13096469938755034,
+      "oracle_hard_mae": 8.19513988494873,
+      "router_regret": 0.02025208473205531,
+      "routing_usage_per_expert": [
+        0.2686813175678253,
+        0.4136447012424469,
+        0.3176739811897278
+      ],
+      "effective_expert_number": 2.952165628900403,
+      "routing_entropy": 1.0274576937510165,
+      "random_trials": [
+        {
+          "trial_seed": 22384721,
+          "routing_method": "random_prior_top1",
+          "test_mixed_mae": 8.21583080291748,
+          "test_workday_mae": 8.178380012512207,
+          "test_holiday_mae": 8.280773162841797,
+          "test_avg_mae": 8.229576587677002,
+          "test_mape": 0.1309950202703476,
+          "routing_usage_per_expert": [
+            0.23443223536014557,
+            0.41025641560554504,
+            0.3553113639354706
+          ],
+          "effective_expert_number": 2.9248826890955475,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22384722,
+          "routing_method": "random_prior_top1",
+          "test_mixed_mae": 8.21621322631836,
+          "test_workday_mae": 8.178773880004883,
+          "test_holiday_mae": 8.281136512756348,
+          "test_avg_mae": 8.229955196380615,
+          "test_mape": 0.13097622990608215,
+          "routing_usage_per_expert": [
+            0.26739928126335144,
+            0.3956044018268585,
+            0.3369963467121124
+          ],
+          "effective_expert_number": 2.962721301761002,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22384723,
+          "routing_method": "random_prior_top1",
+          "test_mixed_mae": 8.216864585876465,
+          "test_workday_mae": 8.179572105407715,
+          "test_holiday_mae": 8.281534194946289,
+          "test_avg_mae": 8.230553150177002,
+          "test_mape": 0.1309811919927597,
+          "routing_usage_per_expert": [
+            0.2637362778186798,
+            0.40842491388320923,
+            0.32783883810043335
+          ],
+          "effective_expert_number": 2.953080520503332,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22384724,
+          "routing_method": "random_prior_top1",
+          "test_mixed_mae": 8.215968132019043,
+          "test_workday_mae": 8.179529190063477,
+          "test_holiday_mae": 8.279157638549805,
+          "test_avg_mae": 8.22934341430664,
+          "test_mape": 0.1310483068227768,
+          "routing_usage_per_expert": [
+            0.29120880365371704,
+            0.4175824224948883,
+            0.29120880365371704
+          ],
+          "effective_expert_number": 2.954119904578468,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22384725,
+          "routing_method": "random_prior_top1",
+          "test_mixed_mae": 8.214760780334473,
+          "test_workday_mae": 8.177507400512695,
+          "test_holiday_mae": 8.2793607711792,
+          "test_avg_mae": 8.228434085845947,
+          "test_mape": 0.13091441988945007,
+          "routing_usage_per_expert": [
+            0.2893773019313812,
+            0.3919413983821869,
+            0.3186813294887543
+          ],
+          "effective_expert_number": 2.975393487569587,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22384726,
+          "routing_method": "random_prior_top1",
+          "test_mixed_mae": 8.215277671813965,
+          "test_workday_mae": 8.179839134216309,
+          "test_holiday_mae": 8.2767333984375,
+          "test_avg_mae": 8.228286266326904,
+          "test_mape": 0.13094019889831543,
+          "routing_usage_per_expert": [
+            0.2985348105430603,
+            0.39926740527153015,
+            0.30219781398773193
+          ],
+          "effective_expert_number": 2.971593815222531,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22384727,
+          "routing_method": "random_prior_top1",
+          "test_mixed_mae": 8.215241432189941,
+          "test_workday_mae": 8.178672790527344,
+          "test_holiday_mae": 8.278657913208008,
+          "test_avg_mae": 8.228665351867676,
+          "test_mape": 0.1308877021074295,
+          "routing_usage_per_expert": [
+            0.2875458002090454,
+            0.40842491388320923,
+            0.30402931571006775
+          ],
+          "effective_expert_number": 2.962694240526234,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22384728,
+          "routing_method": "random_prior_top1",
+          "test_mixed_mae": 8.214224815368652,
+          "test_workday_mae": 8.178055763244629,
+          "test_holiday_mae": 8.276946067810059,
+          "test_avg_mae": 8.227500915527344,
+          "test_mape": 0.1309213936328888,
+          "routing_usage_per_expert": [
+            0.2765567898750305,
+            0.4285714328289032,
+            0.29487180709838867
+          ],
+          "effective_expert_number": 2.9408499882172103,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22384729,
+          "routing_method": "random_prior_top1",
+          "test_mixed_mae": 8.214190483093262,
+          "test_workday_mae": 8.177966117858887,
+          "test_holiday_mae": 8.277009010314941,
+          "test_avg_mae": 8.227487564086914,
+          "test_mape": 0.13092702627182007,
+          "routing_usage_per_expert": [
+            0.3095238208770752,
+            0.38644689321517944,
+            0.30402931571006775
+          ],
+          "effective_expert_number": 2.9813916323839886,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22384730,
+          "routing_method": "random_prior_top1",
+          "test_mixed_mae": 8.215299606323242,
+          "test_workday_mae": 8.178874015808105,
+          "test_holiday_mae": 8.278464317321777,
+          "test_avg_mae": 8.228669166564941,
+          "test_mape": 0.1309499740600586,
+          "routing_usage_per_expert": [
+            0.2838827967643738,
+            0.4175824224948883,
+            0.2985348105430603
+          ],
+          "effective_expert_number": 2.9535754470016164,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22384731,
+          "routing_method": "random_prior_top1",
+          "test_mixed_mae": 8.213863372802734,
+          "test_workday_mae": 8.177363395690918,
+          "test_holiday_mae": 8.277159690856934,
+          "test_avg_mae": 8.227261543273926,
+          "test_mape": 0.1309337019920349,
+          "routing_usage_per_expert": [
+            0.2728937864303589,
+            0.4175824224948883,
+            0.3095238208770752
+          ],
+          "effective_expert_number": 2.9507168049075894,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22384732,
+          "routing_method": "random_prior_top1",
+          "test_mixed_mae": 8.21448802947998,
+          "test_workday_mae": 8.177229881286621,
+          "test_holiday_mae": 8.279094696044922,
+          "test_avg_mae": 8.228162288665771,
+          "test_mape": 0.13095727562904358,
+          "routing_usage_per_expert": [
+            0.2380952388048172,
+            0.4267399311065674,
+            0.3351648449897766
+          ],
+          "effective_expert_number": 2.9196679185703753,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22384733,
+          "routing_method": "random_prior_top1",
+          "test_mixed_mae": 8.216444969177246,
+          "test_workday_mae": 8.180487632751465,
+          "test_holiday_mae": 8.278799057006836,
+          "test_avg_mae": 8.22964334487915,
+          "test_mape": 0.1310156136751175,
+          "routing_usage_per_expert": [
+            0.28205129504203796,
+            0.3827838897705078,
+            0.3351648449897766
+          ],
+          "effective_expert_number": 2.977083178959881,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22384734,
+          "routing_method": "random_prior_top1",
+          "test_mixed_mae": 8.216814041137695,
+          "test_workday_mae": 8.180648803710938,
+          "test_holiday_mae": 8.279529571533203,
+          "test_avg_mae": 8.23008918762207,
+          "test_mape": 0.131026953458786,
+          "routing_usage_per_expert": [
+            0.28205129504203796,
+            0.39926740527153015,
+            0.3186813294887543
+          ],
+          "effective_expert_number": 2.9683081751123086,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22384735,
+          "routing_method": "random_prior_top1",
+          "test_mixed_mae": 8.215295791625977,
+          "test_workday_mae": 8.177842140197754,
+          "test_holiday_mae": 8.280244827270508,
+          "test_avg_mae": 8.22904348373413,
+          "test_mape": 0.1310025155544281,
+          "routing_usage_per_expert": [
+            0.26739928126335144,
+            0.4157509207725525,
+            0.31684982776641846
+          ],
+          "effective_expert_number": 2.9498631620639832,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22384736,
+          "routing_method": "random_prior_top1",
+          "test_mixed_mae": 8.215800285339355,
+          "test_workday_mae": 8.179195404052734,
+          "test_holiday_mae": 8.279277801513672,
+          "test_avg_mae": 8.229236602783203,
+          "test_mape": 0.13095656037330627,
+          "routing_usage_per_expert": [
+            0.24358974397182465,
+            0.4432234466075897,
+            0.3131868243217468
+          ],
+          "effective_expert_number": 2.9102907301852157,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22384737,
+          "routing_method": "random_prior_top1",
+          "test_mixed_mae": 8.21554946899414,
+          "test_workday_mae": 8.178711891174316,
+          "test_holiday_mae": 8.279430389404297,
+          "test_avg_mae": 8.229071140289307,
+          "test_mape": 0.13086093962192535,
+          "routing_usage_per_expert": [
+            0.23443223536014557,
+            0.47985348105430603,
+            0.2857142984867096
+          ],
+          "effective_expert_number": 2.8586262943862852,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22384738,
+          "routing_method": "random_prior_top1",
+          "test_mixed_mae": 8.215806007385254,
+          "test_workday_mae": 8.179397583007812,
+          "test_holiday_mae": 8.278943061828613,
+          "test_avg_mae": 8.229170322418213,
+          "test_mape": 0.13107405602931976,
+          "routing_usage_per_expert": [
+            0.24725274741649628,
+            0.43223443627357483,
+            0.3205128312110901
+          ],
+          "effective_expert_number": 2.923378455091904,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22384739,
+          "routing_method": "random_prior_top1",
+          "test_mixed_mae": 8.214792251586914,
+          "test_workday_mae": 8.178085327148438,
+          "test_holiday_mae": 8.278446197509766,
+          "test_avg_mae": 8.228265762329102,
+          "test_mape": 0.13093377649784088,
+          "routing_usage_per_expert": [
+            0.2747252881526947,
+            0.37362638115882874,
+            0.35164836049079895
+          ],
+          "effective_expert_number": 2.975140754620159,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22384740,
+          "routing_method": "random_prior_top1",
+          "test_mixed_mae": 8.215113639831543,
+          "test_workday_mae": 8.178558349609375,
+          "test_holiday_mae": 8.27850341796875,
+          "test_avg_mae": 8.228530883789062,
+          "test_mape": 0.130991131067276,
+          "routing_usage_per_expert": [
+            0.22893773019313812,
+            0.4377289414405823,
+            0.3333333432674408
+          ],
+          "effective_expert_number": 2.9018844180547063,
+          "routing_entropy": 5.52620422318571e-11
+        }
+      ],
+      "random_mae_mean": 8.228847312927247,
+      "random_mae_std": 0.0008905929009779706,
+      "random_mae_min": 8.227261543273926,
+      "random_mae_max": 8.230553150177002,
+      "mapping_source": "validation",
+      "gmm_fit_source": "training",
+      "best_fixed_source": "not_used",
+      "test_target_used_by": "oracle_only",
+      "prior_source": "training",
+      "cluster_prior": [
+        0.3142913579940796,
+        0.41232606768608093,
+        0.2733825743198395
+      ],
+      "expert_prior": [
+        0.2733825743198395,
+        0.41232606768608093,
+        0.3142913579940796
+      ]
+    },
+    {
+      "seed": 2024,
+      "checkpoint": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2024/best_val_model.pth",
+      "best_epoch": 99,
+      "routing_method": "shuffled_gmm_route",
+      "deployable": false,
+      "uses_test_target": false,
+      "active_experts_per_sample": 1,
+      "test_mixed_mae": 8.21390085220337,
+      "test_workday_mae": 8.17694640159607,
+      "test_holiday_mae": 8.277984189987183,
+      "test_avg_mae": 8.227465295791626,
+      "test_mape": 0.13088007271289825,
+      "oracle_hard_mae": 8.19513988494873,
+      "router_regret": 0.018760967254639382,
+      "routing_usage_per_expert": [
+        0.5146520137786865,
+        0.2380952388048172,
+        0.24725274741649628
+      ],
+      "effective_expert_number": 2.7984031406964225,
+      "routing_entropy": 0.9752908470712839,
+      "random_trials": [
+        {
+          "trial_seed": 22484721,
+          "routing_method": "shuffled_gmm_route",
+          "test_mixed_mae": 8.213566780090332,
+          "test_workday_mae": 8.176678657531738,
+          "test_holiday_mae": 8.277532577514648,
+          "test_avg_mae": 8.227105617523193,
+          "test_mape": 0.13083069026470184,
+          "routing_usage_per_expert": [
+            0.5146520137786865,
+            0.2380952388048172,
+            0.24725274741649628
+          ],
+          "effective_expert_number": 2.7984031406964225,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22484722,
+          "routing_method": "shuffled_gmm_route",
+          "test_mixed_mae": 8.213955879211426,
+          "test_workday_mae": 8.177213668823242,
+          "test_holiday_mae": 8.277671813964844,
+          "test_avg_mae": 8.227442741394043,
+          "test_mape": 0.13091126084327698,
+          "routing_usage_per_expert": [
+            0.5146520137786865,
+            0.2380952388048172,
+            0.24725274741649628
+          ],
+          "effective_expert_number": 2.7984031406964225,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22484723,
+          "routing_method": "shuffled_gmm_route",
+          "test_mixed_mae": 8.215009689331055,
+          "test_workday_mae": 8.178014755249023,
+          "test_holiday_mae": 8.279162406921387,
+          "test_avg_mae": 8.228588581085205,
+          "test_mape": 0.13089169561862946,
+          "routing_usage_per_expert": [
+            0.5146520137786865,
+            0.2380952388048172,
+            0.24725274741649628
+          ],
+          "effective_expert_number": 2.7984031406964225,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22484724,
+          "routing_method": "shuffled_gmm_route",
+          "test_mixed_mae": 8.211886405944824,
+          "test_workday_mae": 8.174711227416992,
+          "test_holiday_mae": 8.27635383605957,
+          "test_avg_mae": 8.225532531738281,
+          "test_mape": 0.130818173289299,
+          "routing_usage_per_expert": [
+            0.5146520137786865,
+            0.2380952388048172,
+            0.24725274741649628
+          ],
+          "effective_expert_number": 2.7984031406964225,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22484725,
+          "routing_method": "shuffled_gmm_route",
+          "test_mixed_mae": 8.213744163513184,
+          "test_workday_mae": 8.177045822143555,
+          "test_holiday_mae": 8.277381896972656,
+          "test_avg_mae": 8.227213859558105,
+          "test_mape": 0.1308993697166443,
+          "routing_usage_per_expert": [
+            0.5146520137786865,
+            0.2380952388048172,
+            0.24725274741649628
+          ],
+          "effective_expert_number": 2.7984031406964225,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22484726,
+          "routing_method": "shuffled_gmm_route",
+          "test_mixed_mae": 8.214176177978516,
+          "test_workday_mae": 8.176701545715332,
+          "test_holiday_mae": 8.279160499572754,
+          "test_avg_mae": 8.227931022644043,
+          "test_mape": 0.13082516193389893,
+          "routing_usage_per_expert": [
+            0.5146520137786865,
+            0.2380952388048172,
+            0.24725274741649628
+          ],
+          "effective_expert_number": 2.7984031406964225,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22484727,
+          "routing_method": "shuffled_gmm_route",
+          "test_mixed_mae": 8.213603973388672,
+          "test_workday_mae": 8.177132606506348,
+          "test_holiday_mae": 8.276850700378418,
+          "test_avg_mae": 8.226991653442383,
+          "test_mape": 0.1308363974094391,
+          "routing_usage_per_expert": [
+            0.5146520137786865,
+            0.2380952388048172,
+            0.24725274741649628
+          ],
+          "effective_expert_number": 2.7984031406964225,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22484728,
+          "routing_method": "shuffled_gmm_route",
+          "test_mixed_mae": 8.21422290802002,
+          "test_workday_mae": 8.177452087402344,
+          "test_holiday_mae": 8.277987480163574,
+          "test_avg_mae": 8.227719783782959,
+          "test_mape": 0.1308491975069046,
+          "routing_usage_per_expert": [
+            0.5146520137786865,
+            0.2380952388048172,
+            0.24725274741649628
+          ],
+          "effective_expert_number": 2.7984031406964225,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22484729,
+          "routing_method": "shuffled_gmm_route",
+          "test_mixed_mae": 8.212929725646973,
+          "test_workday_mae": 8.17605972290039,
+          "test_holiday_mae": 8.27686882019043,
+          "test_avg_mae": 8.22646427154541,
+          "test_mape": 0.13087411224842072,
+          "routing_usage_per_expert": [
+            0.5146520137786865,
+            0.2380952388048172,
+            0.24725274741649628
+          ],
+          "effective_expert_number": 2.7984031406964225,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22484730,
+          "routing_method": "shuffled_gmm_route",
+          "test_mixed_mae": 8.214193344116211,
+          "test_workday_mae": 8.177491188049316,
+          "test_holiday_mae": 8.277841567993164,
+          "test_avg_mae": 8.22766637802124,
+          "test_mape": 0.1308886855840683,
+          "routing_usage_per_expert": [
+            0.5146520137786865,
+            0.2380952388048172,
+            0.24725274741649628
+          ],
+          "effective_expert_number": 2.7984031406964225,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22484731,
+          "routing_method": "shuffled_gmm_route",
+          "test_mixed_mae": 8.21436882019043,
+          "test_workday_mae": 8.176969528198242,
+          "test_holiday_mae": 8.27922248840332,
+          "test_avg_mae": 8.228096008300781,
+          "test_mape": 0.13086959719657898,
+          "routing_usage_per_expert": [
+            0.5146520137786865,
+            0.2380952388048172,
+            0.24725274741649628
+          ],
+          "effective_expert_number": 2.7984031406964225,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22484732,
+          "routing_method": "shuffled_gmm_route",
+          "test_mixed_mae": 8.214040756225586,
+          "test_workday_mae": 8.17715835571289,
+          "test_holiday_mae": 8.277997970581055,
+          "test_avg_mae": 8.227578163146973,
+          "test_mape": 0.13090212643146515,
+          "routing_usage_per_expert": [
+            0.5146520137786865,
+            0.2380952388048172,
+            0.24725274741649628
+          ],
+          "effective_expert_number": 2.7984031406964225,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22484733,
+          "routing_method": "shuffled_gmm_route",
+          "test_mixed_mae": 8.213574409484863,
+          "test_workday_mae": 8.176389694213867,
+          "test_holiday_mae": 8.278058052062988,
+          "test_avg_mae": 8.227223873138428,
+          "test_mape": 0.1308722048997879,
+          "routing_usage_per_expert": [
+            0.5146520137786865,
+            0.2380952388048172,
+            0.24725274741649628
+          ],
+          "effective_expert_number": 2.7984031406964225,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22484734,
+          "routing_method": "shuffled_gmm_route",
+          "test_mixed_mae": 8.21452808380127,
+          "test_workday_mae": 8.17798900604248,
+          "test_holiday_mae": 8.277889251708984,
+          "test_avg_mae": 8.227939128875732,
+          "test_mape": 0.1309245526790619,
+          "routing_usage_per_expert": [
+            0.5146520137786865,
+            0.2380952388048172,
+            0.24725274741649628
+          ],
+          "effective_expert_number": 2.7984031406964225,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22484735,
+          "routing_method": "shuffled_gmm_route",
+          "test_mixed_mae": 8.213006973266602,
+          "test_workday_mae": 8.174653053283691,
+          "test_holiday_mae": 8.27951431274414,
+          "test_avg_mae": 8.227083683013916,
+          "test_mape": 0.1308833807706833,
+          "routing_usage_per_expert": [
+            0.5146520137786865,
+            0.2380952388048172,
+            0.24725274741649628
+          ],
+          "effective_expert_number": 2.7984031406964225,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22484736,
+          "routing_method": "shuffled_gmm_route",
+          "test_mixed_mae": 8.214925765991211,
+          "test_workday_mae": 8.177952766418457,
+          "test_holiday_mae": 8.279040336608887,
+          "test_avg_mae": 8.228496551513672,
+          "test_mape": 0.13085761666297913,
+          "routing_usage_per_expert": [
+            0.5146520137786865,
+            0.2380952388048172,
+            0.24725274741649628
+          ],
+          "effective_expert_number": 2.7984031406964225,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22484737,
+          "routing_method": "shuffled_gmm_route",
+          "test_mixed_mae": 8.214786529541016,
+          "test_workday_mae": 8.176959037780762,
+          "test_holiday_mae": 8.28038501739502,
+          "test_avg_mae": 8.22867202758789,
+          "test_mape": 0.1308862417936325,
+          "routing_usage_per_expert": [
+            0.5146520137786865,
+            0.2380952388048172,
+            0.24725274741649628
+          ],
+          "effective_expert_number": 2.7984031406964225,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22484738,
+          "routing_method": "shuffled_gmm_route",
+          "test_mixed_mae": 8.212532997131348,
+          "test_workday_mae": 8.175531387329102,
+          "test_holiday_mae": 8.276700973510742,
+          "test_avg_mae": 8.226116180419922,
+          "test_mape": 0.13084988296031952,
+          "routing_usage_per_expert": [
+            0.5146520137786865,
+            0.2380952388048172,
+            0.24725274741649628
+          ],
+          "effective_expert_number": 2.7984031406964225,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22484739,
+          "routing_method": "shuffled_gmm_route",
+          "test_mixed_mae": 8.214688301086426,
+          "test_workday_mae": 8.178083419799805,
+          "test_holiday_mae": 8.27816390991211,
+          "test_avg_mae": 8.228123664855957,
+          "test_mape": 0.13100354373455048,
+          "routing_usage_per_expert": [
+            0.5146520137786865,
+            0.2380952388048172,
+            0.24725274741649628
+          ],
+          "effective_expert_number": 2.7984031406964225,
+          "routing_entropy": 5.52620422318571e-11
+        },
+        {
+          "trial_seed": 22484740,
+          "routing_method": "shuffled_gmm_route",
+          "test_mixed_mae": 8.214275360107422,
+          "test_workday_mae": 8.178740501403809,
+          "test_holiday_mae": 8.275899887084961,
+          "test_avg_mae": 8.227320194244385,
+          "test_mape": 0.13092756271362305,
+          "routing_usage_per_expert": [
+            0.5146520137786865,
+            0.2380952388048172,
+            0.24725274741649628
+          ],
+          "effective_expert_number": 2.7984031406964225,
+          "routing_entropy": 5.52620422318571e-11
+        }
+      ],
+      "random_mae_mean": 8.227465295791626,
+      "random_mae_std": 0.0008069502451534162,
+      "random_mae_min": 8.225532531738281,
+      "random_mae_max": 8.22867202758789,
+      "mapping_source": "validation",
+      "gmm_fit_source": "training",
+      "best_fixed_source": "not_used",
+      "test_target_used_by": "oracle_only",
+      "shuffle_preserves_exact_gmm_usage_counts": true
+    },
+    {
+      "seed": 2024,
+      "checkpoint": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2024/best_val_model.pth",
+      "best_epoch": 99,
+      "routing_method": "gmm_hard_identity",
+      "deployable": true,
+      "uses_test_target": false,
+      "active_experts_per_sample": 1,
+      "test_mixed_mae": 8.221978187561035,
+      "test_workday_mae": 8.1846342086792,
+      "test_holiday_mae": 8.286737442016602,
+      "test_avg_mae": 8.2356858253479,
+      "test_mape": 0.13170796632766724,
+      "oracle_hard_mae": 8.19513988494873,
+      "router_regret": 0.026838302612304688,
+      "routing_usage_per_expert": [
+        0.24725274741649628,
+        0.2380952388048172,
+        0.5146520137786865
+      ],
+      "effective_expert_number": 2.7984031406964225,
+      "routing_entropy": 5.52620422318571e-11,
+      "random_trials": [],
+      "random_mae_mean": null,
+      "random_mae_std": null,
+      "random_mae_min": null,
+      "random_mae_max": null,
+      "mapping_source": "identity",
+      "gmm_fit_source": "training",
+      "best_fixed_source": "not_used",
+      "test_target_used_by": "oracle_only",
+      "cluster_to_expert": {
+        "0": 0,
+        "1": 1,
+        "2": 2
+      }
+    },
+    {
+      "seed": 2024,
+      "checkpoint": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2024/best_val_model.pth",
+      "best_epoch": 99,
+      "routing_method": "gmm_hard_val_hungarian",
+      "deployable": true,
+      "uses_test_target": false,
+      "active_experts_per_sample": 1,
+      "test_mixed_mae": 8.206156730651855,
+      "test_workday_mae": 8.16830062866211,
+      "test_holiday_mae": 8.271804809570312,
+      "test_avg_mae": 8.220052719116211,
+      "test_mape": 0.1302189826965332,
+      "oracle_hard_mae": 8.19513988494873,
+      "router_regret": 0.011016845703125,
+      "routing_usage_per_expert": [
+        0.5146520137786865,
+        0.2380952388048172,
+        0.24725274741649628
+      ],
+      "effective_expert_number": 2.7984031406964225,
+      "routing_entropy": 5.52620422318571e-11,
+      "random_trials": [],
+      "random_mae_mean": null,
+      "random_mae_std": null,
+      "random_mae_min": null,
+      "random_mae_max": null,
+      "mapping_source": "validation",
+      "gmm_fit_source": "training",
+      "best_fixed_source": "not_used",
+      "test_target_used_by": "oracle_only",
+      "cluster_to_expert": {
+        "0": 2,
+        "1": 1,
+        "2": 0
+      },
+      "primary_gmm_hard_result": true
+    },
+    {
+      "seed": 2024,
+      "checkpoint": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2024/best_val_model.pth",
+      "best_epoch": 99,
+      "routing_method": "gmm_hard_val_independent",
+      "deployable": true,
+      "uses_test_target": false,
+      "active_experts_per_sample": 1,
+      "test_mixed_mae": 8.207182884216309,
+      "test_workday_mae": 8.169434547424316,
+      "test_holiday_mae": 8.272644996643066,
+      "test_avg_mae": 8.221039772033691,
+      "test_mape": 0.13021676242351532,
+      "oracle_hard_mae": 8.19513988494873,
+      "router_regret": 0.012042999267578125,
+      "routing_usage_per_expert": [
+        0.7527472376823425,
+        0.0,
+        0.24725274741649628
+      ],
+      "effective_expert_number": 1.7494418731102466,
+      "routing_entropy": 5.52620422318571e-11,
+      "random_trials": [],
+      "random_mae_mean": null,
+      "random_mae_std": null,
+      "random_mae_min": null,
+      "random_mae_max": null,
+      "mapping_source": "validation",
+      "gmm_fit_source": "training",
+      "best_fixed_source": "not_used",
+      "test_target_used_by": "oracle_only",
+      "cluster_to_expert": {
+        "0": 2,
+        "1": 0,
+        "2": 0
+      },
+      "diagnostic_only": true
+    },
+    {
+      "seed": 2024,
+      "checkpoint": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2024/best_val_model.pth",
+      "best_epoch": 99,
+      "routing_method": "uniform_all_experts",
+      "deployable": true,
+      "uses_test_target": false,
+      "active_experts_per_sample": 3,
+      "test_mixed_mae": 8.214115142822266,
+      "test_workday_mae": 8.177253723144531,
+      "test_holiday_mae": 8.278036117553711,
+      "test_avg_mae": 8.227644920349121,
+      "test_mape": 0.13091742992401123,
+      "oracle_hard_mae": 8.19513988494873,
+      "router_regret": 0.018975257873535156,
+      "routing_usage_per_expert": [
+        0.3333333432674408,
+        0.3333333432674408,
+        0.3333333432674408
+      ],
+      "effective_expert_number": 2.9999999999999996,
+      "routing_entropy": 1.0986122916069847,
+      "random_trials": [],
+      "random_mae_mean": null,
+      "random_mae_std": null,
+      "random_mae_min": null,
+      "random_mae_max": null,
+      "mapping_source": "not_used",
+      "gmm_fit_source": "not_used",
+      "best_fixed_source": "not_used",
+      "test_target_used_by": "oracle_only"
+    },
+    {
+      "seed": 2024,
+      "checkpoint": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2024/best_val_model.pth",
+      "best_epoch": 99,
+      "routing_method": "oracle_top1",
+      "deployable": false,
+      "uses_test_target": true,
+      "active_experts_per_sample": 1,
+      "test_mixed_mae": 8.19513988494873,
+      "test_workday_mae": 8.158332824707031,
+      "test_holiday_mae": 8.258968353271484,
+      "test_avg_mae": 8.208650588989258,
+      "test_mape": 0.13040529191493988,
+      "oracle_hard_mae": 8.19513988494873,
+      "router_regret": 0.0,
+      "routing_usage_per_expert": [
+        0.4157509207725525,
+        0.23626373708248138,
+        0.3479853570461273
+      ],
+      "effective_expert_number": 2.924449048348829,
+      "routing_entropy": 5.52620422318571e-11,
+      "random_trials": [],
+      "random_mae_mean": null,
+      "random_mae_std": null,
+      "random_mae_min": null,
+      "random_mae_max": null,
+      "mapping_source": "not_used",
+      "gmm_fit_source": "not_used",
+      "best_fixed_source": "not_used",
+      "test_target_used_by": "oracle_only",
+      "diagnostic_only": true
+    }
+  ],
+  "load_missing_keys": [],
+  "load_unexpected_keys": [],
+  "progressive_gmm_state_restored": {
+    "means_buffer_present": true,
+    "variances_buffer_present": true,
+    "priors_buffer_present": true,
+    "feature_mean_present": true,
+    "feature_std_present": true,
+    "ema_teacher_encoder_present": true,
+    "component_alignment_mapping": [
+      2,
+      1,
+      0
+    ]
+  },
+  "leakage_protocol": {
+    "gmm_fit_source": "training",
+    "mapping_source": "validation",
+    "best_fixed_source": "validation",
+    "test_target_used_by": "evaluation_and_oracle_only",
+    "no_checkpoint_fallback": true
+  },
+  "summary_tables": {
+    "cluster_profiles": [
+      {
+        "split": "test",
+        "cluster": 0,
+        "sample_count": 135,
+        "sample_ratio": 0.24725274725274726,
+        "workday_ratio": 0.674074074074074,
+        "holiday_ratio": 0.32592592592592595,
+        "rush_ratio": 0.13333333333333333,
+        "mean_external_load": 0.6593148112297058,
+        "mean_historical_flow": 24.134607315063477,
+        "std_historical_flow": 75.38197326660156,
+        "mean_target_flow": 13.486555099487305,
+        "invariant_mae": 70.51854705810547,
+        "gmm_routed_mae": 5.435469627380371,
+        "uniform_mae": 5.443663597106934,
+        "mean_correction_magnitude": 53.48313903808594,
+        "mean_gmm_confidence": 0.9996958374977112,
+        "mean_gmm_entropy": 0.0015393855283036828,
+        "avg_consecutive_cluster_duration": 135.0
+      },
+      {
+        "split": "test",
+        "cluster": 1,
+        "sample_count": 130,
+        "sample_ratio": 0.23809523809523808,
+        "workday_ratio": 0.7461538461538462,
+        "holiday_ratio": 0.25384615384615383,
+        "rush_ratio": 0.2846153846153846,
+        "mean_external_load": 0.9212499856948853,
+        "mean_historical_flow": 46.383262634277344,
+        "std_historical_flow": 114.896240234375,
+        "mean_target_flow": 41.02619171142578,
+        "invariant_mae": 103.59528350830078,
+        "gmm_routed_mae": 8.299917221069336,
+        "uniform_mae": 8.3038911819458,
+        "mean_correction_magnitude": 68.2962417602539,
+        "mean_gmm_confidence": 0.9933083057403564,
+        "mean_gmm_entropy": 0.016795966774225235,
+        "avg_consecutive_cluster_duration": 130.0
+      },
+      {
+        "split": "test",
+        "cluster": 2,
+        "sample_count": 281,
+        "sample_ratio": 0.5146520146520146,
+        "workday_ratio": 0.5907473309608541,
+        "holiday_ratio": 0.4092526690391459,
+        "rush_ratio": 0.29537366548042704,
+        "mean_external_load": 1.1826245784759521,
+        "mean_historical_flow": 47.054931640625,
+        "std_historical_flow": 117.60432434082031,
+        "mean_target_flow": 55.23032760620117,
+        "invariant_mae": 126.4615478515625,
+        "gmm_routed_mae": 9.230571746826172,
+        "uniform_mae": 9.240470886230469,
+        "mean_correction_magnitude": 79.3344497680664,
+        "mean_gmm_confidence": 0.9973042607307434,
+        "mean_gmm_entropy": 0.005513254087418318,
+        "avg_consecutive_cluster_duration": 281.0
+      }
+    ],
+    "routing_gains": [
+      {
+        "comparison": "gmm_hard_val_hungarian_vs_best_fixed",
+        "baseline_mae": 8.223312377929688,
+        "gmm_hungarian_mae": 8.220052719116211,
+        "gain_positive_means_gmm_better": 0.0032596588134765625,
+        "oracle_gap_positive_means_oracle_better": null
+      },
+      {
+        "comparison": "gmm_hard_val_hungarian_vs_random_uniform_top1",
+        "baseline_mae": 8.228968834877014,
+        "gmm_hungarian_mae": 8.220052719116211,
+        "gain_positive_means_gmm_better": 0.008916115760802867,
+        "oracle_gap_positive_means_oracle_better": null
+      },
+      {
+        "comparison": "gmm_hard_val_hungarian_vs_random_prior_top1",
+        "baseline_mae": 8.228847312927247,
+        "gmm_hungarian_mae": 8.220052719116211,
+        "gain_positive_means_gmm_better": 0.008794593811035867,
+        "oracle_gap_positive_means_oracle_better": null
+      },
+      {
+        "comparison": "gmm_hard_val_hungarian_vs_shuffled_gmm_route",
+        "baseline_mae": 8.227465295791626,
+        "gmm_hungarian_mae": 8.220052719116211,
+        "gain_positive_means_gmm_better": 0.007412576675415394,
+        "oracle_gap_positive_means_oracle_better": null
+      },
+      {
+        "comparison": "gmm_hard_val_hungarian_vs_gmm_hard_identity",
+        "baseline_mae": 8.2356858253479,
+        "gmm_hungarian_mae": 8.220052719116211,
+        "gain_positive_means_gmm_better": 0.015633106231689453,
+        "oracle_gap_positive_means_oracle_better": null
+      },
+      {
+        "comparison": "gmm_hard_val_hungarian_vs_uniform_all_experts",
+        "baseline_mae": 8.227644920349121,
+        "gmm_hungarian_mae": 8.220052719116211,
+        "gain_positive_means_gmm_better": 0.007592201232910156,
+        "oracle_gap_positive_means_oracle_better": null
+      },
+      {
+        "comparison": "gmm_hard_val_hungarian_vs_oracle_top1",
+        "baseline_mae": 8.208650588989258,
+        "gmm_hungarian_mae": 8.220052719116211,
+        "gain_positive_means_gmm_better": -0.011402130126953125,
+        "oracle_gap_positive_means_oracle_better": 0.011402130126953125
+      }
+    ],
+    "typical_samples": [
+      {
+        "cluster": 0,
+        "kind": "positive",
+        "selection_rule": "largest positive gain versus uniform",
+        "sample_index": 213,
+        "temporal_index": 213,
+        "selected_expert_hungarian": 2,
+        "oracle_expert_id": 2,
+        "gmm_confidence": 1.0,
+        "gmm_entropy": 5.5262041470660606e-11,
+        "gmm_hungarian_mae": 8.468884468078613,
+        "uniform_mae": 8.544950485229492,
+        "best_fixed_mae": 8.584752082824707,
+        "oracle_mae": 8.468884468078613,
+        "routing_gain_vs_uniform": 0.0760660171508789,
+        "oracle_gap": 0.0,
+        "figure": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2024/case_study/progressive_gmm_case_outputs/typical_samples/cluster_0_positive.png"
+      },
+      {
+        "cluster": 0,
+        "kind": "neutral",
+        "selection_rule": "smallest expert-MAE spread",
+        "sample_index": 178,
+        "temporal_index": 178,
+        "selected_expert_hungarian": 2,
+        "oracle_expert_id": 2,
+        "gmm_confidence": 1.0,
+        "gmm_entropy": 5.5262041470660606e-11,
+        "gmm_hungarian_mae": 7.348479747772217,
+        "uniform_mae": 7.3486714363098145,
+        "best_fixed_mae": 7.34920597076416,
+        "oracle_mae": 7.348479747772217,
+        "routing_gain_vs_uniform": 0.00019168853759765625,
+        "oracle_gap": 0.0,
+        "figure": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2024/case_study/progressive_gmm_case_outputs/typical_samples/cluster_0_neutral.png"
+      },
+      {
+        "cluster": 0,
+        "kind": "failure",
+        "selection_rule": "largest negative gain versus uniform",
+        "sample_index": 26,
+        "temporal_index": 26,
+        "selected_expert_hungarian": 2,
+        "oracle_expert_id": 1,
+        "gmm_confidence": 1.0,
+        "gmm_entropy": 5.5262041470660606e-11,
+        "gmm_hungarian_mae": 4.495703220367432,
+        "uniform_mae": 4.435734272003174,
+        "best_fixed_mae": 4.410168647766113,
+        "oracle_mae": 4.408493995666504,
+        "routing_gain_vs_uniform": -0.05996894836425781,
+        "oracle_gap": 0.08720922470092773,
+        "figure": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2024/case_study/progressive_gmm_case_outputs/typical_samples/cluster_0_failure.png"
+      },
+      {
+        "cluster": 1,
+        "kind": "positive",
+        "selection_rule": "largest positive gain versus uniform",
+        "sample_index": 233,
+        "temporal_index": 233,
+        "selected_expert_hungarian": 1,
+        "oracle_expert_id": 1,
+        "gmm_confidence": 1.0,
+        "gmm_entropy": 5.5262041470660606e-11,
+        "gmm_hungarian_mae": 9.11131477355957,
+        "uniform_mae": 9.143804550170898,
+        "best_fixed_mae": 9.176708221435547,
+        "oracle_mae": 9.11131477355957,
+        "routing_gain_vs_uniform": 0.032489776611328125,
+        "oracle_gap": 0.0,
+        "figure": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2024/case_study/progressive_gmm_case_outputs/typical_samples/cluster_1_positive.png"
+      },
+      {
+        "cluster": 1,
+        "kind": "neutral",
+        "selection_rule": "smallest expert-MAE spread",
+        "sample_index": 132,
+        "temporal_index": 132,
+        "selected_expert_hungarian": 1,
+        "oracle_expert_id": 0,
+        "gmm_confidence": 1.0,
+        "gmm_entropy": 5.5262041470660606e-11,
+        "gmm_hungarian_mae": 6.598114013671875,
+        "uniform_mae": 6.595566272735596,
+        "best_fixed_mae": 6.5942583084106445,
+        "oracle_mae": 6.5942583084106445,
+        "routing_gain_vs_uniform": -0.002547740936279297,
+        "oracle_gap": 0.0038557052612304688,
+        "figure": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2024/case_study/progressive_gmm_case_outputs/typical_samples/cluster_1_neutral.png"
+      },
+      {
+        "cluster": 1,
+        "kind": "failure",
+        "selection_rule": "largest negative gain versus uniform",
+        "sample_index": 380,
+        "temporal_index": 380,
+        "selected_expert_hungarian": 1,
+        "oracle_expert_id": 2,
+        "gmm_confidence": 1.0,
+        "gmm_entropy": 5.5262041470660606e-11,
+        "gmm_hungarian_mae": 9.45165729522705,
+        "uniform_mae": 9.434774398803711,
+        "best_fixed_mae": 9.435953140258789,
+        "oracle_mae": 9.426555633544922,
+        "routing_gain_vs_uniform": -0.016882896423339844,
+        "oracle_gap": 0.025101661682128906,
+        "figure": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2024/case_study/progressive_gmm_case_outputs/typical_samples/cluster_1_failure.png"
+      },
+      {
+        "cluster": 2,
+        "kind": "positive",
+        "selection_rule": "largest positive gain versus uniform",
+        "sample_index": 275,
+        "temporal_index": 275,
+        "selected_expert_hungarian": 0,
+        "oracle_expert_id": 0,
+        "gmm_confidence": 1.0,
+        "gmm_entropy": 5.5262041470660606e-11,
+        "gmm_hungarian_mae": 15.984464645385742,
+        "uniform_mae": 16.110673904418945,
+        "best_fixed_mae": 15.984464645385742,
+        "oracle_mae": 15.984464645385742,
+        "routing_gain_vs_uniform": 0.12620925903320312,
+        "oracle_gap": 0.0,
+        "figure": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2024/case_study/progressive_gmm_case_outputs/typical_samples/cluster_2_positive.png"
+      },
+      {
+        "cluster": 2,
+        "kind": "neutral",
+        "selection_rule": "smallest expert-MAE spread",
+        "sample_index": 249,
+        "temporal_index": 249,
+        "selected_expert_hungarian": 0,
+        "oracle_expert_id": 2,
+        "gmm_confidence": 1.0,
+        "gmm_entropy": 5.5262041470660606e-11,
+        "gmm_hungarian_mae": 10.204090118408203,
+        "uniform_mae": 10.202327728271484,
+        "best_fixed_mae": 10.204090118408203,
+        "oracle_mae": 10.203819274902344,
+        "routing_gain_vs_uniform": -0.00176239013671875,
+        "oracle_gap": 0.000270843505859375,
+        "figure": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2024/case_study/progressive_gmm_case_outputs/typical_samples/cluster_2_neutral.png"
+      },
+      {
+        "cluster": 2,
+        "kind": "failure",
+        "selection_rule": "largest negative gain versus uniform",
+        "sample_index": 391,
+        "temporal_index": 391,
+        "selected_expert_hungarian": 0,
+        "oracle_expert_id": 2,
+        "gmm_confidence": 1.0,
+        "gmm_entropy": 5.5262041470660606e-11,
+        "gmm_hungarian_mae": 9.99952507019043,
+        "uniform_mae": 9.945516586303711,
+        "best_fixed_mae": 9.99952507019043,
+        "oracle_mae": 9.91971492767334,
+        "routing_gain_vs_uniform": -0.05400848388671875,
+        "oracle_gap": 0.07981014251708984,
+        "figure": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2024/case_study/progressive_gmm_case_outputs/typical_samples/cluster_2_failure.png"
+      }
+    ],
+    "corrections": [
+      {
+        "cluster": 0,
+        "sample_count": 135,
+        "selected_correction_abs_mean": 53.48313903808594,
+        "invariant_mae_minus_selected_expert_mae": 65.08308410644531
+      },
+      {
+        "cluster": 1,
+        "sample_count": 130,
+        "selected_correction_abs_mean": 68.2962417602539,
+        "invariant_mae_minus_selected_expert_mae": 95.29536437988281
+      },
+      {
+        "cluster": 2,
+        "sample_count": 281,
+        "selected_correction_abs_mean": 79.3344497680664,
+        "invariant_mae_minus_selected_expert_mae": 117.2309799194336
+      }
+    ],
+    "confidence_bins": [
+      {
+        "confidence_group": "low",
+        "lower_bound": -Infinity,
+        "upper_bound": 1.0,
+        "sample_count": 57,
+        "gmm_routing_mae": 8.342564582824707,
+        "uniform_mae": 8.346938133239746,
+        "best_fixed_mae": 8.344612121582031,
+        "oracle_mae": 8.33149528503418,
+        "routing_gain_vs_uniform": 0.004372228868305683,
+        "routing_gain_vs_best_fixed": 0.002046886133030057
+      },
+      {
+        "confidence_group": "medium",
+        "lower_bound": 1.0,
+        "upper_bound": 1.0,
+        "sample_count": 0,
+        "gmm_routing_mae": null,
+        "uniform_mae": null,
+        "best_fixed_mae": null,
+        "oracle_mae": null,
+        "routing_gain_vs_uniform": null,
+        "routing_gain_vs_best_fixed": null
+      },
+      {
+        "confidence_group": "high",
+        "lower_bound": 1.0,
+        "upper_bound": Infinity,
+        "sample_count": 489,
+        "gmm_routing_mae": 8.038941383361816,
+        "uniform_mae": 8.047438621520996,
+        "best_fixed_mae": 8.043578147888184,
+        "oracle_mae": 8.027865409851074,
+        "routing_gain_vs_uniform": 0.008496974594891071,
+        "routing_gain_vs_best_fixed": 0.004636597819626331
+      }
+    ],
+    "temporal": {
+      "temporal_order_verified": true,
+      "self_transition_probability_mean": 0.8187577034074086,
+      "mean_run_length": 5.870967741935484
+    }
+  }
+}

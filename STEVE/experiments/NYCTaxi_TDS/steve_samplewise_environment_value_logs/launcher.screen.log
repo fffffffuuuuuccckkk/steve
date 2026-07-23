@@ -1,0 +1,15 @@
+[steve-env-value] skip existing steve_env_value_full_seed2024
+[steve-env-value] skip existing steve_env_value_inv_only_seed2024
+[steve-env-value] skip existing steve_env_value_full_seed2025
+[steve-env-value] skip existing steve_env_value_inv_only_seed2025
+[steve-env-value] skip existing steve_env_value_full_seed2026
+[steve-env-value] skip existing steve_env_value_inv_only_seed2026
+[steve-env-value] OK sample-wise outputs: /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_env_value_full_seed2024
+[steve-env-value] OK sample-wise outputs: /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_env_value_inv_only_seed2024
+[steve-env-value] OK sample-wise outputs: /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_env_value_full_seed2025
+[steve-env-value] OK sample-wise outputs: /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_env_value_inv_only_seed2025
+[steve-env-value] OK sample-wise outputs: /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_env_value_full_seed2026
+[steve-env-value] OK sample-wise outputs: /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_env_value_inv_only_seed2026
+[analyze-steve-env-value] wrote outputs to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_samplewise_environment_analysis
+[analyze-steve-env-value] cross-seed summary: {'num_samples': 546, 'full_consistently_better_count': 1, 'full_consistently_better_prop': 0.0018315018315018315, 'inv_consistently_better_count': 260, 'inv_consistently_better_prop': 0.47619047619047616, 'mixed_count': 285, 'mixed_prop': 0.521978021978022, 'full_at_least_two_count': 79, 'full_at_least_two_prop': 0.1446886446886447, 'inv_at_least_two_count': 467, 'inv_at_least_two_prop': 0.8553113553113553, 'mean_of_mean_delta': -1.8764352355975664, 'median_of_mean_delta': -2.704151153564453, 'tie_threshold': 1e-06, 'relative_threshold': 0.01}
+[steve-env-value] ALL DONE. analysis_dir=/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_samplewise_environment_analysis

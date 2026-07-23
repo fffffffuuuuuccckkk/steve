@@ -1,0 +1,4 @@
+group,count,invariant,best_env,best_fixed,best_fixed_env,native,oracle
+environment_preferred,546,88.5289576718995,7.684528782048784,7.69077935690278,7.69077935690278,7.690909155658385,7.684528782048784
+invariant_preferred,0,nan,nan,nan,nan,nan,nan
+neutral,0,nan,nan,nan,nan,nan,nan

@@ -1,0 +1,4 @@
+[steve-full] start steve_full_reproduce_seed2024 seed=2024 gpu=0 epochs=128
+[steve-full] done steve_full_reproduce_seed2024
+[steve-full] OK /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024
+[steve-full] ALL DONE. logs=/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_logs

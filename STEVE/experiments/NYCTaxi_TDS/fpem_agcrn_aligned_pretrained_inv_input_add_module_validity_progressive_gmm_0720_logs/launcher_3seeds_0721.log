@@ -1,0 +1,69 @@
+[INFO] RUN_PREFIX=fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720
+[INFO] cases=add_progressive_gmm_kmax3_common020 seeds=2024,2025,2026 gpu_ids=0,1,2 max_parallel=3 dry_run=false
+[INFO] pretrained_inv=true ckpt=/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/pure_agcrn_seed2024/best_val_model.pth
+[INFO] run_route_eval=1 route_eval_only=false route_eval_checkpoint_prefix=fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720 route_eval_cases=add_progressive_gmm_kmax3_common020
+[SKIP] completed case=add_progressive_gmm_kmax3_common020 seed=2024 run=fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2024
+[LAUNCH] case=add_progressive_gmm_kmax3_common020 seed=2025 gpu=1 exp_dir=/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2025 backbone=agcrn head=hyper_inv_film_proto_input_add K=3 proto=false sinkhorn=false future_mi=false swap=false club=false env_ablation=normal force_uniform=false
+[RUN] case=add_progressive_gmm_kmax3_common020 seed=2025 attempt=1 gpu=1 date=Tue Jul 21 03:18:33 UTC 2026
+[CLEANUP] gpu=1 date=Tue Jul 21 03:18:33 UTC 2026
+[LAUNCH] case=add_progressive_gmm_kmax3_common020 seed=2026 gpu=2 exp_dir=/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2026 backbone=agcrn head=hyper_inv_film_proto_input_add K=3 proto=false sinkhorn=false future_mi=false swap=false club=false env_ablation=normal force_uniform=false
+[RUN] case=add_progressive_gmm_kmax3_common020 seed=2026 attempt=1 gpu=2 date=Tue Jul 21 03:18:33 UTC 2026
+[CLEANUP] gpu=2 date=Tue Jul 21 03:18:33 UTC 2026
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[WAIT_GPU_ROUTE_EVAL] gpu=0 memory used above 1024MB
+[ROUTE_EVAL_SKIP] seed=2024 output=/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_online_route_eval/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2024/online_route_results.json
+[ROUTE_EVAL_RUNNING] case=add_progressive_gmm_kmax3_common020 seed=2025 gpu=1 ckpt=/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2025/best_val_model.pth output=/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_online_route_eval/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2025
+[CLEANUP] gpu=1 date=Tue Jul 21 05:52:49 UTC 2026
+[ROUTE_EVAL_RUNNING] case=add_progressive_gmm_kmax3_common020 seed=2026 gpu=2 ckpt=/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2026/best_val_model.pth output=/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_online_route_eval/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2026
+[CLEANUP] gpu=2 date=Tue Jul 21 05:52:50 UTC 2026
+[ROUTE_EVAL_OK] case=add_progressive_gmm_kmax3_common020 seed=2025 output=/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_online_route_eval/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2025
+[ROUTE_EVAL_OK] case=add_progressive_gmm_kmax3_common020 seed=2026 output=/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_online_route_eval/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2026
+[ROUTE_EVAL_SUMMARY] /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_online_route_eval/route_eval_seed_summary.tsv
+[DONE] OK=4 SKIP_DONE=1 DRY_RUN=0 FAIL=0 ROUTE_EVAL_OK=3 ROUTE_EVAL_FAIL=0

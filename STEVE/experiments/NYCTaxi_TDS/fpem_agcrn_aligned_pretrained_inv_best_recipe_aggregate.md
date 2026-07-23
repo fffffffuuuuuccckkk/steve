@@ -1,0 +1,8 @@
+| group | name | num_finished | mean_test_avg_mae | std_test_avg_mae | mean_test_workday_mae | mean_test_holiday_mae |
+| --- | --- | --- | --- | --- | --- | --- |
+| other | no_conf_k2_no_mask_no_swap_no_club | 3 | 10.399362 | 0.215432 | 10.263736 | 10.534988 |
+| other | no_conf_k3_mask_off | 3 | 10.398223 | 0.169627 | 10.263635 | 10.532812 |
+| other | no_conf_k3_mask_on | 3 | 10.394121 | 0.185133 | 10.266423 | 10.521820 |
+| other | no_conf_k3_no_mask_no_swap_no_club | 3 | 10.397247 | 0.212050 | 10.259834 | 10.534659 |
+| other | no_conf_k3_no_mask_no_swap_no_club_no_future | 3 | 10.406755 | 0.200851 | 10.276618 | 10.536893 |
+| other | no_conf_k4_no_mask_no_swap_no_club | 3 | 10.435154 | 0.176470 | 10.283957 | 10.586351 |

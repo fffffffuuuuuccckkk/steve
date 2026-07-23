@@ -1,0 +1,90 @@
+{
+  "checkpoint": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_env_disentangle_proto_current_prediction_oracle_seed2025/best_val_model.pth",
+  "exp_dir": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_env_disentangle_proto_current_prediction_oracle_seed2025",
+  "output_dir": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_env_disentangle_proto_current_prediction_oracle_seed2025/case_study/case_outputs",
+  "split": "test",
+  "max_batches": -1,
+  "num_samples": 546,
+  "route_k": 3,
+  "frozen_params": 750800,
+  "trainable_params": 957713,
+  "eval_metrics": {
+    "test_mae": 10.116355895996094,
+    "test_mape": 0.18069574236869812
+  },
+  "route_usage_summary": [
+    {
+      "scope": "expert",
+      "expert": 0,
+      "soft_usage_mean": 0.3504347795750195,
+      "hard_count": 0,
+      "hard_usage_ratio": 0.0,
+      "route_entropy_mean": 0.8419023369279256,
+      "route_mean_distribution_entropy": 0.8419335442425253,
+      "effective_expert_number": 2.32085010758178,
+      "max_expert_usage_ratio": 0.5920943998810135,
+      "min_expert_usage_ratio": 0.05747082033928061
+    },
+    {
+      "scope": "expert",
+      "expert": 1,
+      "soft_usage_mean": 0.5920943998810135,
+      "hard_count": 546,
+      "hard_usage_ratio": 1.0,
+      "route_entropy_mean": 0.8419023369279256,
+      "route_mean_distribution_entropy": 0.8419335442425253,
+      "effective_expert_number": 2.32085010758178,
+      "max_expert_usage_ratio": 0.5920943998810135,
+      "min_expert_usage_ratio": 0.05747082033928061
+    },
+    {
+      "scope": "expert",
+      "expert": 2,
+      "soft_usage_mean": 0.05747082033928061,
+      "hard_count": 0,
+      "hard_usage_ratio": 0.0,
+      "route_entropy_mean": 0.8419023369279256,
+      "route_mean_distribution_entropy": 0.8419335442425253,
+      "effective_expert_number": 2.32085010758178,
+      "max_expert_usage_ratio": 0.5920943998810135,
+      "min_expert_usage_ratio": 0.05747082033928061
+    },
+    {
+      "scope": "overall",
+      "expert": "all",
+      "soft_usage_mean": 0.9999999997953137,
+      "hard_count": 546,
+      "hard_usage_ratio": 1.0,
+      "route_entropy_mean": 0.8419023369279256,
+      "route_mean_distribution_entropy": 0.8419335442425253,
+      "effective_expert_number": 2.32085010758178,
+      "max_expert_usage_ratio": 0.5920943998810135,
+      "min_expert_usage_ratio": 0.05747082033928061
+    }
+  ],
+  "prototype_similarity_rows": 18,
+  "prototype_env_distribution_rows": 28,
+  "files": {
+    "features": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_env_disentangle_proto_current_prediction_oracle_seed2025/case_study/case_outputs/features.npz",
+    "per_sample": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_env_disentangle_proto_current_prediction_oracle_seed2025/case_study/case_outputs/per_sample.csv",
+    "probe_env_results": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_env_disentangle_proto_current_prediction_oracle_seed2025/case_study/case_outputs/probe_env_results.csv",
+    "inv_raw_vs_projected_probe": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_env_disentangle_proto_current_prediction_oracle_seed2025/case_study/case_outputs/inv_raw_vs_projected_probe.csv",
+    "probe_residual_results": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_env_disentangle_proto_current_prediction_oracle_seed2025/case_study/case_outputs/probe_residual_results.csv",
+    "expert_env_crosstab": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_env_disentangle_proto_current_prediction_oracle_seed2025/case_study/case_outputs/expert_env_crosstab.csv",
+    "route_usage_summary": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_env_disentangle_proto_current_prediction_oracle_seed2025/case_study/case_outputs/route_usage_summary.csv",
+    "prototype_similarity": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_env_disentangle_proto_current_prediction_oracle_seed2025/case_study/case_outputs/prototype_similarity.csv",
+    "prototype_env_distribution": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_env_disentangle_proto_current_prediction_oracle_seed2025/case_study/case_outputs/prototype_env_distribution.csv",
+    "expert_by_workday_holiday": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_env_disentangle_proto_current_prediction_oracle_seed2025/case_study/case_outputs/expert_by_workday_holiday.png",
+    "expert_by_hour": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_env_disentangle_proto_current_prediction_oracle_seed2025/case_study/case_outputs/expert_by_hour.png",
+    "expert_by_rush_hour": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_env_disentangle_proto_current_prediction_oracle_seed2025/case_study/case_outputs/expert_by_rush_hour.png",
+    "expert_per_env_mae": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_env_disentangle_proto_current_prediction_oracle_seed2025/case_study/case_outputs/expert_per_env_mae.csv",
+    "route_intervention_mae": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_env_disentangle_proto_current_prediction_oracle_seed2025/case_study/case_outputs/route_intervention_mae.csv",
+    "env_swap_results": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_env_disentangle_proto_current_prediction_oracle_seed2025/case_study/case_outputs/env_swap_results.csv",
+    "env_swap_boxplot": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_env_disentangle_proto_current_prediction_oracle_seed2025/case_study/case_outputs/env_swap_boxplot.png",
+    "umap_z_inv_by_env.png": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_env_disentangle_proto_current_prediction_oracle_seed2025/case_study/case_outputs/umap_z_inv_by_env.png",
+    "umap_e_env_by_env.png": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_env_disentangle_proto_current_prediction_oracle_seed2025/case_study/case_outputs/umap_e_env_by_env.png",
+    "umap_e_env_by_expert.png": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_env_disentangle_proto_current_prediction_oracle_seed2025/case_study/case_outputs/umap_e_env_by_expert.png",
+    "umap_z_inv_by_hour.png": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_env_disentangle_proto_current_prediction_oracle_seed2025/case_study/case_outputs/umap_z_inv_by_hour.png",
+    "umap_e_env_by_hour.png": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_env_disentangle_proto_current_prediction_oracle_seed2025/case_study/case_outputs/umap_e_env_by_hour.png"
+  }
+}

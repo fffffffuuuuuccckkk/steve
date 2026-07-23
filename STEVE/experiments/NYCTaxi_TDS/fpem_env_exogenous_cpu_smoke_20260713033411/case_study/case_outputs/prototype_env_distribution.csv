@@ -1,0 +1,7 @@
+category_type,category,num_samples,expert_0_count,expert_0_prob,expert_1_count,expert_1_prob,expert_2_count,expert_2_prob
+workday_holiday,workday,4,0,0.0,4,1.0,0,0.0
+hour,15,1,0,0.0,1,1.0,0,0.0
+hour,16,2,0,0.0,2,1.0,0,0.0
+hour,17,1,0,0.0,1,1.0,0,0.0
+rush_hour,non_rush_hour,3,0,0.0,3,1.0,0,0.0
+rush_hour,rush_hour,1,0,0.0,1,1.0,0,0.0

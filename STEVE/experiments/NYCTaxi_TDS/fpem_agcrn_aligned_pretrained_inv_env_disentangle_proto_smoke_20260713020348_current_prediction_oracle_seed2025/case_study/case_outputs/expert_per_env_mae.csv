@@ -1,0 +1,13 @@
+group_type,group,expert,num_group_samples,num_assigned_samples,assigned_final_mae,group_final_mae,expert_head_mae_on_group
+workday_holiday,workday,0,4,0,,166.178466796875,157.31460571289062
+workday_holiday,workday,1,4,0,,166.178466796875,131.76205444335938
+workday_holiday,workday,2,4,4,166.178466796875,166.178466796875,334.9693908691406
+workday_holiday,holiday,0,0,0,,,
+workday_holiday,holiday,1,0,0,,,
+workday_holiday,holiday,2,0,0,,,
+rush_hour,rush_hour,0,1,0,,148.5503387451172,149.54006958007812
+rush_hour,rush_hour,1,1,0,,148.5503387451172,124.58766174316406
+rush_hour,rush_hour,2,1,1,148.5503387451172,148.5503387451172,320.82537841796875
+rush_hour,non_rush_hour,0,3,0,,171.99440002441406,159.8795928955078
+rush_hour,non_rush_hour,1,3,0,,171.99440002441406,134.12904357910156
+rush_hour,non_rush_hour,2,3,3,171.99440002441406,171.99440002441406,339.63580322265625

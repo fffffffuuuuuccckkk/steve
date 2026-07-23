@@ -1,0 +1,13 @@
+{
+  "fpem_backbone": "agcrn",
+  "fpem_env_route_train_mode": "progressive_gmm_environment",
+  "fpem_env_route_head_mode": "hyper_inv_film_proto_input_add",
+  "fpem_env_route_k": 3,
+  "fpem_env_route_use_inv_fallback_expert": false,
+  "fpem_use_env_fusion": false,
+  "fpem_force_uniform_route": false,
+  "has_explicit_identity_route": false,
+  "can_explicitly_choose_no_environment": false,
+  "environment_use_score_available": false,
+  "native_prediction_source_in_summary": "progressive_gmm_teacher_hard"
+}

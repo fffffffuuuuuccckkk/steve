@@ -1,0 +1,4 @@
+case	seed	status	run_name	best_epoch	best_val_loss	test_avg_mae	test_mixed_mae	route_head_mode	fpem_env_route_target_mode	fpem_force_uniform_route	fpem_env_rep_ablation	effective_expert_number	prototype_pairwise_cosine	loss_future_mi	loss_swap	detail
+add_progressive_gmm_kmax3_common020	2024	DRY_RUN	fpem_progressive_gmm_dryrun_add_progressive_gmm_kmax3_common020_seed2024	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	not launched
+add_progressive_gmm_kmax6_common020	2024	DRY_RUN	fpem_progressive_gmm_dryrun_add_progressive_gmm_kmax6_common020_seed2024	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	not launched
+add_progressive_gmm_kmax6_common010	2024	DRY_RUN	fpem_progressive_gmm_dryrun_add_progressive_gmm_kmax6_common010_seed2024	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	not launched

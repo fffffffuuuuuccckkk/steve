@@ -1,0 +1,711 @@
+2026-07-22 08:21:53: Experiment log path in: /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024
+2026-07-22 08:21:53: Experiment configs are: Namespace(seed=2024, device='cuda:0', mode='train', best_path='/home/zhangwt/remote/StableST/experiments/NYCTaxi/20240510-014845/best_model.pth', debug=False, data_dir='/data/OuXiaoyu/STEVE_CODE/STEVE/data', dataset='NYCTaxi_TDS', input_length=35, batch_size=64, test_batch_size=64, graph_file='/data/OuXiaoyu/STEVE_CODE/STEVE/data/NYCTaxi_TDS/adj_mx.npz', num_nodes=200, len_closeness=8, len_period=27, len_trend=0, d_input=2, d_output=2, d_model=64, dropout=0.1, percent=0.1, shm_temp=0.5, nmb_prototype=4, yita=0.5, layers=3, K=64, bank_gamma=0.2, kw=1, mi_w=2, epochs=128, lr_init=0.001, early_stop=True, early_stop_patience=50, grad_norm=True, max_grad_norm=5, use_dwa=True, temp=2, MMI=False, lr_patience=20, lr_mode='only', use_RevIN=True, ablation='all', log_dir='/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024', resume=True, model_impl='steve_original', steve_prediction_mode='full', save_samplewise=True)
+2026-07-22 08:21:53: Resume requested, but no checkpoint found in /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024
+2026-07-22 08:21:53: loss weights: [1. 1. 1.]
+2026-07-22 08:22:05: *******Train Epoch 1: averaged Loss : 95.355103
+2026-07-22 08:22:05: *******Train Epoch 1: averaged lm : -0.000000
+2026-07-22 08:22:05: *******Val Epoch 1: averaged Loss : 60.476649 sep loss : [60.47664928  3.49923843  3.42130131]
+2026-07-22 08:22:05: **************Current 1 model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/epoch1.pth
+2026-07-22 08:22:05: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:22:05: loss weights: [1. 1. 1.]
+2026-07-22 08:22:16: *******Train Epoch 2: averaged Loss : 60.813050
+2026-07-22 08:22:16: *******Train Epoch 2: averaged lm : 0.000286
+2026-07-22 08:22:16: *******Val Epoch 2: averaged Loss : 42.110614 sep loss : [42.11061382  3.48974252  3.24168664]
+2026-07-22 08:22:16: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:22:16: loss weights: [0.8955601 1.0720116 1.0324281]
+2026-07-22 08:22:26: *******Train Epoch 3: averaged Loss : 46.351008
+2026-07-22 08:22:26: *******Train Epoch 3: averaged lm : 0.002032
+2026-07-22 08:22:26: *******Val Epoch 3: averaged Loss : 41.118324 sep loss : [41.11832428  3.4598307   2.82030952]
+2026-07-22 08:22:26: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:22:27: loss weights: [0.9563433  1.0459638  0.99769306]
+2026-07-22 08:22:37: *******Train Epoch 4: averaged Loss : 43.839914
+2026-07-22 08:22:37: *******Train Epoch 4: averaged lm : 0.006976
+2026-07-22 08:22:37: *******Val Epoch 4: averaged Loss : 33.665504 sep loss : [33.66550446  3.41905922  2.4616819 ]
+2026-07-22 08:22:37: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:22:37: loss weights: [0.9870372 1.0380758 0.9748869]
+2026-07-22 08:22:48: *******Train Epoch 5: averaged Loss : 40.603587
+2026-07-22 08:22:48: *******Train Epoch 5: averaged lm : 0.014662
+2026-07-22 08:22:48: *******Val Epoch 5: averaged Loss : 33.413408 sep loss : [33.4134078   3.34718519  2.17461389]
+2026-07-22 08:22:48: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:22:48: loss weights: [0.9905668  1.0346946  0.97473854]
+2026-07-22 08:22:58: *******Train Epoch 6: averaged Loss : 39.222719
+2026-07-22 08:22:58: *******Train Epoch 6: averaged lm : 0.026287
+2026-07-22 08:22:59: *******Val Epoch 6: averaged Loss : 29.446352 sep loss : [29.44635153  3.26071239  2.10266516]
+2026-07-22 08:22:59: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:22:59: loss weights: [1.0041922 1.0114802 0.9843276]
+2026-07-22 08:23:09: *******Train Epoch 7: averaged Loss : 37.589816
+2026-07-22 08:23:09: *******Train Epoch 7: averaged lm : 0.044908
+2026-07-22 08:23:09: *******Val Epoch 7: averaged Loss : 31.084100 sep loss : [31.08409977  3.23834485  2.08462676]
+2026-07-22 08:23:09: loss weights: [0.9892404 1.0044369 1.0063229]
+2026-07-22 08:23:19: *******Train Epoch 8: averaged Loss : 35.299913
+2026-07-22 08:23:19: *******Train Epoch 8: averaged lm : 0.034582
+2026-07-22 08:23:20: *******Val Epoch 8: averaged Loss : 27.444028 sep loss : [27.4440279   3.11680794  2.08504742]
+2026-07-22 08:23:20: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:23:20: loss weights: [0.9850453 1.0028641 1.0120903]
+2026-07-22 08:23:30: *******Train Epoch 9: averaged Loss : 33.709585
+2026-07-22 08:23:30: *******Train Epoch 9: averaged lm : 0.046234
+2026-07-22 08:23:30: *******Val Epoch 9: averaged Loss : 27.204487 sep loss : [27.20448685  3.07485783  2.07897976]
+2026-07-22 08:23:30: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:23:31: loss weights: [0.9897664 0.9984999 1.0117337]
+2026-07-22 08:23:41: *******Train Epoch 10: averaged Loss : 33.129340
+2026-07-22 08:23:41: *******Train Epoch 10: averaged lm : 0.087884
+2026-07-22 08:23:41: *******Val Epoch 10: averaged Loss : 25.896207 sep loss : [25.89620686  2.9408313   2.00132993]
+2026-07-22 08:23:41: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:23:41: loss weights: [0.9998702 0.9996387 1.0004911]
+2026-07-22 08:23:51: *******Train Epoch 11: averaged Loss : 32.237514
+2026-07-22 08:23:51: *******Train Epoch 11: averaged lm : 0.093929
+2026-07-22 08:23:52: *******Val Epoch 11: averaged Loss : 26.549849 sep loss : [26.54984856  2.88289756  1.91862556]
+2026-07-22 08:23:52: loss weights: [1.0004908 1.0029176 0.9965913]
+2026-07-22 08:24:02: *******Train Epoch 12: averaged Loss : 31.534510
+2026-07-22 08:24:02: *******Train Epoch 12: averaged lm : 0.108776
+2026-07-22 08:24:02: *******Val Epoch 12: averaged Loss : 26.435513 sep loss : [26.4355135   2.90456557  1.79637247]
+2026-07-22 08:24:02: loss weights: [1.0037396 1.0071642 0.9890962]
+2026-07-22 08:24:13: *******Train Epoch 13: averaged Loss : 31.174685
+2026-07-22 08:24:13: *******Train Epoch 13: averaged lm : 0.139907
+2026-07-22 08:24:13: *******Val Epoch 13: averaged Loss : 25.761692 sep loss : [25.76169157  2.82467282  1.72032636]
+2026-07-22 08:24:13: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:24:13: loss weights: [1.0068057  1.0093421  0.98385227]
+2026-07-22 08:24:23: *******Train Epoch 14: averaged Loss : 30.412501
+2026-07-22 08:24:23: *******Train Epoch 14: averaged lm : 0.169746
+2026-07-22 08:24:23: *******Val Epoch 14: averaged Loss : 23.840934 sep loss : [23.84093428  2.80250043  1.67097241]
+2026-07-22 08:24:23: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:24:23: loss weights: [1.0003682  1.0045611  0.99507076]
+2026-07-22 08:24:34: *******Train Epoch 15: averaged Loss : 29.866469
+2026-07-22 08:24:34: *******Train Epoch 15: averaged lm : 0.159426
+2026-07-22 08:24:34: *******Val Epoch 15: averaged Loss : 26.539551 sep loss : [26.53955126  2.74365216  1.63982463]
+2026-07-22 08:24:34: loss weights: [0.9985008 1.0078248 0.9936744]
+2026-07-22 08:24:44: *******Train Epoch 16: averaged Loss : 29.791505
+2026-07-22 08:24:44: *******Train Epoch 16: averaged lm : 0.146245
+2026-07-22 08:24:44: *******Val Epoch 16: averaged Loss : 30.230557 sep loss : [30.23055744  3.01276308  1.62020493]
+2026-07-22 08:24:44: **************Current 16 model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/epoch16.pth
+2026-07-22 08:24:45: loss weights: [1.0027232  1.0028777  0.99439913]
+2026-07-22 08:24:55: *******Train Epoch 17: averaged Loss : 30.352457
+2026-07-22 08:24:55: *******Train Epoch 17: averaged lm : 0.195952
+2026-07-22 08:24:55: *******Val Epoch 17: averaged Loss : 24.713269 sep loss : [24.71326876  2.73029798  1.61557066]
+2026-07-22 08:24:55: loss weights: [1.0088009 0.9966172 0.9945817]
+2026-07-22 08:25:05: *******Train Epoch 18: averaged Loss : 29.487736
+2026-07-22 08:25:05: *******Train Epoch 18: averaged lm : 0.200315
+2026-07-22 08:25:06: *******Val Epoch 18: averaged Loss : 25.018175 sep loss : [25.01817465  2.69622922  1.60188961]
+2026-07-22 08:25:06: loss weights: [0.9901347 1.0041058 1.0057595]
+2026-07-22 08:25:16: *******Train Epoch 19: averaged Loss : 28.809521
+2026-07-22 08:25:16: *******Train Epoch 19: averaged lm : 0.218783
+2026-07-22 08:25:16: *******Val Epoch 19: averaged Loss : 24.188959 sep loss : [24.18895912  2.70981449  1.58672881]
+2026-07-22 08:25:16: loss weights: [1.0020688  0.9984564  0.99947476]
+2026-07-22 08:25:26: *******Train Epoch 20: averaged Loss : 28.334391
+2026-07-22 08:25:26: *******Train Epoch 20: averaged lm : 0.259327
+2026-07-22 08:25:27: *******Val Epoch 20: averaged Loss : 26.001186 sep loss : [26.00118589  2.66465175  1.5852522 ]
+2026-07-22 08:25:27: loss weights: [0.99788916 0.9948641  1.0072466 ]
+2026-07-22 08:25:37: *******Train Epoch 21: averaged Loss : 29.024423
+2026-07-22 08:25:37: *******Train Epoch 21: averaged lm : 0.230016
+2026-07-22 08:25:37: *******Val Epoch 21: averaged Loss : 23.627714 sep loss : [23.62771416  2.56992483  1.5723004 ]
+2026-07-22 08:25:37: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:25:37: loss weights: [1.0128201  0.9929854  0.99419457]
+2026-07-22 08:25:48: *******Train Epoch 22: averaged Loss : 28.169336
+2026-07-22 08:25:48: *******Train Epoch 22: averaged lm : 0.104515
+2026-07-22 08:25:48: *******Val Epoch 22: averaged Loss : 23.557210 sep loss : [23.55721045  2.60065532  1.56142917]
+2026-07-22 08:25:48: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:25:48: loss weights: [0.9901303 1.0017409 1.0081288]
+2026-07-22 08:25:58: *******Train Epoch 23: averaged Loss : 27.914602
+2026-07-22 08:25:58: *******Train Epoch 23: averaged lm : 0.004378
+2026-07-22 08:25:59: *******Val Epoch 23: averaged Loss : 25.123223 sep loss : [25.12322283  2.66474032  1.55582443]
+2026-07-22 08:25:59: loss weights: [1.0032911 1.0015649 0.995144 ]
+2026-07-22 08:26:09: *******Train Epoch 24: averaged Loss : 27.998885
+2026-07-22 08:26:09: *******Train Epoch 24: averaged lm : 0.011027
+2026-07-22 08:26:09: *******Val Epoch 24: averaged Loss : 24.925303 sep loss : [24.92530346  2.49429148  1.555509  ]
+2026-07-22 08:26:09: loss weights: [0.99986005 0.9974891  1.002651  ]
+2026-07-22 08:26:19: *******Train Epoch 25: averaged Loss : 27.623322
+2026-07-22 08:26:19: *******Train Epoch 25: averaged lm : 0.012488
+2026-07-22 08:26:20: *******Val Epoch 25: averaged Loss : 23.062949 sep loss : [23.06294918  2.47606325  1.54361242]
+2026-07-22 08:26:20: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:26:20: loss weights: [1.001521  0.9936982 1.0047809]
+2026-07-22 08:26:30: *******Train Epoch 26: averaged Loss : 26.985798
+2026-07-22 08:26:30: *******Train Epoch 26: averaged lm : 0.005894
+2026-07-22 08:26:30: *******Val Epoch 26: averaged Loss : 24.438373 sep loss : [24.43837261  2.42939484  1.5432567 ]
+2026-07-22 08:26:30: loss weights: [0.9926367 1.0028019 1.0045614]
+2026-07-22 08:26:40: *******Train Epoch 27: averaged Loss : 27.020662
+2026-07-22 08:26:40: *******Train Epoch 27: averaged lm : 0.000000
+2026-07-22 08:26:41: *******Val Epoch 27: averaged Loss : 24.595233 sep loss : [24.59523344  2.38694626  1.53236017]
+2026-07-22 08:26:41: loss weights: [1.0078299 0.994373  0.997797 ]
+2026-07-22 08:26:51: *******Train Epoch 28: averaged Loss : 26.770868
+2026-07-22 08:26:51: *******Train Epoch 28: averaged lm : -0.000000
+2026-07-22 08:26:51: *******Val Epoch 28: averaged Loss : 23.535826 sep loss : [23.53582573  2.32851177  1.52493528]
+2026-07-22 08:26:51: loss weights: [0.9955467 1.001007  1.0034462]
+2026-07-22 08:27:02: *******Train Epoch 29: averaged Loss : 28.439108
+2026-07-22 08:27:02: *******Train Epoch 29: averaged lm : 0.000000
+2026-07-22 08:27:02: *******Val Epoch 29: averaged Loss : 25.745378 sep loss : [25.74537849  2.40785486  1.52340418]
+2026-07-22 08:27:02: loss weights: [1.0250936  0.9908594  0.98404723]
+2026-07-22 08:27:12: *******Train Epoch 30: averaged Loss : 27.683963
+2026-07-22 08:27:12: *******Train Epoch 30: averaged lm : 0.000031
+2026-07-22 08:27:13: *******Val Epoch 30: averaged Loss : 22.802472 sep loss : [22.80247164  2.33839875  1.51797071]
+2026-07-22 08:27:13: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:27:13: loss weights: [0.9872044 1.0021864 1.0106093]
+2026-07-22 08:27:23: *******Train Epoch 31: averaged Loss : 26.062313
+2026-07-22 08:27:23: *******Train Epoch 31: averaged lm : -0.000000
+2026-07-22 08:27:23: *******Val Epoch 31: averaged Loss : 25.075653 sep loss : [25.07565308  2.37353665  1.52925092]
+2026-07-22 08:27:23: loss weights: [0.9947271 0.9921731 1.0130999]
+2026-07-22 08:27:33: *******Train Epoch 32: averaged Loss : 25.678338
+2026-07-22 08:27:33: *******Train Epoch 32: averaged lm : 0.000000
+2026-07-22 08:27:34: *******Val Epoch 32: averaged Loss : 23.396165 sep loss : [23.39616537  2.33184975  1.52779761]
+2026-07-22 08:27:34: **************Current 32 model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/epoch32.pth
+2026-07-22 08:27:34: loss weights: [0.99436426 1.0031285  1.0025071 ]
+2026-07-22 08:27:44: *******Train Epoch 33: averaged Loss : 25.785676
+2026-07-22 08:27:44: *******Train Epoch 33: averaged lm : -0.000000
+2026-07-22 08:27:44: *******Val Epoch 33: averaged Loss : 25.898823 sep loss : [25.89882326  2.23373917  1.54213578]
+2026-07-22 08:27:44: loss weights: [1.0039864 0.9933291 1.0026846]
+2026-07-22 08:27:55: *******Train Epoch 34: averaged Loss : 25.333724
+2026-07-22 08:27:55: *******Train Epoch 34: averaged lm : 0.000000
+2026-07-22 08:27:55: *******Val Epoch 34: averaged Loss : 22.576550 sep loss : [22.57655048  2.19631994  1.52200726]
+2026-07-22 08:27:55: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:27:55: loss weights: [0.99593234 0.9950092  1.0090582 ]
+2026-07-22 08:28:05: *******Train Epoch 35: averaged Loss : 25.628952
+2026-07-22 08:28:05: *******Train Epoch 35: averaged lm : -0.000000
+2026-07-22 08:28:06: *******Val Epoch 35: averaged Loss : 23.134175 sep loss : [23.13417482  2.15366992  1.53996444]
+2026-07-22 08:28:06: loss weights: [1.0049694  0.9955857  0.99944496]
+2026-07-22 08:28:16: *******Train Epoch 36: averaged Loss : 24.956381
+2026-07-22 08:28:16: *******Train Epoch 36: averaged lm : 0.000000
+2026-07-22 08:28:16: *******Val Epoch 36: averaged Loss : 23.955658 sep loss : [23.95565796  2.19430816  1.56705651]
+2026-07-22 08:28:16: loss weights: [0.99218726 0.9960897  1.011723  ]
+2026-07-22 08:28:26: *******Train Epoch 37: averaged Loss : 25.288659
+2026-07-22 08:28:26: *******Train Epoch 37: averaged lm : -0.000030
+2026-07-22 08:28:27: *******Val Epoch 37: averaged Loss : 23.219169 sep loss : [23.21916866  2.11934915  1.56751937]
+2026-07-22 08:28:27: loss weights: [1.0056287 0.9957141 0.9986571]
+2026-07-22 08:28:37: *******Train Epoch 38: averaged Loss : 24.711854
+2026-07-22 08:28:37: *******Train Epoch 38: averaged lm : 0.000267
+2026-07-22 08:28:37: *******Val Epoch 38: averaged Loss : 22.675593 sep loss : [22.67559338  2.2161786   1.58317634]
+2026-07-22 08:28:37: loss weights: [0.99172354 0.9937116  1.0145649 ]
+2026-07-22 08:28:48: *******Train Epoch 39: averaged Loss : 25.613807
+2026-07-22 08:28:48: *******Train Epoch 39: averaged lm : 0.000000
+2026-07-22 08:28:48: *******Val Epoch 39: averaged Loss : 25.344172 sep loss : [25.344172    2.39560956  1.59244832]
+2026-07-22 08:28:48: loss weights: [1.0162954 0.9927577 0.9909469]
+2026-07-22 08:28:58: *******Train Epoch 40: averaged Loss : 25.563307
+2026-07-22 08:28:58: *******Train Epoch 40: averaged lm : 0.000000
+2026-07-22 08:28:58: *******Val Epoch 40: averaged Loss : 22.713471 sep loss : [22.71347094  2.2431891   1.61415792]
+2026-07-22 08:28:59: loss weights: [0.9900279 1.0018554 1.0081166]
+2026-07-22 08:29:09: *******Train Epoch 41: averaged Loss : 24.224970
+2026-07-22 08:29:09: *******Train Epoch 41: averaged lm : -0.000000
+2026-07-22 08:29:09: *******Val Epoch 41: averaged Loss : 23.574078 sep loss : [23.57407808  2.02811164  1.64099503]
+2026-07-22 08:29:09: loss weights: [0.9940623 0.9906516 1.0152861]
+2026-07-22 08:29:19: *******Train Epoch 42: averaged Loss : 24.115622
+2026-07-22 08:29:19: *******Train Epoch 42: averaged lm : -0.000000
+2026-07-22 08:29:20: *******Val Epoch 42: averaged Loss : 22.322297 sep loss : [22.32229662  2.00210106  1.64039424]
+2026-07-22 08:29:20: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:29:20: loss weights: [0.9979358  0.99462736 1.0074366 ]
+2026-07-22 08:29:30: *******Train Epoch 43: averaged Loss : 23.719053
+2026-07-22 08:29:30: *******Train Epoch 43: averaged lm : 0.000001
+2026-07-22 08:29:30: *******Val Epoch 43: averaged Loss : 22.060939 sep loss : [22.06093884  1.97657621  1.66090271]
+2026-07-22 08:29:30: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:29:30: loss weights: [0.9928601  0.99722195 1.009918  ]
+2026-07-22 08:29:40: *******Train Epoch 44: averaged Loss : 23.871156
+2026-07-22 08:29:40: *******Train Epoch 44: averaged lm : 0.000000
+2026-07-22 08:29:41: *******Val Epoch 44: averaged Loss : 22.483354 sep loss : [22.48335361  1.9898181   1.65772235]
+2026-07-22 08:29:41: loss weights: [1.0016596 0.995507  1.0028334]
+2026-07-22 08:29:51: *******Train Epoch 45: averaged Loss : 23.606310
+2026-07-22 08:29:51: *******Train Epoch 45: averaged lm : 0.000000
+2026-07-22 08:29:51: *******Val Epoch 45: averaged Loss : 22.828456 sep loss : [22.8284564   2.09045789  1.66501674]
+2026-07-22 08:29:51: loss weights: [0.99494743 0.9989736  1.0060787 ]
+2026-07-22 08:30:02: *******Train Epoch 46: averaged Loss : 23.168001
+2026-07-22 08:30:02: *******Train Epoch 46: averaged lm : -0.000000
+2026-07-22 08:30:02: *******Val Epoch 46: averaged Loss : 22.473351 sep loss : [22.47335148  2.23589084  1.66786408]
+2026-07-22 08:30:02: loss weights: [1.0031149  0.98657346 1.0103115 ]
+2026-07-22 08:30:12: *******Train Epoch 47: averaged Loss : 23.446913
+2026-07-22 08:30:12: *******Train Epoch 47: averaged lm : -0.000328
+2026-07-22 08:30:13: *******Val Epoch 47: averaged Loss : 22.941116 sep loss : [22.94111586  2.06399271  1.65102509]
+2026-07-22 08:30:13: loss weights: [0.99792284 1.0084139  0.9936633 ]
+2026-07-22 08:30:23: *******Train Epoch 48: averaged Loss : 23.142658
+2026-07-22 08:30:23: *******Train Epoch 48: averaged lm : -0.000080
+2026-07-22 08:30:23: *******Val Epoch 48: averaged Loss : 22.669072 sep loss : [22.66907215  2.04883218  1.64442837]
+2026-07-22 08:30:23: loss weights: [1.005552   0.99123096 1.0032169 ]
+2026-07-22 08:30:33: *******Train Epoch 49: averaged Loss : 22.743139
+2026-07-22 08:30:33: *******Train Epoch 49: averaged lm : -0.000000
+2026-07-22 08:30:34: *******Val Epoch 49: averaged Loss : 23.565156 sep loss : [23.56515551  1.88236135  1.65389022]
+2026-07-22 08:30:34: loss weights: [0.9938831  0.99611664 1.0100002 ]
+2026-07-22 08:30:44: *******Train Epoch 50: averaged Loss : 22.870890
+2026-07-22 08:30:44: *******Train Epoch 50: averaged lm : 0.000062
+2026-07-22 08:30:44: *******Val Epoch 50: averaged Loss : 21.358811 sep loss : [21.35881138  1.82900292  1.63448671]
+2026-07-22 08:30:44: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:30:44: loss weights: [1.0046647  1.0019561  0.99337924]
+2026-07-22 08:30:55: *******Train Epoch 51: averaged Loss : 22.713860
+2026-07-22 08:30:55: *******Train Epoch 51: averaged lm : 0.000105
+2026-07-22 08:30:55: *******Val Epoch 51: averaged Loss : 21.697935 sep loss : [21.69793463  1.80387455  1.63562223]
+2026-07-22 08:30:55: loss weights: [0.99905074 0.99589014 1.005059  ]
+2026-07-22 08:31:05: *******Train Epoch 52: averaged Loss : 22.295400
+2026-07-22 08:31:05: *******Train Epoch 52: averaged lm : 0.000000
+2026-07-22 08:31:05: *******Val Epoch 52: averaged Loss : 21.955140 sep loss : [21.95514011  1.75810033  1.61304337]
+2026-07-22 08:31:05: loss weights: [0.9995377 0.9980537 1.0024084]
+2026-07-22 08:31:16: *******Train Epoch 53: averaged Loss : 22.238886
+2026-07-22 08:31:16: *******Train Epoch 53: averaged lm : 0.000000
+2026-07-22 08:31:16: *******Val Epoch 53: averaged Loss : 21.373776 sep loss : [21.37377644  1.72935918  1.6143446 ]
+2026-07-22 08:31:16: loss weights: [1.0054505  0.99032295 1.0042264 ]
+2026-07-22 08:31:26: *******Train Epoch 54: averaged Loss : 22.156018
+2026-07-22 08:31:26: *******Train Epoch 54: averaged lm : 0.000000
+2026-07-22 08:31:26: *******Val Epoch 54: averaged Loss : 21.776331 sep loss : [21.77633095  1.77576214  1.6157687 ]
+2026-07-22 08:31:26: loss weights: [1.0000598 0.9974636 1.0024768]
+2026-07-22 08:31:37: *******Train Epoch 55: averaged Loss : 22.066355
+2026-07-22 08:31:37: *******Train Epoch 55: averaged lm : -0.000000
+2026-07-22 08:31:37: *******Val Epoch 55: averaged Loss : 21.561079 sep loss : [21.56107855  1.84109288  1.60046971]
+2026-07-22 08:31:37: loss weights: [0.99822116 1.0046086  0.99717003]
+2026-07-22 08:31:47: *******Train Epoch 56: averaged Loss : 21.601202
+2026-07-22 08:31:47: *******Train Epoch 56: averaged lm : -0.000000
+2026-07-22 08:31:47: *******Val Epoch 56: averaged Loss : 20.937145 sep loss : [20.93714523  1.71725085  1.59689623]
+2026-07-22 08:31:47: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:31:48: loss weights: [0.9972756  0.99756396 1.0051606 ]
+2026-07-22 08:31:58: *******Train Epoch 57: averaged Loss : 21.633347
+2026-07-22 08:31:58: *******Train Epoch 57: averaged lm : -0.000000
+2026-07-22 08:31:58: *******Val Epoch 57: averaged Loss : 20.965805 sep loss : [20.96580505  1.86024505  1.57684144]
+2026-07-22 08:31:58: loss weights: [1.0061636  0.99420595 0.9996306 ]
+2026-07-22 08:32:08: *******Train Epoch 58: averaged Loss : 21.373975
+2026-07-22 08:32:08: *******Train Epoch 58: averaged lm : -0.000000
+2026-07-22 08:32:09: *******Val Epoch 58: averaged Loss : 20.502603 sep loss : [20.50260305  1.74754912  1.56805038]
+2026-07-22 08:32:09: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:32:09: loss weights: [0.9963493 1.0009598 1.002691 ]
+2026-07-22 08:32:19: *******Train Epoch 59: averaged Loss : 21.442169
+2026-07-22 08:32:19: *******Train Epoch 59: averaged lm : 0.000000
+2026-07-22 08:32:19: *******Val Epoch 59: averaged Loss : 20.722450 sep loss : [20.72245026  1.80605122  1.56192911]
+2026-07-22 08:32:19: loss weights: [1.0065054  0.9954412  0.99805355]
+2026-07-22 08:32:29: *******Train Epoch 60: averaged Loss : 21.128278
+2026-07-22 08:32:29: *******Train Epoch 60: averaged lm : 0.000000
+2026-07-22 08:32:30: *******Val Epoch 60: averaged Loss : 21.596987 sep loss : [21.59698677  1.74186194  1.56798062]
+2026-07-22 08:32:30: loss weights: [0.9961102  0.99723065 1.006659  ]
+2026-07-22 08:32:40: *******Train Epoch 61: averaged Loss : 20.551421
+2026-07-22 08:32:40: *******Train Epoch 61: averaged lm : 0.000000
+2026-07-22 08:32:40: *******Val Epoch 61: averaged Loss : 20.742958 sep loss : [20.74295759  1.73170742  1.56229031]
+2026-07-22 08:32:40: loss weights: [0.99606705 0.99989915 1.0040338 ]
+2026-07-22 08:32:51: *******Train Epoch 62: averaged Loss : 20.645159
+2026-07-22 08:32:51: *******Train Epoch 62: averaged lm : -0.000000
+2026-07-22 08:32:51: *******Val Epoch 62: averaged Loss : 20.254848 sep loss : [20.25484753  1.66862205  1.54709005]
+2026-07-22 08:32:51: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:32:51: loss weights: [1.0032976 0.9993503 0.9973521]
+2026-07-22 08:33:01: *******Train Epoch 63: averaged Loss : 20.677387
+2026-07-22 08:33:01: *******Train Epoch 63: averaged lm : 0.000000
+2026-07-22 08:33:02: *******Val Epoch 63: averaged Loss : 20.204908 sep loss : [20.20490837  1.96336156  1.53729749]
+2026-07-22 08:33:02: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:33:02: loss weights: [0.99671197 1.0052865  0.9980016 ]
+2026-07-22 08:33:12: *******Train Epoch 64: averaged Loss : 20.582707
+2026-07-22 08:33:12: *******Train Epoch 64: averaged lm : 0.000000
+2026-07-22 08:33:12: *******Val Epoch 64: averaged Loss : 19.660960 sep loss : [19.66095972  1.64442575  1.53755113]
+2026-07-22 08:33:12: **************Current 64 model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/epoch64.pth
+2026-07-22 08:33:12: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:33:12: loss weights: [1.0064689 0.9893576 1.0041736]
+2026-07-22 08:33:23: *******Train Epoch 65: averaged Loss : 20.325569
+2026-07-22 08:33:23: *******Train Epoch 65: averaged lm : -0.000000
+2026-07-22 08:33:23: *******Val Epoch 65: averaged Loss : 19.663340 sep loss : [19.66334009  1.70553112  1.53517449]
+2026-07-22 08:33:23: loss weights: [0.99587166 0.99783957 1.0062888 ]
+2026-07-22 08:33:33: *******Train Epoch 66: averaged Loss : 20.413587
+2026-07-22 08:33:33: *******Train Epoch 66: averaged lm : -0.000000
+2026-07-22 08:33:33: *******Val Epoch 66: averaged Loss : 19.152757 sep loss : [19.15275717  1.71839336  1.52464807]
+2026-07-22 08:33:33: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:33:33: loss weights: [1.0035058  1.0035537  0.99294007]
+2026-07-22 08:33:44: *******Train Epoch 67: averaged Loss : 20.100307
+2026-07-22 08:33:44: *******Train Epoch 67: averaged lm : 0.000000
+2026-07-22 08:33:44: *******Val Epoch 67: averaged Loss : 19.249520 sep loss : [19.2495203   1.66528139  1.52979377]
+2026-07-22 08:33:44: loss weights: [0.997856   0.99534595 1.006798  ]
+2026-07-22 08:33:54: *******Train Epoch 68: averaged Loss : 20.032132
+2026-07-22 08:33:54: *******Train Epoch 68: averaged lm : -0.000000
+2026-07-22 08:33:54: *******Val Epoch 68: averaged Loss : 19.050925 sep loss : [19.05092478  1.60817474  1.53871733]
+2026-07-22 08:33:54: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:33:55: loss weights: [0.99748456 1.0018735  1.0006418 ]
+2026-07-22 08:34:05: *******Train Epoch 69: averaged Loss : 19.616503
+2026-07-22 08:34:05: *******Train Epoch 69: averaged lm : -0.000000
+2026-07-22 08:34:05: *******Val Epoch 69: averaged Loss : 18.350886 sep loss : [18.35088634  1.59035417  1.52308762]
+2026-07-22 08:34:05: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:34:05: loss weights: [0.9989878  0.99155635 1.0094559 ]
+2026-07-22 08:34:15: *******Train Epoch 70: averaged Loss : 20.075701
+2026-07-22 08:34:15: *******Train Epoch 70: averaged lm : 0.000000
+2026-07-22 08:34:16: *******Val Epoch 70: averaged Loss : 18.103948 sep loss : [18.10394764  1.62577224  1.51253814]
+2026-07-22 08:34:16: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:34:16: loss weights: [0.99907446 1.0145991  0.98632634]
+2026-07-22 08:34:26: *******Train Epoch 71: averaged Loss : 19.730705
+2026-07-22 08:34:26: *******Train Epoch 71: averaged lm : 0.000000
+2026-07-22 08:34:26: *******Val Epoch 71: averaged Loss : 18.192327 sep loss : [18.19232655  1.62158307  1.51674214]
+2026-07-22 08:34:26: loss weights: [0.9964993  0.99879515 1.0047054 ]
+2026-07-22 08:34:36: *******Train Epoch 72: averaged Loss : 19.197221
+2026-07-22 08:34:36: *******Train Epoch 72: averaged lm : 0.000000
+2026-07-22 08:34:37: *******Val Epoch 72: averaged Loss : 18.248613 sep loss : [18.24861312  1.7925283   1.54800242]
+2026-07-22 08:34:37: loss weights: [0.99630994 0.98787546 1.0158145 ]
+2026-07-22 08:34:47: *******Train Epoch 73: averaged Loss : 19.140179
+2026-07-22 08:34:47: *******Train Epoch 73: averaged lm : -0.000000
+2026-07-22 08:34:47: *******Val Epoch 73: averaged Loss : 18.611085 sep loss : [18.61108518  1.61777097  1.52207425]
+2026-07-22 08:34:47: loss weights: [1.0010452 0.9997406 0.9992142]
+2026-07-22 08:34:57: *******Train Epoch 74: averaged Loss : 19.326839
+2026-07-22 08:34:57: *******Train Epoch 74: averaged lm : -0.000000
+2026-07-22 08:34:58: *******Val Epoch 74: averaged Loss : 18.562796 sep loss : [18.56279564  1.90029466  1.52750626]
+2026-07-22 08:34:58: loss weights: [0.9932287  1.0181714  0.98859984]
+2026-07-22 08:35:08: *******Train Epoch 75: averaged Loss : 18.710724
+2026-07-22 08:35:08: *******Train Epoch 75: averaged lm : -0.000000
+2026-07-22 08:35:08: *******Val Epoch 75: averaged Loss : 17.744045 sep loss : [17.74404526  1.65657723  1.5288614 ]
+2026-07-22 08:35:08: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:35:08: loss weights: [1.010444  0.9665174 1.0230387]
+2026-07-22 08:35:19: *******Train Epoch 76: averaged Loss : 18.735909
+2026-07-22 08:35:19: *******Train Epoch 76: averaged lm : 0.000000
+2026-07-22 08:35:19: *******Val Epoch 76: averaged Loss : 17.712513 sep loss : [17.71251345  1.64553738  1.5269894 ]
+2026-07-22 08:35:19: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:35:19: loss weights: [0.9978681 0.9976203 1.0045116]
+2026-07-22 08:35:29: *******Train Epoch 77: averaged Loss : 18.228838
+2026-07-22 08:35:29: *******Train Epoch 77: averaged lm : -0.000000
+2026-07-22 08:35:29: *******Val Epoch 77: averaged Loss : 17.608191 sep loss : [17.60819077  1.68318906  1.51395869]
+2026-07-22 08:35:29: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:35:30: loss weights: [0.99234533 1.0080318  0.99962294]
+2026-07-22 08:35:40: *******Train Epoch 78: averaged Loss : 18.080698
+2026-07-22 08:35:40: *******Train Epoch 78: averaged lm : -0.000000
+2026-07-22 08:35:40: *******Val Epoch 78: averaged Loss : 17.889856 sep loss : [17.88985634  1.68551004  1.50572759]
+2026-07-22 08:35:40: loss weights: [1.0060813  0.99326766 1.000651  ]
+2026-07-22 08:35:50: *******Train Epoch 79: averaged Loss : 18.284459
+2026-07-22 08:35:50: *******Train Epoch 79: averaged lm : 0.000000
+2026-07-22 08:35:51: *******Val Epoch 79: averaged Loss : 17.314321 sep loss : [17.31432056  1.62738249  1.49234596]
+2026-07-22 08:35:51: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:35:51: loss weights: [0.9919388 1.0150267 0.9930344]
+2026-07-22 08:36:01: *******Train Epoch 80: averaged Loss : 17.927037
+2026-07-22 08:36:01: *******Train Epoch 80: averaged lm : -0.000000
+2026-07-22 08:36:01: *******Val Epoch 80: averaged Loss : 17.191100 sep loss : [17.19110012  1.76404598  1.48738018]
+2026-07-22 08:36:01: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:36:01: loss weights: [1.000965  0.99508   1.0039551]
+2026-07-22 08:36:12: *******Train Epoch 81: averaged Loss : 17.793606
+2026-07-22 08:36:12: *******Train Epoch 81: averaged lm : 0.000000
+2026-07-22 08:36:12: *******Val Epoch 81: averaged Loss : 16.293982 sep loss : [16.29398179  1.54883301  1.48618588]
+2026-07-22 08:36:12: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:36:12: loss weights: [0.9985069  0.99648696 1.0050061 ]
+2026-07-22 08:36:22: *******Train Epoch 82: averaged Loss : 17.789570
+2026-07-22 08:36:22: *******Train Epoch 82: averaged lm : -0.000000
+2026-07-22 08:36:22: *******Val Epoch 82: averaged Loss : 17.584059 sep loss : [17.58405924  1.73224121  1.4815703 ]
+2026-07-22 08:36:22: loss weights: [0.9993905 1.0030533 0.9975562]
+2026-07-22 08:36:33: *******Train Epoch 83: averaged Loss : 17.407666
+2026-07-22 08:36:33: *******Train Epoch 83: averaged lm : -0.000000
+2026-07-22 08:36:33: *******Val Epoch 83: averaged Loss : 16.001512 sep loss : [16.00151205  1.70235428  1.47649416]
+2026-07-22 08:36:33: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:36:33: loss weights: [1.0043532 0.9840143 1.0116323]
+2026-07-22 08:36:43: *******Train Epoch 84: averaged Loss : 17.250852
+2026-07-22 08:36:43: *******Train Epoch 84: averaged lm : -0.000000
+2026-07-22 08:36:43: *******Val Epoch 84: averaged Loss : 15.863472 sep loss : [15.86347151  1.51914537  1.47315967]
+2026-07-22 08:36:43: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:36:44: loss weights: [0.9970014  0.99984574 1.0031528 ]
+2026-07-22 08:36:54: *******Train Epoch 85: averaged Loss : 17.328440
+2026-07-22 08:36:54: *******Train Epoch 85: averaged lm : 0.000000
+2026-07-22 08:36:54: *******Val Epoch 85: averaged Loss : 16.584506 sep loss : [16.58450603  1.57172719  1.47897074]
+2026-07-22 08:36:54: loss weights: [0.9992608 1.0048742 0.9958651]
+2026-07-22 08:37:04: *******Train Epoch 86: averaged Loss : 17.295118
+2026-07-22 08:37:04: *******Train Epoch 86: averaged lm : 0.000000
+2026-07-22 08:37:05: *******Val Epoch 86: averaged Loss : 15.974954 sep loss : [15.97495413  1.58203909  1.47936922]
+2026-07-22 08:37:05: loss weights: [0.99461335 1.0060819  0.9993047 ]
+2026-07-22 08:37:15: *******Train Epoch 87: averaged Loss : 17.266009
+2026-07-22 08:37:15: *******Train Epoch 87: averaged lm : -0.000000
+2026-07-22 08:37:15: *******Val Epoch 87: averaged Loss : 16.843724 sep loss : [16.84372425  1.7861557   1.47910011]
+2026-07-22 08:37:15: loss weights: [1.0002067 0.9995073 1.0002859]
+2026-07-22 08:37:25: *******Train Epoch 88: averaged Loss : 17.153407
+2026-07-22 08:37:25: *******Train Epoch 88: averaged lm : 0.000000
+2026-07-22 08:37:26: *******Val Epoch 88: averaged Loss : 15.504195 sep loss : [15.50419497  1.64116505  1.47235009]
+2026-07-22 08:37:26: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:37:26: loss weights: [0.99510205 1.0027207  1.0021774 ]
+2026-07-22 08:37:36: *******Train Epoch 89: averaged Loss : 16.693229
+2026-07-22 08:37:36: *******Train Epoch 89: averaged lm : 0.000000
+2026-07-22 08:37:36: *******Val Epoch 89: averaged Loss : 15.568705 sep loss : [15.56870461  1.53513077  1.48316425]
+2026-07-22 08:37:36: loss weights: [0.9978708 0.9930452 1.009084 ]
+2026-07-22 08:37:47: *******Train Epoch 90: averaged Loss : 16.708682
+2026-07-22 08:37:47: *******Train Epoch 90: averaged lm : -0.000000
+2026-07-22 08:37:47: *******Val Epoch 90: averaged Loss : 15.860041 sep loss : [15.86004066  1.54959726  1.45522442]
+2026-07-22 08:37:47: loss weights: [0.98755884 1.0231769  0.98926425]
+2026-07-22 08:37:57: *******Train Epoch 91: averaged Loss : 16.406751
+2026-07-22 08:37:57: *******Train Epoch 91: averaged lm : -0.000000
+2026-07-22 08:37:58: *******Val Epoch 91: averaged Loss : 15.515633 sep loss : [15.51563334  1.46501306  1.4381741 ]
+2026-07-22 08:37:58: loss weights: [1.014509  0.9774139 1.0080774]
+2026-07-22 08:38:08: *******Train Epoch 92: averaged Loss : 16.981360
+2026-07-22 08:38:08: *******Train Epoch 92: averaged lm : -0.000000
+2026-07-22 08:38:08: *******Val Epoch 92: averaged Loss : 15.227933 sep loss : [15.22793293  1.49356291  1.42154062]
+2026-07-22 08:38:08: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:38:08: loss weights: [1.0121685  0.9883095  0.99952215]
+2026-07-22 08:38:18: *******Train Epoch 93: averaged Loss : 16.208571
+2026-07-22 08:38:18: *******Train Epoch 93: averaged lm : 0.000000
+2026-07-22 08:38:19: *******Val Epoch 93: averaged Loss : 15.160889 sep loss : [15.16088915  1.40251246  1.40882081]
+2026-07-22 08:38:19: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:38:19: loss weights: [0.9944047 0.9958672 1.0097282]
+2026-07-22 08:38:29: *******Train Epoch 94: averaged Loss : 15.996613
+2026-07-22 08:38:29: *******Train Epoch 94: averaged lm : 0.000000
+2026-07-22 08:38:29: *******Val Epoch 94: averaged Loss : 14.986602 sep loss : [14.98660231  1.60629877  1.41265237]
+2026-07-22 08:38:29: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:38:29: loss weights: [1.000283   1.0047959  0.99492085]
+2026-07-22 08:38:39: *******Train Epoch 95: averaged Loss : 16.227498
+2026-07-22 08:38:39: *******Train Epoch 95: averaged lm : -0.000000
+2026-07-22 08:38:40: *******Val Epoch 95: averaged Loss : 15.391082 sep loss : [15.39108157  1.36969617  1.41057828]
+2026-07-22 08:38:40: loss weights: [0.9921435  1.0151227  0.99273396]
+2026-07-22 08:38:50: *******Train Epoch 96: averaged Loss : 15.954918
+2026-07-22 08:38:50: *******Train Epoch 96: averaged lm : 0.000000
+2026-07-22 08:38:50: *******Val Epoch 96: averaged Loss : 14.770047 sep loss : [14.77004719  1.42481136  1.38709566]
+2026-07-22 08:38:50: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:38:50: loss weights: [1.0124494  0.97816133 1.0093892 ]
+2026-07-22 08:39:01: *******Train Epoch 97: averaged Loss : 16.360058
+2026-07-22 08:39:01: *******Train Epoch 97: averaged lm : -0.000000
+2026-07-22 08:39:01: *******Val Epoch 97: averaged Loss : 14.631510 sep loss : [14.63151026  1.47246963  1.38489005]
+2026-07-22 08:39:01: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:39:01: loss weights: [1.0032401 1.0034822 0.9932776]
+2026-07-22 08:39:11: *******Train Epoch 98: averaged Loss : 15.923992
+2026-07-22 08:39:11: *******Train Epoch 98: averaged lm : -0.000000
+2026-07-22 08:39:11: *******Val Epoch 98: averaged Loss : 15.001314 sep loss : [15.00131369  1.41398996  1.39781731]
+2026-07-22 08:39:11: loss weights: [0.9922817 1.0031078 1.0046105]
+2026-07-22 08:39:22: *******Train Epoch 99: averaged Loss : 15.590552
+2026-07-22 08:39:22: *******Train Epoch 99: averaged lm : -0.000000
+2026-07-22 08:39:22: *******Val Epoch 99: averaged Loss : 15.073684 sep loss : [15.07368445  1.49525166  1.38142228]
+2026-07-22 08:39:22: loss weights: [0.9999907 0.9965527 1.0034564]
+2026-07-22 08:39:32: *******Train Epoch 100: averaged Loss : 15.698127
+2026-07-22 08:39:32: *******Train Epoch 100: averaged lm : 0.000000
+2026-07-22 08:39:33: *******Val Epoch 100: averaged Loss : 14.646173 sep loss : [14.64617324  1.51225087  1.40160233]
+2026-07-22 08:39:33: loss weights: [1.0004128 1.0029799 0.9966074]
+2026-07-22 08:39:43: *******Train Epoch 101: averaged Loss : 15.553158
+2026-07-22 08:39:43: *******Train Epoch 101: averaged lm : -0.000000
+2026-07-22 08:39:43: *******Val Epoch 101: averaged Loss : 14.090843 sep loss : [14.0908432   1.43799049  1.38519928]
+2026-07-22 08:39:43: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:39:43: loss weights: [0.99968946 0.99179614 1.0085143 ]
+2026-07-22 08:39:53: *******Train Epoch 102: averaged Loss : 15.300259
+2026-07-22 08:39:53: *******Train Epoch 102: averaged lm : 0.000000
+2026-07-22 08:39:54: *******Val Epoch 102: averaged Loss : 14.540408 sep loss : [14.54040813  1.46076319  1.38391283]
+2026-07-22 08:39:54: loss weights: [0.99940664 0.9944166  1.0061767 ]
+2026-07-22 08:40:04: *******Train Epoch 103: averaged Loss : 15.491300
+2026-07-22 08:40:04: *******Train Epoch 103: averaged lm : -0.000000
+2026-07-22 08:40:04: *******Val Epoch 103: averaged Loss : 14.414504 sep loss : [14.41450405  1.59859809  1.39387721]
+2026-07-22 08:40:04: loss weights: [1.001538  1.002354  0.9961079]
+2026-07-22 08:40:14: *******Train Epoch 104: averaged Loss : 15.303058
+2026-07-22 08:40:14: *******Train Epoch 104: averaged lm : -0.000000
+2026-07-22 08:40:15: *******Val Epoch 104: averaged Loss : 14.626124 sep loss : [14.62612367  1.35913292  1.39000171]
+2026-07-22 08:40:15: loss weights: [0.9993143  0.99651515 1.0041707 ]
+2026-07-22 08:40:25: *******Train Epoch 105: averaged Loss : 15.074387
+2026-07-22 08:40:25: *******Train Epoch 105: averaged lm : -0.000000
+2026-07-22 08:40:25: *******Val Epoch 105: averaged Loss : 14.091416 sep loss : [14.09141564  1.50856218  1.38897011]
+2026-07-22 08:40:25: loss weights: [1.0004301  0.99506617 1.0045037 ]
+2026-07-22 08:40:36: *******Train Epoch 106: averaged Loss : 15.651313
+2026-07-22 08:40:36: *******Train Epoch 106: averaged lm : -0.000009
+2026-07-22 08:40:36: *******Val Epoch 106: averaged Loss : 15.187922 sep loss : [15.18792176  1.3963227   1.38266188]
+2026-07-22 08:40:36: loss weights: [1.0035809 1.0077758 0.9886433]
+2026-07-22 08:40:46: *******Train Epoch 107: averaged Loss : 15.615101
+2026-07-22 08:40:46: *******Train Epoch 107: averaged lm : -0.000000
+2026-07-22 08:40:46: *******Val Epoch 107: averaged Loss : 13.929101 sep loss : [13.92910075  1.499345    1.37842456]
+2026-07-22 08:40:46: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:40:47: loss weights: [0.9999399  0.99934757 1.0007125 ]
+2026-07-22 08:40:57: *******Train Epoch 108: averaged Loss : 15.023611
+2026-07-22 08:40:57: *******Train Epoch 108: averaged lm : -0.000000
+2026-07-22 08:40:57: *******Val Epoch 108: averaged Loss : 14.057232 sep loss : [14.05723214  1.4295519   1.39318818]
+2026-07-22 08:40:57: loss weights: [0.9972887  0.98851466 1.0141968 ]
+2026-07-22 08:41:07: *******Train Epoch 109: averaged Loss : 14.999926
+2026-07-22 08:41:07: *******Train Epoch 109: averaged lm : 0.000000
+2026-07-22 08:41:07: *******Val Epoch 109: averaged Loss : 13.892497 sep loss : [13.89249682  1.43117535  1.38982105]
+2026-07-22 08:41:07: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:41:08: loss weights: [1.0012581  0.99775004 1.0009921 ]
+2026-07-22 08:41:18: *******Train Epoch 110: averaged Loss : 14.954683
+2026-07-22 08:41:18: *******Train Epoch 110: averaged lm : -0.000000
+2026-07-22 08:41:18: *******Val Epoch 110: averaged Loss : 14.311523 sep loss : [14.31152344  1.82196397  1.43548733]
+2026-07-22 08:41:18: loss weights: [0.9973471  0.99218273 1.0104702 ]
+2026-07-22 08:41:28: *******Train Epoch 111: averaged Loss : 14.956945
+2026-07-22 08:41:28: *******Train Epoch 111: averaged lm : 0.000000
+2026-07-22 08:41:29: *******Val Epoch 111: averaged Loss : 13.804061 sep loss : [13.80406117  2.07254195  1.39323068]
+2026-07-22 08:41:29: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:41:29: loss weights: [0.997556  1.006101  0.9963429]
+2026-07-22 08:41:39: *******Train Epoch 112: averaged Loss : 14.825244
+2026-07-22 08:41:39: *******Train Epoch 112: averaged lm : 0.000000
+2026-07-22 08:41:39: *******Val Epoch 112: averaged Loss : 14.471781 sep loss : [14.47178125  2.52623105  1.38417274]
+2026-07-22 08:41:39: loss weights: [0.99869704 1.007011   0.99429214]
+2026-07-22 08:41:49: *******Train Epoch 113: averaged Loss : 14.809583
+2026-07-22 08:41:49: *******Train Epoch 113: averaged lm : 0.000000
+2026-07-22 08:41:50: *******Val Epoch 113: averaged Loss : 14.544871 sep loss : [14.54487085  1.47897771  1.42718858]
+2026-07-22 08:41:50: loss weights: [0.9894141 1.0133963 0.9971897]
+2026-07-22 08:42:00: *******Train Epoch 114: averaged Loss : 14.714227
+2026-07-22 08:42:00: *******Train Epoch 114: averaged lm : 0.000000
+2026-07-22 08:42:00: *******Val Epoch 114: averaged Loss : 14.396925 sep loss : [14.39692521  2.11237016  1.43374637]
+2026-07-22 08:42:00: loss weights: [1.0044304 0.9832333 1.0123366]
+2026-07-22 08:42:10: *******Train Epoch 115: averaged Loss : 14.766497
+2026-07-22 08:42:10: *******Train Epoch 115: averaged lm : 0.000000
+2026-07-22 08:42:11: *******Val Epoch 115: averaged Loss : 13.598366 sep loss : [13.59836626  1.5373992   1.44917545]
+2026-07-22 08:42:11: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:42:11: loss weights: [1.0016156  0.98630285 1.0120815 ]
+2026-07-22 08:42:21: *******Train Epoch 116: averaged Loss : 14.523706
+2026-07-22 08:42:21: *******Train Epoch 116: averaged lm : 0.000000
+2026-07-22 08:42:21: *******Val Epoch 116: averaged Loss : 13.608018 sep loss : [13.60801768  1.78498414  1.48309377]
+2026-07-22 08:42:21: loss weights: [0.9990699  0.98580825 1.0151217 ]
+2026-07-22 08:42:32: *******Train Epoch 117: averaged Loss : 14.731950
+2026-07-22 08:42:32: *******Train Epoch 117: averaged lm : 0.000000
+2026-07-22 08:42:32: *******Val Epoch 117: averaged Loss : 13.737262 sep loss : [13.73726225  1.38337636  1.52810583]
+2026-07-22 08:42:32: loss weights: [0.990309  1.0045029 1.0051879]
+2026-07-22 08:42:42: *******Train Epoch 118: averaged Loss : 14.757831
+2026-07-22 08:42:42: *******Train Epoch 118: averaged lm : -0.000000
+2026-07-22 08:42:42: *******Val Epoch 118: averaged Loss : 14.210061 sep loss : [14.2100606   1.40516669  1.54500329]
+2026-07-22 08:42:42: loss weights: [1.0000294 0.9912683 1.0087025]
+2026-07-22 08:42:53: *******Train Epoch 119: averaged Loss : 14.648882
+2026-07-22 08:42:53: *******Train Epoch 119: averaged lm : -0.000000
+2026-07-22 08:42:53: *******Val Epoch 119: averaged Loss : 13.568237 sep loss : [13.56823683  1.42452848  1.5534701 ]
+2026-07-22 08:42:53: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:42:53: loss weights: [1.0022205 0.9830123 1.0147673]
+2026-07-22 08:43:03: *******Train Epoch 120: averaged Loss : 14.836739
+2026-07-22 08:43:03: *******Train Epoch 120: averaged lm : -0.000002
+2026-07-22 08:43:03: *******Val Epoch 120: averaged Loss : 14.040486 sep loss : [14.04048634  1.29188296  1.55807272]
+2026-07-22 08:43:03: loss weights: [0.9981417 1.0094669 0.9923914]
+2026-07-22 08:43:13: *******Train Epoch 121: averaged Loss : 14.636926
+2026-07-22 08:43:13: *******Train Epoch 121: averaged lm : 0.000000
+2026-07-22 08:43:13: *******Val Epoch 121: averaged Loss : 13.640988 sep loss : [13.64098787  1.37942234  1.55969369]
+2026-07-22 08:43:14: loss weights: [1.0000085 0.9962146 1.0037769]
+2026-07-22 08:43:24: *******Train Epoch 122: averaged Loss : 14.505590
+2026-07-22 08:43:24: *******Train Epoch 122: averaged lm : -0.000000
+2026-07-22 08:43:24: *******Val Epoch 122: averaged Loss : 13.589411 sep loss : [13.58941102  1.47971368  1.55251369]
+2026-07-22 08:43:24: loss weights: [0.9944975 1.0084932 0.9970093]
+2026-07-22 08:43:34: *******Train Epoch 123: averaged Loss : 14.567392
+2026-07-22 08:43:34: *******Train Epoch 123: averaged lm : 0.000000
+2026-07-22 08:43:34: *******Val Epoch 123: averaged Loss : 13.617291 sep loss : [13.61729074  1.4872365   1.54332078]
+2026-07-22 08:43:35: loss weights: [1.0109627  0.98504376 1.0039933 ]
+2026-07-22 08:43:45: *******Train Epoch 124: averaged Loss : 14.655005
+2026-07-22 08:43:45: *******Train Epoch 124: averaged lm : 0.000000
+2026-07-22 08:43:45: *******Val Epoch 124: averaged Loss : 13.900111 sep loss : [13.90011072  1.307648    1.51376268]
+2026-07-22 08:43:45: loss weights: [1.0072167 0.99582   0.9969633]
+2026-07-22 08:43:55: *******Train Epoch 125: averaged Loss : 14.686609
+2026-07-22 08:43:55: *******Train Epoch 125: averaged lm : 0.000000
+2026-07-22 08:43:56: *******Val Epoch 125: averaged Loss : 13.354761 sep loss : [13.35476112  1.2791006   1.50813875]
+2026-07-22 08:43:56: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:43:56: loss weights: [0.9819169 1.0419617 0.9761214]
+2026-07-22 08:44:06: *******Train Epoch 126: averaged Loss : 14.100868
+2026-07-22 08:44:06: *******Train Epoch 126: averaged lm : 0.000000
+2026-07-22 08:44:07: *******Val Epoch 126: averaged Loss : 13.495034 sep loss : [13.49503398  1.58476633  1.52315739]
+2026-07-22 08:44:07: loss weights: [1.0099521  0.97065234 1.0193956 ]
+2026-07-22 08:44:17: *******Train Epoch 127: averaged Loss : 14.532797
+2026-07-22 08:44:17: *******Train Epoch 127: averaged lm : 0.000000
+2026-07-22 08:44:17: *******Val Epoch 127: averaged Loss : 13.987354 sep loss : [13.98735428  1.8773078   1.51701632]
+2026-07-22 08:44:17: loss weights: [0.9936778  1.014148   0.99217415]
+2026-07-22 08:44:27: *******Train Epoch 128: averaged Loss : 14.362144
+2026-07-22 08:44:27: *******Train Epoch 128: averaged lm : 0.000000
+2026-07-22 08:44:28: *******Val Epoch 128: averaged Loss : 13.484077 sep loss : [13.48407698  2.08829352  1.50053149]
+2026-07-22 08:44:28: **************Current 128 model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/epoch128.pth
+2026-07-22 08:44:28: == Training finished.
+Total training time: 22.57 min	best loss: 13.3548	best epoch: 125	
+2026-07-22 08:44:28: load best model from /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth
+2026-07-22 08:44:28: == Test results.
+2026-07-22 08:44:28: 0.45163702964782715
+2026-07-22 08:44:28: FLOW, MAE: 11.96, MAPE: 19.2660%
+2026-07-22 08:44:28: abulation is all
+2026-07-22 08:44:28: bank gradient!
+2026-07-22 08:44:28: gamma 0.2
+2026-07-22 08:44:28: kw 1
+Starting experiment with configurations in /data/OuXiaoyu/STEVE_CODE/STEVE/configs/NYCTaxi.yaml...
+Creat Log File in:  /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/run.log
+train_time:0:00:11.465304
+train_time:0:00:10.215380
+train_time:0:00:10.180346
+train_time:0:00:10.198696
+train_time:0:00:10.309337
+train_time:0:00:10.203195
+train_time:0:00:10.216851
+train_time:0:00:10.164799
+train_time:0:00:10.208660
+train_time:0:00:10.157928
+train_time:0:00:10.245194
+train_time:0:00:10.243952
+train_time:0:00:10.151021
+train_time:0:00:10.131395
+train_time:0:00:10.151012
+train_time:0:00:10.134728
+train_time:0:00:10.212941
+train_time:0:00:10.177115
+train_time:0:00:10.199204
+train_time:0:00:10.163656
+train_time:0:00:10.181687
+train_time:0:00:10.243604
+train_time:0:00:10.165187
+train_time:0:00:10.146386
+train_time:0:00:10.178218
+train_time:0:00:10.142781
+train_time:0:00:10.141894
+train_time:0:00:10.178654
+train_time:0:00:10.303693
+train_time:0:00:10.189816
+train_time:0:00:10.152993
+train_time:0:00:10.241289
+train_time:0:00:10.319590
+train_time:0:00:10.267395
+train_time:0:00:10.209905
+train_time:0:00:10.189184
+train_time:0:00:10.177566
+train_time:0:00:10.219344
+train_time:0:00:10.145063
+train_time:0:00:10.152872
+train_time:0:00:10.133700
+train_time:0:00:10.321132
+train_time:0:00:10.184980
+train_time:0:00:10.135354
+train_time:0:00:10.196946
+train_time:0:00:10.211732
+train_time:0:00:10.218167
+train_time:0:00:10.230425
+train_time:0:00:10.193073
+train_time:0:00:10.159487
+train_time:0:00:10.134359
+train_time:0:00:10.116314
+train_time:0:00:10.156048
+train_time:0:00:10.145372
+train_time:0:00:10.157175
+train_time:0:00:10.128751
+train_time:0:00:10.176737
+train_time:0:00:10.215897
+train_time:0:00:10.162197
+train_time:0:00:10.133873
+train_time:0:00:10.294028
+train_time:0:00:10.338819
+train_time:0:00:10.248662
+train_time:0:00:10.120860
+train_time:0:00:10.141461
+train_time:0:00:10.129477
+train_time:0:00:10.150813
+train_time:0:00:10.155385
+train_time:0:00:10.134479
+train_time:0:00:10.150100
+train_time:0:00:10.156089
+train_time:0:00:10.194105
+train_time:0:00:10.152738
+train_time:0:00:10.146469
+train_time:0:00:10.149518
+train_time:0:00:10.158312
+train_time:0:00:10.139105
+train_time:0:00:10.158901
+train_time:0:00:10.170168
+train_time:0:00:10.208222
+train_time:0:00:10.249520
+train_time:0:00:10.134011
+train_time:0:00:10.135623
+train_time:0:00:10.132885
+train_time:0:00:10.174430
+train_time:0:00:10.172132
+train_time:0:00:10.221729
+train_time:0:00:10.183199
+train_time:0:00:10.218757
+train_time:0:00:10.256705
+train_time:0:00:10.230111
+train_time:0:00:10.136079
+train_time:0:00:10.122754
+train_time:0:00:10.125320
+train_time:0:00:10.136762
+train_time:0:00:10.154198
+train_time:0:00:10.145535
+train_time:0:00:10.129963
+train_time:0:00:10.184093
+train_time:0:00:10.197510
+train_time:0:00:10.139637
+train_time:0:00:10.164463
+train_time:0:00:10.278343
+train_time:0:00:10.137252
+train_time:0:00:10.129543
+train_time:0:00:10.211815
+train_time:0:00:10.206100
+train_time:0:00:10.113981
+train_time:0:00:10.144151
+train_time:0:00:10.114791
+train_time:0:00:10.156749
+train_time:0:00:10.151605
+train_time:0:00:10.153878
+train_time:0:00:10.221344
+train_time:0:00:10.174384
+train_time:0:00:10.140554
+train_time:0:00:10.157643
+train_time:0:00:10.163938
+train_time:0:00:10.060254
+train_time:0:00:09.928024
+train_time:0:00:09.913741
+train_time:0:00:10.127397
+train_time:0:00:10.160594
+train_time:0:00:10.199947
+train_time:0:00:10.344413
+train_time:0:00:10.309772
+train_time:0:00:10.136151
+train_time:0:00:10.220487
+1784709868.2652855
+0.45163702964782715

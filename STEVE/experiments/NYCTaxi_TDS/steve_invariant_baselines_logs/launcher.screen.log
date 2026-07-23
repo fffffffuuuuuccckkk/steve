@@ -1,0 +1,7 @@
+[steve-repro] start steve_inv_only_with_disentangle_seed2024 case=inv_only_with_disentangle mode=inv_only_with_disentangle seed=2024 gpu=0 epochs=128
+[steve-repro] start steve_inv_only_no_env_seed2024 case=inv_only_no_env mode=inv_only_no_env seed=2024 gpu=1 epochs=128
+[steve-repro] done steve_inv_only_no_env_seed2024
+[steve-repro] done steve_inv_only_with_disentangle_seed2024
+[steve-repro] OK /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_inv_only_with_disentangle_seed2024
+[steve-repro] OK /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_inv_only_no_env_seed2024
+[steve-repro] ALL DONE. logs=/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_invariant_baselines_logs

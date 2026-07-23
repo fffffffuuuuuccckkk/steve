@@ -1,0 +1,92 @@
+{
+  "exp_dir": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2025",
+  "checkpoint": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2025/best_val_model.pth",
+  "checkpoint_epoch": 98,
+  "reported_test_mixed_mae": 7.7929229736328125,
+  "reported_test_avg_mae": 7.804407596588135,
+  "reconstructed_native_global_masked_mae": 7.792922019958496,
+  "native_matches_reported_test_mixed": true,
+  "native_samplewise_masked_mae_mean": 7.690909155658385,
+  "invariant_global_masked_mae": 90.58709716796875,
+  "invariant_samplewise_masked_mae_mean": 88.5289576718995,
+  "expert_global_masked_mae": {
+    "0": 7.793151378631592,
+    "1": 7.7927069664001465,
+    "2": 7.792784690856934
+  },
+  "best_fixed_route_global": "expert_1",
+  "best_fixed_route_global_mae": 7.7927069664001465,
+  "best_fixed_env_route_global": "expert_1",
+  "best_fixed_env_global_mae": 7.7927069664001465,
+  "uniform_global_masked_mae": 7.792642593383789,
+  "random_global_masked_mae_mean": 7.792811989784241,
+  "random_global_masked_mae_std": 0.00021516337598767826,
+  "oracle_global_masked_mae": 7.7868452072143555,
+  "oracle_gap_best_fixed_env_minus_oracle": 0.005861759185791016,
+  "gap_closed_by_fpem_vs_best_fixed_env": -0.03668754575774831,
+  "mean_route_regret": 0.0063803736095995696,
+  "median_route_regret": 0.003303932113631447,
+  "p90_route_regret": 0.016758498777088793,
+  "max_route_regret": 0.0719353704169241,
+  "environment_preferred_count": 546,
+  "environment_preferred_prop": 1.0,
+  "invariant_preferred_count": 0,
+  "invariant_preferred_prop": 0.0,
+  "neutral_count": 0,
+  "neutral_prop": 0.0,
+  "harmful_correction_rate": 0.0,
+  "missed_environment_gain_rate": 0.0,
+  "avg_available_env_gain_recovered_by_fpem": 0.9998575862388854,
+  "exact_expert_selection_accuracy": 0.34065934065934067,
+  "top2_expert_selection_accuracy": 0.6391941391941391,
+  "tolerance_1pct_expert_accuracy": 0.9871794871794872,
+  "correction_norm_spearman_with_true_env_gain": 0.8404327705235073,
+  "routing_entropy_spearman_with_true_env_gain": NaN,
+  "max_router_prob_spearman_with_true_env_gain": NaN,
+  "has_explicit_identity_route": false,
+  "can_explicitly_choose_no_environment": false,
+  "binary_environment_use_metrics_available": false,
+  "external_steve_consistency_status": "ok; target_value_mismatch_max_abs_diff=0.00012207",
+  "top_level_sources_observed": {
+    "progressive_gmm_teacher_hard": 35
+  },
+  "route_head_modes_observed": {
+    "hyper_inv_film_proto_input_add": 35
+  },
+  "proto_modes_observed": {
+    "progressive_gmm_teacher_hard": 35
+  },
+  "state_changed_during_audit": false,
+  "test_loader_shuffle": false,
+  "conclusion_note": "This checkpoint has no explicit identity/no-environment route, so exact binary environment-use accuracy is not measurable; the audit evaluates expert selection and native correction quality against analytical invariant/expert candidates.",
+  "architecture": {
+    "fpem_backbone": "agcrn",
+    "fpem_env_route_train_mode": "progressive_gmm_environment",
+    "fpem_env_route_head_mode": "hyper_inv_film_proto_input_add",
+    "fpem_env_route_k": 3,
+    "fpem_env_route_use_inv_fallback_expert": false,
+    "fpem_use_env_fusion": false,
+    "fpem_force_uniform_route": false,
+    "has_explicit_identity_route": false,
+    "can_explicitly_choose_no_environment": false,
+    "environment_use_score_available": false,
+    "native_prediction_source_in_summary": "progressive_gmm_teacher_hard"
+  },
+  "expert_selection_summary": {
+    "env_oracle_samples": 546,
+    "exact_expert_selection_accuracy": 0.34065934065934067,
+    "top2_expert_selection_accuracy": 0.6391941391941391,
+    "tolerance_1pct_expert_accuracy": 0.9871794871794872,
+    "mean_expert_selection_regret": 0.0063803736095995696,
+    "median_expert_selection_regret": 0.003303932113631447
+  },
+  "batch_size_invariance_check": {
+    "batch_size_a": 1,
+    "batch_size_b": 16,
+    "n_compared": 32,
+    "sample_index_equal": true,
+    "native_prediction_allclose": true,
+    "max_abs_diff": 0.000244140625,
+    "ok": true
+  }
+}

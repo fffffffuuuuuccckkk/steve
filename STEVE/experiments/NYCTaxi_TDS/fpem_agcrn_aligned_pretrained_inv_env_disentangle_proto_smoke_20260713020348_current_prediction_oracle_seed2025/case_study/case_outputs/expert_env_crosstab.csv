@@ -1,0 +1,7 @@
+category_type,category,expert_0,expert_1,expert_2
+workday_holiday,workday,0.0,0.0,1.0
+hour,15,0.0,0.0,1.0
+hour,16,0.0,0.0,1.0
+hour,17,0.0,0.0,1.0
+rush_hour,non_rush_hour,0.0,0.0,1.0
+rush_hour,rush_hour,0.0,0.0,1.0
