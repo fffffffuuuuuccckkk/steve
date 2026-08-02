@@ -1,0 +1,3 @@
+case	seed	status	run_name	best_epoch	best_val_loss	test_avg_mae	test_mixed_mae	route_head_mode	fpem_env_route_target_mode	fpem_force_uniform_route	fpem_env_rep_ablation	effective_expert_number	prototype_pairwise_cosine	loss_future_mi	loss_swap	detail
+obs_k3_fixed_hard_router	2024	DRY_RUN	fpem_observable_hard_router_smoke_0727_v1_obs_k3_fixed_hard_router_seed2024	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	not launched
+obs_k3_fixed_hard_router	2024	OK	fpem_observable_hard_router_smoke_0727_v1_obs_k3_fixed_hard_router_seed2024	1	14.947721481323242	11.659516334533691	13.19605827331543	hyper_inv_film_proto_input_add	env_prototype	0.0	normal	1.0	0.0	0.0	0.0	attempt=1

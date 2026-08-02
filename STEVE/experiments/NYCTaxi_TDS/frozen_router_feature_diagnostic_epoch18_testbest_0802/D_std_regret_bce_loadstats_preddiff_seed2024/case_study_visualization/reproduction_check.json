@@ -1,0 +1,46 @@
+{
+  "ok": true,
+  "checks": {
+    "all_env_mae": {
+      "actual": 11.257920265197754,
+      "expected": 11.257920265197754,
+      "diff": 0.0
+    },
+    "learned_mae": {
+      "actual": 11.25318717956543,
+      "expected": 11.253186225891113,
+      "diff": 9.5367431640625e-07
+    },
+    "predicted_invariant_ratio": {
+      "actual": 0.03113553114235401,
+      "expected": 0.03113553114235401,
+      "diff": 0.0
+    },
+    "target_invariant_ratio": {
+      "actual": 0.311355322599411,
+      "expected": 0.311355322599411,
+      "diff": 0.0
+    },
+    "invariant_switch_precision": {
+      "actual": 0.7058823704719543,
+      "expected": 0.7058823704719543,
+      "diff": 0.0
+    },
+    "invariant_switch_recall": {
+      "actual": 0.07058823853731155,
+      "expected": 0.07058823853731155,
+      "diff": 0.0
+    },
+    "correct_invariant_switches": {
+      "actual": 12,
+      "expected": 12,
+      "diff": 0.0
+    },
+    "harmful_switches": {
+      "actual": 5,
+      "expected": 5,
+      "diff": 0.0
+    }
+  },
+  "tolerance": 5e-05
+}

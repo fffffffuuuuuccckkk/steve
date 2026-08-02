@@ -1,0 +1,9 @@
+feature_set,regressor,n_train,n_test,residual_mae,r2
+z_inv_raw,ridge,2,2,9.148390769958496,-88337.640625
+z_inv_raw,linear_regression,2,2,9.150799751281738,-88381.2421875
+h_inv,ridge,2,2,9.148390769958496,-88337.640625
+h_inv,linear_regression,2,2,9.150799751281738,-88381.2421875
+e_env,ridge,2,2,11.992725372314453,-58309.12109375
+e_env,linear_regression,2,2,12.065390586853027,-58701.23046875
+h_inv_plus_e_env,ridge,2,2,8.367000579833984,-53446.1015625
+h_inv_plus_e_env,linear_regression,2,2,8.373644828796387,-53399.65625

@@ -1,0 +1,28 @@
+{
+  "name": "hyper_proto_input_add",
+  "seed": 2024,
+  "gpu_id": "3",
+  "run_prefix": "fpem_agcrn_aligned_pretrained_inv_hyper_proto",
+  "extra_args": [
+    "--fpem_env_route_head_mode",
+    "hyper_inv_film_proto_input_add",
+    "--fpem_env_use_exogenous",
+    "true",
+    "--fpem_use_env_fusion",
+    "false",
+    "--fpem_use_sinkhorn_route",
+    "true",
+    "--fpem_expert_uniform_warmup_epochs",
+    "5",
+    "--fpem_env_route_balance_warmup_epochs",
+    "10",
+    "--fpem_use_future_mi",
+    "true",
+    "--fpem_lambda_future_mi",
+    "0.02",
+    "--fpem_use_swap",
+    "true",
+    "--fpem_lambda_swap",
+    "0.01"
+  ]
+}

@@ -1,0 +1,4 @@
+model,exp_dir,num_samples,valid_samples,masked_sample_mae_mean,masked_sample_mae_median,masked_sample_mae_q25,masked_sample_mae_q75,global_masked_mae,unmasked_sample_mae_mean,best_count,best_prop
+full,/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024,546,546,11.769911136315445,11.901445419837302,9.999406109138075,13.677307595848943,11.961324276898958,68.38217389463942,290,0.5311355311355311
+inv_disentangle,/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_inv_only_with_disentangle_seed2024,546,546,12.545914982154391,12.593804329864739,10.474285114726447,14.602058729045412,12.7844613074969,63.51780208126531,102,0.18681318681318682
+inv_no_env,/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_inv_only_no_env_seed2024,546,546,12.843264071061213,12.9536402789624,10.23501163022781,15.30031918950726,13.064776216879702,21.403147363531723,154,0.28205128205128205

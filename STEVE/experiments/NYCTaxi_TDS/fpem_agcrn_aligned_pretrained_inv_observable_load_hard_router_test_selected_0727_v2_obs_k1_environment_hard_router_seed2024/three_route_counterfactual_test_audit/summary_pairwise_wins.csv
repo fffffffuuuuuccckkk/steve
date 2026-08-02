@@ -1,0 +1,4 @@
+comparison,first_strategy,second_strategy,first_win_count,first_win_percentage,second_win_count,second_win_percentage,tie_count,tie_percentage,sample_count,mae_difference_definition,mean_samplewise_mae_difference,median_samplewise_mae_difference
+all_environment_vs_all_invariant,all_environment,all_invariant,392,71.7948717948718,154,28.205128205128204,0,0.0,546,first_minus_second,-0.2666996044818408,-0.25844229903875604
+all_environment_vs_selective_hard_routing,all_environment,selective_hard_routing,138,25.274725274725274,78,14.285714285714286,330,60.43956043956044,546,first_minus_second,-0.04461753107665851,0.0
+all_invariant_vs_selective_hard_routing,all_invariant,selective_hard_routing,76,13.91941391941392,254,46.52014652014652,216,39.56043956043956,546,first_minus_second,0.22208207340518235,0.0

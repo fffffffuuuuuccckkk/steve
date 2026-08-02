@@ -1,0 +1,13 @@
+[INFO] RUN_PREFIX=fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_warmup_risk_0720
+[INFO] cases=add_k3_warmup_risk_sinkhorn_common005,add_k3_warmup_risk_sinkhorn_common010,add_k3_warmup_risk_sinkhorn_common020 seeds=2024 gpu_ids=0,1,2 max_parallel=3 dry_run=false
+[INFO] pretrained_inv=true ckpt=/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/pure_agcrn_seed2024/best_val_model.pth
+[INFO] run_route_eval=false route_eval_only=false route_eval_checkpoint_prefix=fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_warmup_risk_0720
+[LAUNCH] case=add_k3_warmup_risk_sinkhorn_common005 seed=2024 gpu=0 exp_dir=/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_warmup_risk_0720_add_k3_warmup_risk_sinkhorn_common005_seed2024 backbone=agcrn head=hyper_inv_film_proto_input_add K=3 proto=false sinkhorn=false future_mi=false swap=false club=false env_ablation=normal force_uniform=false
+[RUN] case=add_k3_warmup_risk_sinkhorn_common005 seed=2024 attempt=1 gpu=0 date=Mon Jul 20 02:13:04 UTC 2026
+[CLEANUP] gpu=0 date=Mon Jul 20 02:13:04 UTC 2026
+[LAUNCH] case=add_k3_warmup_risk_sinkhorn_common010 seed=2024 gpu=1 exp_dir=/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_warmup_risk_0720_add_k3_warmup_risk_sinkhorn_common010_seed2024 backbone=agcrn head=hyper_inv_film_proto_input_add K=3 proto=false sinkhorn=false future_mi=false swap=false club=false env_ablation=normal force_uniform=false
+[RUN] case=add_k3_warmup_risk_sinkhorn_common010 seed=2024 attempt=1 gpu=1 date=Mon Jul 20 02:13:04 UTC 2026
+[CLEANUP] gpu=1 date=Mon Jul 20 02:13:04 UTC 2026
+[LAUNCH] case=add_k3_warmup_risk_sinkhorn_common020 seed=2024 gpu=2 exp_dir=/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_warmup_risk_0720_add_k3_warmup_risk_sinkhorn_common020_seed2024 backbone=agcrn head=hyper_inv_film_proto_input_add K=3 proto=false sinkhorn=false future_mi=false swap=false club=false env_ablation=normal force_uniform=false
+[RUN] case=add_k3_warmup_risk_sinkhorn_common020 seed=2024 attempt=1 gpu=2 date=Mon Jul 20 02:13:04 UTC 2026
+[CLEANUP] gpu=2 date=Mon Jul 20 02:13:04 UTC 2026

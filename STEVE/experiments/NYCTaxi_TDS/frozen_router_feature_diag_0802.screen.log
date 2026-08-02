@@ -1,0 +1,11 @@
+[INFO] PROJECT_DIR=/data/OuXiaoyu/STEVE_CODE/STEVE
+[INFO] BASE_EXP_DIR=/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_counterfactual_risk_router_testbest_diagnostic_0802_obs_k1_counterfactual_risk_router_seed2024
+[INFO] OUTPUT_ROOT=/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/frozen_router_feature_diagnostic_epoch18_testbest_0802
+[INFO] cases=A_std_delta_mse B_std_regret_bce C_std_regret_bce_loadstats D_std_regret_bce_loadstats_preddiff gpu_ids=0,1,2,3 seed=2024
+[LAUNCH] case=A_std_delta_mse gpu=0 log=/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/frozen_router_feature_diagnostic_epoch18_testbest_0802/A_std_delta_mse_seed2024.log
+[LAUNCH] case=B_std_regret_bce gpu=1 log=/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/frozen_router_feature_diagnostic_epoch18_testbest_0802/B_std_regret_bce_seed2024.log
+[LAUNCH] case=C_std_regret_bce_loadstats gpu=2 log=/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/frozen_router_feature_diagnostic_epoch18_testbest_0802/C_std_regret_bce_loadstats_seed2024.log
+[LAUNCH] case=D_std_regret_bce_loadstats_preddiff gpu=3 log=/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/frozen_router_feature_diagnostic_epoch18_testbest_0802/D_std_regret_bce_loadstats_preddiff_seed2024.log
+[SUMMARY] wrote /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/frozen_router_feature_diagnostic_epoch18_testbest_0802/summary_all_frozen_router_cases.csv
+[SUMMARY] wrote /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/frozen_router_feature_diagnostic_epoch18_testbest_0802/summary_all_frozen_router_cases.json
+[DONE] OK

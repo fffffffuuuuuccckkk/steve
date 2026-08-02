@@ -1,0 +1,20 @@
+{
+  "checkpoint_path": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth",
+  "split": "test",
+  "num_samples": 64,
+  "base_mae_mean": 73.64219665527344,
+  "full_mae_mean": 67.06192016601562,
+  "mean_delta_base_minus_full": 6.580282688140869,
+  "median_delta": 7.198860168457031,
+  "std_delta": 3.69476580619812,
+  "q25_delta": 4.809722900390625,
+  "q75_delta": 9.064878463745117,
+  "env_helps_count": 57,
+  "env_helps_prop": 0.890625,
+  "env_hurts_count": 3,
+  "env_hurts_prop": 0.046875,
+  "env_neutral_count": 4,
+  "env_neutral_prop": 0.0625,
+  "tie_threshold": 1e-06,
+  "env_delta_abs_mean": 11.905635833740234
+}

@@ -1,0 +1,40 @@
+[StableST] loaded pretrained invariant AGCRN encoder from /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/pure_agcrn_seed2024/best_val_model.pth; missing=[] unexpected=[]
+{
+  "checkpoint": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2024/best_val_model.pth",
+  "output_dir": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_online_route_eval/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2024",
+  "seed": 2024,
+  "best_epoch": 99,
+  "fpem_env_route_train_mode": "progressive_gmm_environment",
+  "fpem_use_pretrained_inv_agcrn": true,
+  "fpem_pretrained_inv_agcrn_path": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/pure_agcrn_seed2024/best_val_model.pth"
+}
+{
+  "checkpoint": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2024/best_val_model.pth",
+  "output_dir": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_online_route_eval/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2024",
+  "seed": 2024,
+  "best_epoch": 99,
+  "methods": [
+    "best_fixed",
+    "random_uniform_top1",
+    "random_prior_top1",
+    "shuffled_gmm_route",
+    "gmm_hard_identity",
+    "gmm_hard_val_hungarian",
+    "gmm_hard_val_independent",
+    "uniform_all_experts",
+    "oracle_top1"
+  ],
+  "primary_gmm_hard_test_avg_mae": 8.220052719116211,
+  "oracle_top1_test_avg_mae": 8.208650588989258,
+  "leakage_protocol": {
+    "mapping_source": "validation",
+    "best_fixed_source": "validation",
+    "gmm_fit_source": "training",
+    "test_target_used_by": "oracle_only",
+    "test_targets_used_for_mapping": false,
+    "test_targets_used_for_best_fixed": false,
+    "test_targets_used_for_gmm_fit": false,
+    "test_targets_used_for_router_training": false,
+    "test_targets_used_for_hyperparameter_selection": false
+  }
+}

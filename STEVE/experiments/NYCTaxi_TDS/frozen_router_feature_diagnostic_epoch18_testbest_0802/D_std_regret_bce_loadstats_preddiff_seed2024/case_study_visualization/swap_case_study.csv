@@ -1,0 +1,2 @@
+status,reason,minimal_safe_change
+blocked,Current StableST forward path does not expose a safe inference-only API to inject swapped environment representation before the environment prediction head while keeping all parameters unchanged.,Add an analysis-only return_analysis_features/route_override or env_rep_override argument that is ignored by default and only used in analyze scripts; then recompute y_env from frozen heads with injected C_cur.

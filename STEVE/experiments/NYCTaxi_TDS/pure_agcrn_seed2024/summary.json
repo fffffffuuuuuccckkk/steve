@@ -1,0 +1,206 @@
+{
+  "exp_name": "pure_agcrn_seed2024",
+  "seed": 2024,
+  "dataset": "NYCTaxi_TDS",
+  "model": "agcrn",
+  "ablation": "full",
+  "best_epoch": 87,
+  "best_val_loss": 11.887380218505859,
+  "test_mixed_mae": 10.742055892944336,
+  "test_workday_mae": 10.633964538574219,
+  "test_holiday_mae": 10.929496765136719,
+  "test_avg_mae": 10.781730651855469,
+  "finished": true,
+  "counts": {
+    "train_total": 1680,
+    "train_workday": 1200,
+    "train_holiday": 480,
+    "train_workday_holiday_ratio": 2.5,
+    "val_total": 274,
+    "val_workday": 178,
+    "val_holiday": 96,
+    "test_total": 546,
+    "test_workday": 354,
+    "test_holiday": 192
+  },
+  "best": {
+    "val": {
+      "mae": 11.887380218505859,
+      "epoch": 87
+    },
+    "test_avg": {
+      "mae": 10.732969284057617,
+      "epoch": 92
+    },
+    "workday": {
+      "mae": 10.564342498779297,
+      "epoch": 92
+    },
+    "holiday": {
+      "mae": 10.84702205657959,
+      "epoch": 95
+    }
+  },
+  "final": {
+    "val": {
+      "selected_epoch": 87,
+      "val": {
+        "loss": 11.887380218505859,
+        "mae": 11.673948287963867,
+        "mape": 0.18977294862270355
+      },
+      "test_mixed": {
+        "loss": 10.853128433227539,
+        "mae": 10.742055892944336,
+        "mape": 0.17484037578105927
+      },
+      "test_workday": {
+        "loss": 10.764035860697428,
+        "mae": 10.633964538574219,
+        "mape": 0.1748131811618805
+      },
+      "test_holiday": {
+        "loss": 11.04198169708252,
+        "mae": 10.929496765136719,
+        "mape": 0.1748875379562378
+      },
+      "test_avg_mae": 10.781730651855469
+    },
+    "test_avg": {
+      "selected_epoch": 92,
+      "val": {
+        "loss": 11.96199722290039,
+        "mae": 11.733287811279297,
+        "mape": 0.18477150797843933
+      },
+      "test_mixed": {
+        "loss": 10.788251982794868,
+        "mae": 10.68769359588623,
+        "mape": 0.17028376460075378
+      },
+      "test_workday": {
+        "loss": 10.67726469039917,
+        "mae": 10.564342498779297,
+        "mape": 0.17059172689914703
+      },
+      "test_holiday": {
+        "loss": 11.025088946024576,
+        "mae": 10.901596069335938,
+        "mape": 0.16974970698356628
+      },
+      "test_avg_mae": 10.732969284057617
+    },
+    "workday": {
+      "selected_epoch": 92,
+      "val": {
+        "loss": 11.96199722290039,
+        "mae": 11.733287811279297,
+        "mape": 0.18477150797843933
+      },
+      "test_mixed": {
+        "loss": 10.788251982794868,
+        "mae": 10.68769359588623,
+        "mape": 0.17028376460075378
+      },
+      "test_workday": {
+        "loss": 10.67726469039917,
+        "mae": 10.564342498779297,
+        "mape": 0.17059172689914703
+      },
+      "test_holiday": {
+        "loss": 11.025088946024576,
+        "mae": 10.901596069335938,
+        "mape": 0.16974970698356628
+      },
+      "test_avg_mae": 10.732969284057617
+    },
+    "holiday": {
+      "selected_epoch": 95,
+      "val": {
+        "loss": 12.11131591796875,
+        "mae": 11.895915031433105,
+        "mape": 0.1873026341199875
+      },
+      "test_mixed": {
+        "loss": 10.846435440911186,
+        "mae": 10.729726791381836,
+        "mape": 0.17256727814674377
+      },
+      "test_workday": {
+        "loss": 10.789991537729898,
+        "mae": 10.66208553314209,
+        "mape": 0.17369301617145538
+      },
+      "test_holiday": {
+        "loss": 10.96845817565918,
+        "mae": 10.84702205657959,
+        "mape": 0.17061515152454376
+      },
+      "test_avg_mae": 10.75455379486084
+    }
+  },
+  "elapsed_min": 19.721377738316853,
+  "args": {
+    "seed": 2024,
+    "device": "cuda:0",
+    "mode": "train",
+    "best_path": "/home/zhangwt/remote/StableST/experiments/NYCTaxi/20240510-014845/best_model.pth",
+    "debug": false,
+    "data_dir": "/data/OuXiaoyu/STEVE_CODE/STEVE/data",
+    "dataset": "NYCTaxi_TDS",
+    "input_length": 35,
+    "batch_size": 64,
+    "test_batch_size": 64,
+    "graph_file": "/data/OuXiaoyu/STEVE_CODE/STEVE/data/NYCTaxi_TDS/adj_mx.npz",
+    "num_nodes": 200,
+    "len_closeness": 8,
+    "len_period": 27,
+    "len_trend": 0,
+    "d_input": 2,
+    "d_output": 2,
+    "d_model": 64,
+    "dropout": 0.1,
+    "percent": 0.1,
+    "shm_temp": 0.5,
+    "nmb_prototype": 4,
+    "yita": 0.5,
+    "layers": 3,
+    "K": 64,
+    "bank_gamma": 0.2,
+    "kw": 1,
+    "mi_w": 2,
+    "epochs": 100,
+    "lr_init": 0.001,
+    "early_stop": false,
+    "early_stop_patience": 30,
+    "grad_norm": false,
+    "max_grad_norm": 5,
+    "use_dwa": false,
+    "temp": 2,
+    "MMI": false,
+    "lr_patience": 20,
+    "lr_mode": "only",
+    "use_RevIN": true,
+    "ablation": "full",
+    "config_filename": "/data/OuXiaoyu/STEVE_CODE/STEVE/configs/NYCTaxi.yaml",
+    "model": "agcrn",
+    "early_stop_test_avg_mae_epoch": 0,
+    "early_stop_test_avg_mae_threshold": 0.0,
+    "train_work_per_holiday": 2.5,
+    "exp_name": "pure_agcrn_seed2024",
+    "run_name": "pure_agcrn_seed2024",
+    "result_root": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS",
+    "resume": true,
+    "resume_reset_patience": true,
+    "max_train_batches": null,
+    "max_eval_batches": null,
+    "agcrn_lr": 0.003,
+    "agcrn_embed_dim": 10,
+    "agcrn_rnn_units": 64,
+    "agcrn_num_layers": 2,
+    "agcrn_cheb_k": 2,
+    "git_commit": "1b38ed8",
+    "log_dir": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/pure_agcrn_seed2024"
+  },
+  "git_commit": "1b38ed8"
+}

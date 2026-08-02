@@ -1,0 +1,22 @@
+[StableST] loaded pretrained invariant AGCRN encoder from /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/pure_agcrn_seed2024/best_val_model.pth; missing=[] unexpected=[]
+/data/OuXiaoyu/STEVE_CODE/STEVE/scripts/analyze_fpem_samplewise_environment_routing.py:553: RuntimeWarning: Mean of empty slice
+  return float(np.nanmean(values))
+[fpem-audit] exp_dir=/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2025
+[fpem-audit] checkpoint=/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2025/best_val_model.pth
+[fpem-audit] output_dir=/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2025/samplewise_environment_routing_audit
+[fpem-audit] load missing=[] unexpected=[]
+[StableST] loaded pretrained invariant AGCRN encoder from /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/pure_agcrn_seed2024/best_val_model.pth; missing=[] unexpected=[]
+[StableST] loaded pretrained invariant AGCRN encoder from /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/pure_agcrn_seed2024/best_val_model.pth; missing=[] unexpected=[]
+[fpem-audit] native_global_masked_mae=7.792922
+[fpem-audit] invariant_global_masked_mae=90.587097
+[fpem-audit] expert_globals={0: 7.793151378631592, 1: 7.7927069664001465, 2: 7.792784690856934}
+[fpem-audit] best_fixed_env=expert_1 7.792707
+[fpem-audit] uniform_global_masked_mae=7.792643
+[fpem-audit] oracle_global_masked_mae=7.786845
+[fpem-audit] gap_closed=-0.036688
+[fpem-audit] groups env=546 inv=0 neutral=0
+[fpem-audit] harmful_rate=0.000000 missed_gain_rate=0.000000
+[fpem-audit] exact_expert_acc=0.340659 tol_acc=0.987179
+[fpem-audit] correction_gain_spearman=0.840433
+[fpem-audit] output_dir=/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2025/samplewise_environment_routing_audit
+[fpem-audit-screen] exit=0

@@ -1,0 +1,600 @@
+{
+  "audit_type": "inference_only_three_route_counterfactual",
+  "batch_size": 64,
+  "cache": "/data/OuXiaoyu/STEVE_CODE/STEVE/data/NYCTaxi/observable_load_prior_k3_v1.npz",
+  "cache_metadata": {
+    "CP_shape": [
+      200,
+      2
+    ],
+    "CP_zero_count": 0,
+    "cache_version": 1,
+    "created": false,
+    "metadata": {
+      "cache_version": 1,
+      "formula": "c_obs=clip(ceil(5*x[:,-1]/CP),0,5); CP=max(train_x,axis=(0,1)); CP==0 -> c_obs=0",
+      "load_score": "mean(c_obs/5 over nodes and channels)",
+      "quantiles": [
+        0.3333333333333333,
+        0.6666666666666666
+      ],
+      "random_assignment_seed": 314159,
+      "source_x_shapes": {
+        "test": [
+          546,
+          35,
+          200,
+          2
+        ],
+        "train": [
+          1912,
+          35,
+          200,
+          2
+        ],
+        "val": [
+          274,
+          35,
+          200,
+          2
+        ]
+      },
+      "threshold_fit_split": "train",
+      "uses_stored_c": false,
+      "uses_target_y": false
+    },
+    "path": "/data/OuXiaoyu/STEVE_CODE/STEVE/data/NYCTaxi/observable_load_prior_k3_v1.npz",
+    "random_assignment_seed": 314159,
+    "splits": {
+      "test": {
+        "c_obs_shape": [
+          546,
+          200,
+          2
+        ],
+        "expert_counts": [
+          125,
+          183,
+          238
+        ],
+        "random_expert_counts": [
+          125,
+          183,
+          238
+        ],
+        "samples": 546,
+        "score_max": 0.331,
+        "score_min": 0.08850000000000001
+      },
+      "train": {
+        "c_obs_shape": [
+          1912,
+          200,
+          2
+        ],
+        "expert_counts": [
+          639,
+          636,
+          637
+        ],
+        "random_expert_counts": [
+          639,
+          636,
+          637
+        ],
+        "samples": 1912,
+        "score_max": 0.32,
+        "score_min": 0.005
+      },
+      "val": {
+        "c_obs_shape": [
+          274,
+          200,
+          2
+        ],
+        "expert_counts": [
+          73,
+          81,
+          120
+        ],
+        "random_expert_counts": [
+          73,
+          81,
+          120
+        ],
+        "samples": 274,
+        "score_max": 0.311,
+        "score_min": 0.0925
+      }
+    },
+    "thresholds": [
+      0.165,
+      0.20350000000000001
+    ]
+  },
+  "checkpoint": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_observable_load_hard_router_test_selected_0727_v2_obs_k1_environment_hard_router_seed2024/best_test_avg_model.pth",
+  "checkpoint_args": {
+    "K": 64,
+    "MMI": false,
+    "ablation": "obs_k1_environment_hard_router",
+    "agcrn_cheb_k": 2,
+    "agcrn_embed_dim": 10,
+    "agcrn_lr": 0.003,
+    "agcrn_num_layers": 2,
+    "agcrn_rnn_units": 64,
+    "bank_gamma": 0.2,
+    "batch_size": 16,
+    "best_path": "/home/zhangwt/remote/StableST/experiments/NYCTaxi/20240510-014845/best_model.pth",
+    "config_filename": "/data/OuXiaoyu/STEVE_CODE/STEVE/configs/NYCTaxi.yaml",
+    "d_input": 2,
+    "d_model": 64,
+    "d_output": 2,
+    "data_dir": "/data/OuXiaoyu/STEVE_CODE/STEVE/data",
+    "data_seed": 2024,
+    "dataset": "NYCTaxi_TDS",
+    "debug": false,
+    "device": "cuda:0",
+    "dropout": 0.1,
+    "early_stop": true,
+    "early_stop_patience": 30,
+    "early_stop_test_avg_mae_epoch": 40,
+    "early_stop_test_avg_mae_threshold": 12.0,
+    "epochs": 100,
+    "exp_name": "fpem_agcrn_aligned_pretrained_inv_observable_load_hard_router_test_selected_0727_v2_obs_k1_environment_hard_router_seed2024",
+    "fpem_backbone": "agcrn",
+    "fpem_confounder_use_mask": false,
+    "fpem_env_cluster_compactness_lambda": 0.01,
+    "fpem_env_cluster_consistency_lambda": 0.05,
+    "fpem_env_exogenous_day_dim": 4,
+    "fpem_env_exogenous_hour_dim": 8,
+    "fpem_env_exogenous_load_dim": 8,
+    "fpem_env_exogenous_load_num_embeddings": 6,
+    "fpem_env_exogenous_rush_dim": 4,
+    "fpem_env_exogenous_scale": 0.1,
+    "fpem_env_gmm_n_init": 10,
+    "fpem_env_gmm_variance_floor": 0.0001,
+    "fpem_env_max_clusters": 6,
+    "fpem_env_min_cluster_ratio": 0.08,
+    "fpem_env_partition_freeze_last_epochs": 15,
+    "fpem_env_partition_max_batches": -1,
+    "fpem_env_partition_start_epoch": 5,
+    "fpem_env_partition_update_interval": 5,
+    "fpem_env_progressive_lambda_common": 0.2,
+    "fpem_env_prototype_temperature": 1.0,
+    "fpem_env_rep_ablation": "normal",
+    "fpem_env_route_balance_warmup_epochs": 10,
+    "fpem_env_route_final_temperature": 0.3,
+    "fpem_env_route_head_mode": "hyper_inv_film_proto_input_add",
+    "fpem_env_route_hidden_dim": 64,
+    "fpem_env_route_hybrid_alpha": 1.0,
+    "fpem_env_route_hybrid_alpha_decay_epochs": 30,
+    "fpem_env_route_hybrid_alpha_end": 0.5,
+    "fpem_env_route_hybrid_alpha_start": 1.0,
+    "fpem_env_route_inference_mode": "mlp",
+    "fpem_env_route_initial_temperature": 1.0,
+    "fpem_env_route_k": 1,
+    "fpem_env_route_lambda_balance": 0.1,
+    "fpem_env_route_lambda_diverse": 0.02,
+    "fpem_env_route_lambda_entropy": 0.0,
+    "fpem_env_route_lambda_expert": 0.2,
+    "fpem_env_route_lambda_final": 1.0,
+    "fpem_env_route_lambda_global": 0.0,
+    "fpem_env_route_lambda_proto_align": 0.01,
+    "fpem_env_route_lambda_route_soft": 0.5,
+    "fpem_env_route_lambda_router_oracle": 1.0,
+    "fpem_env_route_oracle_tau": 0.3,
+    "fpem_env_route_sinkhorn_iters": 5,
+    "fpem_env_route_sinkhorn_tau": 1.0,
+    "fpem_env_route_target_mode": "env_prototype",
+    "fpem_env_route_tau": 1.0,
+    "fpem_env_route_train_mode": "soft_oracle",
+    "fpem_env_route_use_inv_fallback_expert": false,
+    "fpem_env_route_warmup_epochs": 0,
+    "fpem_env_sinkhorn_environment_beta_final": 0.2,
+    "fpem_env_sinkhorn_environment_beta_start": 1.0,
+    "fpem_env_sinkhorn_gaussian_ema": 0.05,
+    "fpem_env_sinkhorn_gaussian_min_var": 0.0001,
+    "fpem_env_sinkhorn_prediction_alpha_final": 1.0,
+    "fpem_env_sinkhorn_prediction_alpha_start": 0.2,
+    "fpem_env_sinkhorn_schedule_end_epoch": 15,
+    "fpem_env_sinkhorn_schedule_start_epoch": 5,
+    "fpem_env_sinkhorn_temporal_lambda": 0.05,
+    "fpem_env_split_perturb_std": 1e-05,
+    "fpem_env_supcon_temperature": 0.1,
+    "fpem_env_teacher_ema_momentum": 0.995,
+    "fpem_env_use_exogenous": true,
+    "fpem_environment_gate_hidden_dim": 64,
+    "fpem_environment_gate_margin_relative": 0.01,
+    "fpem_environment_gate_temperature": 0.05,
+    "fpem_environment_gate_warmup_epochs": 5,
+    "fpem_expert_uniform_warmup_epochs": 5,
+    "fpem_force_uniform_route": false,
+    "fpem_future_mi_detach_target": true,
+    "fpem_future_mi_hidden_dim": 64,
+    "fpem_future_mi_target_mode": "env_encoder",
+    "fpem_future_mi_warmup_epochs": 5,
+    "fpem_gc_pred_loss_only": true,
+    "fpem_grl_alpha": 1.0,
+    "fpem_hard_router_hidden_dim": 64,
+    "fpem_hard_router_relative_margin": 0.01,
+    "fpem_hard_router_warmup_epochs": 5,
+    "fpem_hyper_alpha_mode": "fixed_one",
+    "fpem_ignore_future_c": true,
+    "fpem_input_scaler_mean": 38.48429196519959,
+    "fpem_input_scaler_std": 103.72333844876623,
+    "fpem_lambda_club_mi": 0.0,
+    "fpem_lambda_cross_cov_sep": 0.0,
+    "fpem_lambda_env_day_cls": 0.0,
+    "fpem_lambda_env_hour_cls": 0.0,
+    "fpem_lambda_env_rush_cls": 0.0,
+    "fpem_lambda_env_supcon": 0.0,
+    "fpem_lambda_environment_gate": 1.0,
+    "fpem_lambda_future_mi": 0.0,
+    "fpem_lambda_hard_router": 1.0,
+    "fpem_lambda_hyper_delta_norm": 0.0001,
+    "fpem_lambda_inv_env_adv": 0.0,
+    "fpem_lambda_inv_pred": 0.0,
+    "fpem_lambda_load_expert": 0.2,
+    "fpem_lambda_mask_entropy": 0.0,
+    "fpem_lambda_mask_sparse": 0.0,
+    "fpem_lambda_swap": 0.0,
+    "fpem_lambda_swap_diff": 1.0,
+    "fpem_lambda_swap_fallback_router": 0.0,
+    "fpem_lambda_swap_same": 0.05,
+    "fpem_load_level_k": 1,
+    "fpem_load_level_mode": "train_quantile",
+    "fpem_load_level_source": "cached c_obs=clip(ceil(5*x[:, -1]/train-only CP),0,5)",
+    "fpem_load_level_threshold_fit_split": "raw train",
+    "fpem_load_level_thresholds": [],
+    "fpem_load_level_train_counts": [
+      1912
+    ],
+    "fpem_load_level_uses_target_or_future_load": false,
+    "fpem_observable_load_prior_cache": "/data/OuXiaoyu/STEVE_CODE/STEVE/data/NYCTaxi/observable_load_prior_k3_v1.npz",
+    "fpem_observable_load_prior_summary": {
+      "CP_shape": [
+        200,
+        2
+      ],
+      "CP_zero_count": 0,
+      "cache_version": 1,
+      "created": false,
+      "metadata": {
+        "cache_version": 1,
+        "formula": "c_obs=clip(ceil(5*x[:,-1]/CP),0,5); CP=max(train_x,axis=(0,1)); CP==0 -> c_obs=0",
+        "load_score": "mean(c_obs/5 over nodes and channels)",
+        "quantiles": [
+          0.3333333333333333,
+          0.6666666666666666
+        ],
+        "random_assignment_seed": 314159,
+        "source_x_shapes": {
+          "test": [
+            546,
+            35,
+            200,
+            2
+          ],
+          "train": [
+            1912,
+            35,
+            200,
+            2
+          ],
+          "val": [
+            274,
+            35,
+            200,
+            2
+          ]
+        },
+        "threshold_fit_split": "train",
+        "uses_stored_c": false,
+        "uses_target_y": false
+      },
+      "path": "/data/OuXiaoyu/STEVE_CODE/STEVE/data/NYCTaxi/observable_load_prior_k3_v1.npz",
+      "random_assignment_seed": 314159,
+      "splits": {
+        "test": {
+          "c_obs_shape": [
+            546,
+            200,
+            2
+          ],
+          "expert_counts": [
+            125,
+            183,
+            238
+          ],
+          "random_expert_counts": [
+            125,
+            183,
+            238
+          ],
+          "samples": 546,
+          "score_max": 0.331,
+          "score_min": 0.08850000000000001
+        },
+        "train": {
+          "c_obs_shape": [
+            1912,
+            200,
+            2
+          ],
+          "expert_counts": [
+            639,
+            636,
+            637
+          ],
+          "random_expert_counts": [
+            639,
+            636,
+            637
+          ],
+          "samples": 1912,
+          "score_max": 0.32,
+          "score_min": 0.005
+        },
+        "val": {
+          "c_obs_shape": [
+            274,
+            200,
+            2
+          ],
+          "expert_counts": [
+            73,
+            81,
+            120
+          ],
+          "random_expert_counts": [
+            73,
+            81,
+            120
+          ],
+          "samples": 274,
+          "score_max": 0.311,
+          "score_min": 0.0925
+        }
+      },
+      "thresholds": [
+        0.165,
+        0.20350000000000001
+      ]
+    },
+    "fpem_observable_load_random_seed": 314159,
+    "fpem_pretrained_inv_agcrn_path": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/pure_agcrn_seed2024/best_val_model.pth",
+    "fpem_random_load_level_seed": 20260727,
+    "fpem_randomize_train_load_level": false,
+    "fpem_risk_router_lambda": 0.5,
+    "fpem_risk_router_pairwise_lambda": 0.0,
+    "fpem_risk_router_temperature": 1.0,
+    "fpem_sinkhorn_epsilon": 0.05,
+    "fpem_sinkhorn_iters": 3,
+    "fpem_sinkhorn_lambda_common": 0.1,
+    "fpem_sinkhorn_soft_end_epoch": 20,
+    "fpem_sinkhorn_temperature_final": 0.3,
+    "fpem_sinkhorn_temperature_start": 1.0,
+    "fpem_sinkhorn_warmup_epochs": 10,
+    "fpem_swap_detach_env": false,
+    "fpem_swap_detach_inv": true,
+    "fpem_swap_gain_eta": 0.0,
+    "fpem_swap_gain_tau": 0.05,
+    "fpem_swap_margin": 0.01,
+    "fpem_swap_only_diff_route": true,
+    "fpem_swap_warmup_epochs": 30,
+    "fpem_use_club_mi": false,
+    "fpem_use_confounder_extractor": false,
+    "fpem_use_cross_cov_sep": false,
+    "fpem_use_env_fusion": false,
+    "fpem_use_env_mask": false,
+    "fpem_use_env_prototype_router": false,
+    "fpem_use_env_route": true,
+    "fpem_use_env_supcon": false,
+    "fpem_use_env_supervision": false,
+    "fpem_use_environment_gate": false,
+    "fpem_use_future_mi": false,
+    "fpem_use_grad_consensus": false,
+    "fpem_use_hard_environment_router": true,
+    "fpem_use_inv_env_adversarial": false,
+    "fpem_use_inv_projector": false,
+    "fpem_use_load_level_experts": true,
+    "fpem_use_observable_load_prior": true,
+    "fpem_use_pretrained_inv_agcrn": true,
+    "fpem_use_random_balanced_assignment": false,
+    "fpem_use_sinkhorn_route": false,
+    "fpem_use_swap": false,
+    "fpem_use_swap_fallback_router_loss": false,
+    "git_commit": "1b38ed8",
+    "grad_norm": true,
+    "graph_file": "/data/OuXiaoyu/STEVE_CODE/STEVE/data/NYCTaxi_TDS/adj_mx.npz",
+    "graphwavenet_dropout": 0.1,
+    "graphwavenet_kernel_size": 2,
+    "graphwavenet_layers": 4,
+    "input_length": 35,
+    "kw": 1,
+    "layers": 3,
+    "len_closeness": 8,
+    "len_period": 27,
+    "len_trend": 0,
+    "log_dir": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_observable_load_hard_router_test_selected_0727_v2_obs_k1_environment_hard_router_seed2024",
+    "lr_init": 0.001,
+    "lr_mode": "only",
+    "lr_patience": 20,
+    "max_eval_batches": null,
+    "max_grad_norm": 5,
+    "max_train_batches": null,
+    "mi_w": 2,
+    "mode": "train",
+    "model": "steve",
+    "nmb_prototype": 4,
+    "num_nodes": 200,
+    "percent": 0.1,
+    "result_root": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS",
+    "resume": true,
+    "resume_reset_patience": true,
+    "run_name": "fpem_agcrn_aligned_pretrained_inv_observable_load_hard_router_test_selected_0727_v2_obs_k1_environment_hard_router_seed2024",
+    "save_test_selected_checkpoints": true,
+    "seed": 2024,
+    "shm_temp": 0.5,
+    "staeformer_dropout": 0.1,
+    "staeformer_heads": 4,
+    "staeformer_input_length_max": 512,
+    "staeformer_layers": 2,
+    "staeformer_mlp_ratio": 2.0,
+    "temp": 2,
+    "test_batch_size": 16,
+    "train_work_per_holiday": 2.5,
+    "use_RevIN": true,
+    "use_dwa": true,
+    "yita": 0.5
+  },
+  "checkpoint_epoch": 77,
+  "checkpoint_sha256": "bbc121fafe4d065d93679f804c4fb8913de55b12b3cd73e6aca6b3c0f0cc98b2",
+  "device": "cpu",
+  "forward_calls": 9,
+  "metric_notes": {
+    "masked_weighted": "mask=target[...,0]>5; error=yita*abs(flow_error)+(1-yita)*abs(speed_error)",
+    "standard": "lib.metrics.test_metrics on inverse-transformed arrays"
+  },
+  "one_forward_per_batch": true,
+  "output_dir": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_observable_load_hard_router_test_selected_0727_v2_obs_k1_environment_hard_router_seed2024/three_route_counterfactual_test_audit",
+  "pairwise_summary": [
+    {
+      "comparison": "all_environment_vs_all_invariant",
+      "first_strategy": "all_environment",
+      "first_win_count": 392,
+      "first_win_percentage": 71.7948717948718,
+      "mae_difference_definition": "first_minus_second",
+      "mean_samplewise_mae_difference": -0.2666996044818408,
+      "median_samplewise_mae_difference": -0.25844229903875604,
+      "sample_count": 546,
+      "second_strategy": "all_invariant",
+      "second_win_count": 154,
+      "second_win_percentage": 28.205128205128204,
+      "tie_count": 0,
+      "tie_percentage": 0.0
+    },
+    {
+      "comparison": "all_environment_vs_selective_hard_routing",
+      "first_strategy": "all_environment",
+      "first_win_count": 138,
+      "first_win_percentage": 25.274725274725274,
+      "mae_difference_definition": "first_minus_second",
+      "mean_samplewise_mae_difference": -0.04461753107665851,
+      "median_samplewise_mae_difference": 0.0,
+      "sample_count": 546,
+      "second_strategy": "selective_hard_routing",
+      "second_win_count": 78,
+      "second_win_percentage": 14.285714285714286,
+      "tie_count": 330,
+      "tie_percentage": 60.43956043956044
+    },
+    {
+      "comparison": "all_invariant_vs_selective_hard_routing",
+      "first_strategy": "all_invariant",
+      "first_win_count": 76,
+      "first_win_percentage": 13.91941391941392,
+      "mae_difference_definition": "first_minus_second",
+      "mean_samplewise_mae_difference": 0.22208207340518235,
+      "median_samplewise_mae_difference": 0.0,
+      "sample_count": 546,
+      "second_strategy": "selective_hard_routing",
+      "second_win_count": 254,
+      "second_win_percentage": 46.52014652014652,
+      "tie_count": 216,
+      "tie_percentage": 39.56043956043956
+    }
+  ],
+  "relative_margin": 0.01,
+  "router_summary": {
+    "margin_aware": {
+      "balanced_accuracy": 0.5889715492108174,
+      "correct_route_count": 333,
+      "f1": 0.6835066864784547,
+      "false_negative": 113,
+      "false_positive": 100,
+      "harmful_environment_corrections_avoided": 0.5073891625615764,
+      "incorrect_route_count": 213,
+      "oracle_environment_ratio": 0.6282051282051282,
+      "precision": 0.696969696969697,
+      "predicted_environment_ratio": 0.6043956043956044,
+      "recall": 0.6705539358600583,
+      "route_accuracy": 0.6098901098901099,
+      "specificity": 0.5073891625615764,
+      "total_samples": 546,
+      "true_negative": 103,
+      "true_positive": 230,
+      "useful_environment_gains_captured": 0.6705539358600583
+    },
+    "margin_formula": "relative_margin * L_inv",
+    "no_margin_argmin": {
+      "correct_route_count": 332,
+      "incorrect_route_count": 214,
+      "oracle_environment_ratio": 0.717948717948718,
+      "route_accuracy": 0.608058608058608,
+      "total_samples": 546
+    },
+    "primary_oracle": "margin_aware_training_rule",
+    "relative_margin": 0.01,
+    "route_convention": {
+      "0": "invariant",
+      "1": "environment"
+    }
+  },
+  "sample_count": 546,
+  "strategy_summary": [
+    {
+      "display_name": "All Environment",
+      "global_masked_weighted_mae": 11.551098273611771,
+      "samplewise_mean_masked_weighted_mae": 11.194354973869011,
+      "samplewise_median_masked_weighted_mae": 11.551306811982961,
+      "standard_test_mae": 10.525163650512695,
+      "standard_test_mape": 0.16917704045772552,
+      "strategy": "all_environment",
+      "valid_sample_count": 546
+    },
+    {
+      "display_name": "All Invariant",
+      "global_masked_weighted_mae": 11.819758172164214,
+      "samplewise_mean_masked_weighted_mae": 11.46105457835085,
+      "samplewise_median_masked_weighted_mae": 11.956935722770638,
+      "standard_test_mae": 10.74205493927002,
+      "standard_test_mape": 0.17484039068222046,
+      "strategy": "all_invariant",
+      "valid_sample_count": 546
+    },
+    {
+      "display_name": "Selective Hard Routing",
+      "global_masked_weighted_mae": 11.591362126245848,
+      "samplewise_mean_masked_weighted_mae": 11.238972504945668,
+      "samplewise_median_masked_weighted_mae": 11.541450944527117,
+      "standard_test_mae": 10.563006401062012,
+      "standard_test_mape": 0.17024056613445282,
+      "strategy": "selective_hard_routing",
+      "valid_sample_count": 546
+    }
+  ],
+  "test_loader_sampler": "SequentialSampler",
+  "tie_tolerance": 1e-06,
+  "validation": {
+    "cached_load_level_matches_output": true,
+    "changed_state_names": [],
+    "identical_sample_order_and_targets": true,
+    "model_eval": true,
+    "model_parameters_and_buffers_unchanged": true,
+    "pairwise_counts_sum_to_total": true,
+    "prediction_equals_y_final_exactly": true,
+    "route_convention_verified": true,
+    "selective_identity_max_abs_difference": 0.0,
+    "selective_matches_hard_where_atol_1e_5": true,
+    "state_digest_after": "255f677b06e6fca2b06f3c81b2b75a94227887c83a1c57c28834b86f272e66ac",
+    "state_digest_before": "255f677b06e6fca2b06f3c81b2b75a94227887c83a1c57c28834b86f272e66ac",
+    "stored_future_c_absent": true,
+    "target_passed_to_forward": false,
+    "test_loader_replay_indexes_identical": true,
+    "test_loader_replay_targets_identical": true,
+    "test_loader_shuffle_false": true,
+    "torch_no_grad_used": true
+  },
+  "yita": 0.5
+}

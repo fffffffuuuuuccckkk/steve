@@ -1,0 +1,4 @@
+strategy,display_name,global_masked_weighted_mae,samplewise_mean_masked_weighted_mae,samplewise_median_masked_weighted_mae,standard_test_mae,standard_test_mape,valid_sample_count
+all_environment,All Environment,11.551098273611771,11.194354973869011,11.551306811982961,10.525163650512695,0.16917704045772552,546
+all_invariant,All Invariant,11.819758172164214,11.46105457835085,11.956935722770638,10.74205493927002,0.17484039068222046,546
+selective_hard_routing,Selective Hard Routing,11.591362126245848,11.238972504945668,11.541450944527117,10.563006401062012,0.17024056613445282,546

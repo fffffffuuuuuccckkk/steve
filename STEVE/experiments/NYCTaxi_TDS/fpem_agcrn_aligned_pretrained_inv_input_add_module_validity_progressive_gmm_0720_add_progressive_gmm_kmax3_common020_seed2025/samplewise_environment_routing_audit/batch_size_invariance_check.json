@@ -1,0 +1,9 @@
+{
+  "batch_size_a": 1,
+  "batch_size_b": 16,
+  "n_compared": 32,
+  "sample_index_equal": true,
+  "native_prediction_allclose": true,
+  "max_abs_diff": 0.000244140625,
+  "ok": true
+}

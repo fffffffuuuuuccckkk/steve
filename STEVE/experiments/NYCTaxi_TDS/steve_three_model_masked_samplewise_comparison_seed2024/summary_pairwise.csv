@@ -1,0 +1,4 @@
+comparison,positive_means,mean_gain,median_gain,a_better_count,b_better_count,tie_count,valid_samples
+full_vs_inv_disentangle,full better,0.7760038458389458,0.65241982693628,364,182,0,546
+full_vs_inv_no_env,full better,1.0733529347457698,0.7146211091411718,351,195,0,546
+inv_disentangle_vs_inv_no_env,inv_disentangle better,0.2973490889068237,0.06229146337216651,279,267,0,546

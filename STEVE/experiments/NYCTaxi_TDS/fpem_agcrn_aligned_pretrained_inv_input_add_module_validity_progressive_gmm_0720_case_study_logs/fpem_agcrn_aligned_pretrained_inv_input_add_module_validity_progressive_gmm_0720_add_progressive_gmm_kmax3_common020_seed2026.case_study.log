@@ -1,0 +1,14 @@
+[StableST] loaded pretrained invariant AGCRN encoder from /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/pure_agcrn_seed2024/best_val_model.pth; missing=[] unexpected=[]
+{
+  "status": "ok",
+  "seed": 2026,
+  "output_dir": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2026/case_study/progressive_gmm_case_outputs",
+  "active_k": 3,
+  "hungarian_mapping": {
+    "0": 0,
+    "1": 2,
+    "2": 1
+  },
+  "best_fixed_expert_id": 0,
+  "num_files": 56
+}

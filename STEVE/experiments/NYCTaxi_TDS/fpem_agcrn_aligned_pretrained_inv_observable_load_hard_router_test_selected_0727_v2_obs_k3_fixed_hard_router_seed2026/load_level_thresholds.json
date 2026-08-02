@@ -1,0 +1,126 @@
+{
+  "source": "cached c_obs=clip(ceil(5*x[:, -1]/train-only CP),0,5)",
+  "mode": "train_quantile",
+  "k": 3,
+  "thresholds": [
+    0.165,
+    0.20350000000000001
+  ],
+  "fit_split": "raw train",
+  "train_level_counts": [
+    639,
+    636,
+    637
+  ],
+  "uses_target_or_future_load": false,
+  "observable_load_prior": {
+    "path": "/data/OuXiaoyu/STEVE_CODE/STEVE/data/NYCTaxi/observable_load_prior_k3_v1.npz",
+    "cache_version": 1,
+    "created": false,
+    "CP_shape": [
+      200,
+      2
+    ],
+    "CP_zero_count": 0,
+    "thresholds": [
+      0.165,
+      0.20350000000000001
+    ],
+    "random_assignment_seed": 314159,
+    "metadata": {
+      "cache_version": 1,
+      "formula": "c_obs=clip(ceil(5*x[:,-1]/CP),0,5); CP=max(train_x,axis=(0,1)); CP==0 -> c_obs=0",
+      "load_score": "mean(c_obs/5 over nodes and channels)",
+      "quantiles": [
+        0.3333333333333333,
+        0.6666666666666666
+      ],
+      "random_assignment_seed": 314159,
+      "source_x_shapes": {
+        "test": [
+          546,
+          35,
+          200,
+          2
+        ],
+        "train": [
+          1912,
+          35,
+          200,
+          2
+        ],
+        "val": [
+          274,
+          35,
+          200,
+          2
+        ]
+      },
+      "threshold_fit_split": "train",
+      "uses_stored_c": false,
+      "uses_target_y": false
+    },
+    "splits": {
+      "train": {
+        "samples": 1912,
+        "c_obs_shape": [
+          1912,
+          200,
+          2
+        ],
+        "score_min": 0.005,
+        "score_max": 0.32,
+        "expert_counts": [
+          639,
+          636,
+          637
+        ],
+        "random_expert_counts": [
+          639,
+          636,
+          637
+        ]
+      },
+      "val": {
+        "samples": 274,
+        "c_obs_shape": [
+          274,
+          200,
+          2
+        ],
+        "score_min": 0.0925,
+        "score_max": 0.311,
+        "expert_counts": [
+          73,
+          81,
+          120
+        ],
+        "random_expert_counts": [
+          73,
+          81,
+          120
+        ]
+      },
+      "test": {
+        "samples": 546,
+        "c_obs_shape": [
+          546,
+          200,
+          2
+        ],
+        "score_min": 0.08850000000000001,
+        "score_max": 0.331,
+        "expert_counts": [
+          125,
+          183,
+          238
+        ],
+        "random_expert_counts": [
+          125,
+          183,
+          238
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "checkpoint": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_progressive_gmm_0720_add_progressive_gmm_kmax3_common020_seed2025/best_val_model.pth",
+  "seed": 2025,
+  "k": 3,
+  "mapping_source": "validation",
+  "validation_cross_mae": [
+    [
+      5.512677345833757,
+      5.513410724497444,
+      5.506010616128627
+    ],
+    [
+      8.649861064461222,
+      8.650531747891831,
+      8.650907578204912
+    ],
+    [
+      8.920008946349826,
+      8.91778339434647,
+      8.919654645650692
+    ]
+  ],
+  "identity_mapping": {
+    "0": 0,
+    "1": 1,
+    "2": 2
+  },
+  "hungarian_mapping": {
+    "0": 2,
+    "1": 0,
+    "2": 1
+  },
+  "independent_mapping": {
+    "0": 2,
+    "1": 0,
+    "2": 1
+  },
+  "training_cluster_prior": [
+    0.2744036316871643,
+    0.47007694840431213,
+    0.25551939010620117
+  ],
+  "training_prior_converted_to_expert_prior_by_hungarian_mapping": [
+    0.47007694840431213,
+    0.25551939010620117,
+    0.2744036316871643
+  ],
+  "gmm_fit_source": "training"
+}

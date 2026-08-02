@@ -1,0 +1,2 @@
+checkpoint_path,split,num_samples,base_mae_mean,full_mae_mean,mean_delta_base_minus_full,median_delta,std_delta,q25_delta,q75_delta,env_helps_count,env_helps_prop,env_hurts_count,env_hurts_prop,env_neutral_count,env_neutral_prop,tie_threshold,env_delta_abs_mean
+/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_full_reproduce_seed2024/best_model.pth,test,64,73.64219665527344,67.06192016601562,6.580282688140869,7.198860168457031,3.69476580619812,4.809722900390625,9.064878463745117,57,0.890625,3,0.046875,4,0.0625,1e-06,11.905635833740234
