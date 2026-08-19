@@ -1,0 +1,87 @@
+{
+  "best_epoch": 1,
+  "checkpoint_selection": "lowest validation MAE",
+  "dataset": "LargeST-SD_TDS",
+  "fixed_graph": true,
+  "graph_file": "data/LargeST-SD_TDS/adj_mx.npz",
+  "graph_hops": 2,
+  "implementation_status": "non-official-paper-adapter",
+  "input_length": 35,
+  "method": "EpoD",
+  "num_nodes": 716,
+  "official_repo": "No official implementation found during the initial audit pass",
+  "output_length": 1,
+  "paper": "Improving Generalization of Dynamic Graph Learning via Environment Prompt",
+  "parameter_count": 16882,
+  "peak_gpu_memory_mb": 1575.10986328125,
+  "scaler": {
+    "fit_split": "train",
+    "mean": 244.42984008789062,
+    "std": 184.03782653808594
+  },
+  "seed": 2024,
+  "smoke": true,
+  "source_commit": "non-official-paper-adapter",
+  "support_edge_ratio": 0.09487258642911911,
+  "target_channels": 1,
+  "test_dynamic_adj_mean": 0.001396648120135069,
+  "test_dynamic_adj_std": 0.007245917804539204,
+  "test_mae": 319.6241760253906,
+  "test_mape": 10.40473747253418,
+  "test_period": "2020 second half",
+  "test_rmse": 320.8481140136719,
+  "train_period": "2019",
+  "train_shapes": {
+    "test": {
+      "x": [
+        17663,
+        35,
+        716,
+        1
+      ],
+      "y": [
+        17663,
+        1,
+        716,
+        1
+      ]
+    },
+    "train": {
+      "x": [
+        35005,
+        35,
+        716,
+        1
+      ],
+      "y": [
+        35005,
+        1,
+        716,
+        1
+      ]
+    },
+    "val": {
+      "x": [
+        17471,
+        35,
+        716,
+        1
+      ],
+      "y": [
+        17471,
+        1,
+        716,
+        1
+      ]
+    }
+  },
+  "trainable_parameter_count": 16882,
+  "training_time": 1.733447551727295,
+  "uses_environment_labels": false,
+  "uses_external_features": false,
+  "uses_test_time_adaptation": false,
+  "val_mae": 265.5028991699219,
+  "val_mape": 4.396247863769531,
+  "val_period": "2020 first half",
+  "val_rmse": 270.8210754394531
+}

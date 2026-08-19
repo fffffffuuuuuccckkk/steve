@@ -1,0 +1,2 @@
+case	seed	status	run_name	test_avg_mae	best_epoch	confounder_dep_total	loss_gci	loss_scd	loss_conf_kl	detail
+conf_gci	2024	DRY_RUN	tmp_check_obs_k1_router_conf_gci_seed2024	NA	NA	NA	NA	NA	NA	not launched

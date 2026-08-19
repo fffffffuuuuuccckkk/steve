@@ -1,0 +1,3 @@
+swap_type,num_samples,mean_abs_pred_swap_minus_original,median_abs_pred_swap_minus_original,mae_original,mae_swapped,delta_mae
+same_env,4,0.00021023035515099764,0.0002341032086405903,166.178466796875,166.178466796875,0.0
+cross_env,4,0.0,0.0,166.178466796875,166.178466796875,0.0

@@ -1,0 +1,2 @@
+case	seed	status	run_name	test_avg_mae	best_epoch	confounder_dep_total	loss_gci	loss_scd	loss_conf_kl	detail
+conf_both	2024	OK	fpem_agcrn_aligned_confounder_dep_scd_smoke_0810_conf_both_seed2024	99.54179000854492	1	0.00019839272135868669	9.851128204203464e-43	0.18778519332408905	0.10607512295246124	finished

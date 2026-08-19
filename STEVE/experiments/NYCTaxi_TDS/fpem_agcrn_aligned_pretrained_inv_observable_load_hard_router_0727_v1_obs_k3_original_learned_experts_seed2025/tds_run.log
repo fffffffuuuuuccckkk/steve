@@ -1,0 +1,510 @@
+{
+  "args": {
+    "seed": 2025,
+    "device": "cuda:0",
+    "mode": "train",
+    "best_path": "/home/zhangwt/remote/StableST/experiments/NYCTaxi/20240510-014845/best_model.pth",
+    "debug": false,
+    "data_dir": "/data/OuXiaoyu/STEVE_CODE/STEVE/data",
+    "dataset": "NYCTaxi_TDS",
+    "input_length": 35,
+    "batch_size": 16,
+    "test_batch_size": 16,
+    "graph_file": "/data/OuXiaoyu/STEVE_CODE/STEVE/data/NYCTaxi_TDS/adj_mx.npz",
+    "num_nodes": 200,
+    "len_closeness": 8,
+    "len_period": 27,
+    "len_trend": 0,
+    "d_input": 2,
+    "d_output": 2,
+    "d_model": 64,
+    "dropout": 0.1,
+    "percent": 0.1,
+    "shm_temp": 0.5,
+    "nmb_prototype": 4,
+    "yita": 0.5,
+    "layers": 3,
+    "K": 64,
+    "bank_gamma": 0.2,
+    "kw": 1,
+    "mi_w": 2,
+    "epochs": 100,
+    "lr_init": 0.001,
+    "early_stop": true,
+    "early_stop_patience": 30,
+    "grad_norm": true,
+    "max_grad_norm": 5,
+    "use_dwa": true,
+    "temp": 2,
+    "MMI": false,
+    "lr_patience": 20,
+    "lr_mode": "only",
+    "use_RevIN": true,
+    "ablation": "obs_k3_original_learned_experts",
+    "config_filename": "/data/OuXiaoyu/STEVE_CODE/STEVE/configs/NYCTaxi.yaml",
+    "model": "steve",
+    "data_seed": 2025,
+    "early_stop_test_avg_mae_epoch": 0,
+    "early_stop_test_avg_mae_threshold": 12.0,
+    "train_work_per_holiday": 2.5,
+    "exp_name": "fpem_agcrn_aligned_pretrained_inv_observable_load_hard_router_0727_v1_obs_k3_original_learned_experts_seed2025",
+    "run_name": "fpem_agcrn_aligned_pretrained_inv_observable_load_hard_router_0727_v1_obs_k3_original_learned_experts_seed2025",
+    "result_root": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS",
+    "resume": true,
+    "resume_reset_patience": true,
+    "max_train_batches": null,
+    "max_eval_batches": null,
+    "fpem_backbone": "agcrn",
+    "agcrn_lr": 0.003,
+    "agcrn_embed_dim": 10,
+    "agcrn_rnn_units": 64,
+    "agcrn_num_layers": 2,
+    "agcrn_cheb_k": 2,
+    "graphwavenet_layers": 4,
+    "graphwavenet_kernel_size": 2,
+    "graphwavenet_dropout": 0.1,
+    "staeformer_layers": 2,
+    "staeformer_heads": 4,
+    "staeformer_dropout": 0.1,
+    "staeformer_mlp_ratio": 2.0,
+    "staeformer_input_length_max": 512,
+    "fpem_use_pretrained_inv_agcrn": true,
+    "fpem_pretrained_inv_agcrn_path": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/pure_agcrn_seed2024/best_val_model.pth",
+    "fpem_use_env_supervision": false,
+    "fpem_lambda_env_day_cls": 0.0,
+    "fpem_lambda_env_hour_cls": 0.0,
+    "fpem_lambda_env_rush_cls": 0.0,
+    "fpem_env_use_exogenous": true,
+    "fpem_env_exogenous_hour_dim": 8,
+    "fpem_env_exogenous_day_dim": 4,
+    "fpem_env_exogenous_rush_dim": 4,
+    "fpem_env_exogenous_load_dim": 8,
+    "fpem_env_exogenous_load_num_embeddings": 6,
+    "fpem_env_exogenous_scale": 0.1,
+    "fpem_ignore_future_c": true,
+    "fpem_use_load_level_experts": false,
+    "fpem_load_level_k": 3,
+    "fpem_load_level_mode": "train_quantile",
+    "fpem_randomize_train_load_level": false,
+    "fpem_random_load_level_seed": 20260727,
+    "fpem_use_environment_gate": false,
+    "fpem_environment_gate_hidden_dim": 64,
+    "fpem_environment_gate_warmup_epochs": 5,
+    "fpem_environment_gate_margin_relative": 0.01,
+    "fpem_environment_gate_temperature": 0.05,
+    "fpem_lambda_environment_gate": 1.0,
+    "fpem_lambda_load_expert": 0.2,
+    "fpem_use_env_supcon": false,
+    "fpem_lambda_env_supcon": 0.0,
+    "fpem_env_supcon_temperature": 0.1,
+    "fpem_use_inv_projector": false,
+    "fpem_use_inv_env_adversarial": false,
+    "fpem_lambda_inv_env_adv": 0.0,
+    "fpem_grl_alpha": 1.0,
+    "fpem_env_route_head_mode": "hyper_inv_film_proto_input_add",
+    "fpem_use_env_prototype_router": false,
+    "fpem_env_route_target_mode": "prediction_oracle",
+    "fpem_env_route_train_mode": "soft_oracle",
+    "fpem_env_route_inference_mode": "mlp",
+    "fpem_env_prototype_temperature": 1.0,
+    "fpem_env_route_hybrid_alpha": 1.0,
+    "fpem_env_route_hybrid_alpha_start": 1.0,
+    "fpem_env_route_hybrid_alpha_end": 0.5,
+    "fpem_env_route_hybrid_alpha_decay_epochs": 30,
+    "fpem_use_sinkhorn_route": false,
+    "fpem_force_uniform_route": false,
+    "fpem_env_rep_ablation": "normal",
+    "fpem_env_route_sinkhorn_tau": 1.0,
+    "fpem_env_route_sinkhorn_iters": 5,
+    "fpem_env_sinkhorn_prediction_alpha_start": 0.2,
+    "fpem_env_sinkhorn_prediction_alpha_final": 1.0,
+    "fpem_env_sinkhorn_environment_beta_start": 1.0,
+    "fpem_env_sinkhorn_environment_beta_final": 0.2,
+    "fpem_env_sinkhorn_schedule_start_epoch": 5,
+    "fpem_env_sinkhorn_schedule_end_epoch": 15,
+    "fpem_env_sinkhorn_temporal_lambda": 0.05,
+    "fpem_env_sinkhorn_gaussian_ema": 0.05,
+    "fpem_env_sinkhorn_gaussian_min_var": 0.0001,
+    "fpem_sinkhorn_warmup_epochs": 10,
+    "fpem_sinkhorn_soft_end_epoch": 20,
+    "fpem_sinkhorn_temperature_start": 1.0,
+    "fpem_sinkhorn_temperature_final": 0.3,
+    "fpem_sinkhorn_lambda_common": 0.1,
+    "fpem_risk_router_temperature": 1.0,
+    "fpem_risk_router_lambda": 0.5,
+    "fpem_risk_router_pairwise_lambda": 0.0,
+    "fpem_env_teacher_ema_momentum": 0.995,
+    "fpem_env_partition_start_epoch": 5,
+    "fpem_env_partition_update_interval": 5,
+    "fpem_env_partition_freeze_last_epochs": 15,
+    "fpem_env_partition_max_batches": -1,
+    "fpem_env_max_clusters": 6,
+    "fpem_env_min_cluster_ratio": 0.08,
+    "fpem_env_gmm_n_init": 10,
+    "fpem_env_gmm_variance_floor": 0.0001,
+    "fpem_env_progressive_lambda_common": 0.2,
+    "fpem_env_cluster_compactness_lambda": 0.01,
+    "fpem_env_cluster_consistency_lambda": 0.05,
+    "fpem_env_split_perturb_std": 1e-05,
+    "fpem_sinkhorn_iters": 3,
+    "fpem_sinkhorn_epsilon": 0.05,
+    "fpem_expert_uniform_warmup_epochs": 5,
+    "fpem_env_route_balance_warmup_epochs": 10,
+    "fpem_env_route_initial_temperature": 1.0,
+    "fpem_env_route_final_temperature": 0.3,
+    "fpem_use_cross_cov_sep": false,
+    "fpem_lambda_cross_cov_sep": 0.0,
+    "save_test_selected_checkpoints": false,
+    "fpem_use_confounder_extractor": false,
+    "fpem_use_env_mask": false,
+    "fpem_confounder_use_mask": false,
+    "fpem_lambda_mask_sparse": 0.0,
+    "fpem_lambda_mask_entropy": 0.0,
+    "fpem_lambda_inv_pred": 0.0,
+    "fpem_use_env_route": true,
+    "fpem_env_route_k": 3,
+    "fpem_env_route_warmup_epochs": 0,
+    "fpem_env_route_tau": 1.0,
+    "fpem_env_route_oracle_tau": 0.3,
+    "fpem_env_route_hidden_dim": 64,
+    "fpem_env_route_lambda_final": 1.0,
+    "fpem_env_route_lambda_global": 0.0,
+    "fpem_env_route_lambda_route_soft": 0.5,
+    "fpem_env_route_lambda_expert": 0.2,
+    "fpem_env_route_lambda_router_oracle": 1.0,
+    "fpem_env_route_lambda_balance": 0.1,
+    "fpem_env_route_lambda_diverse": 0.02,
+    "fpem_env_route_lambda_proto_align": 0.01,
+    "fpem_env_route_lambda_entropy": 0.0,
+    "fpem_hyper_alpha_mode": "fixed_one",
+    "fpem_lambda_hyper_delta_norm": 0.0001,
+    "fpem_use_club_mi": false,
+    "fpem_lambda_club_mi": 0.0,
+    "fpem_use_env_fusion": false,
+    "fpem_env_route_use_inv_fallback_expert": false,
+    "fpem_use_future_mi": false,
+    "fpem_lambda_future_mi": 0.0,
+    "fpem_future_mi_target_mode": "env_encoder",
+    "fpem_future_mi_warmup_epochs": 5,
+    "fpem_future_mi_hidden_dim": 64,
+    "fpem_future_mi_detach_target": true,
+    "fpem_use_swap": false,
+    "fpem_lambda_swap": 0.0,
+    "fpem_swap_warmup_epochs": 30,
+    "fpem_swap_margin": 0.01,
+    "fpem_swap_gain_eta": 0.0,
+    "fpem_swap_gain_tau": 0.05,
+    "fpem_lambda_swap_diff": 1.0,
+    "fpem_lambda_swap_same": 0.05,
+    "fpem_swap_only_diff_route": true,
+    "fpem_swap_detach_inv": true,
+    "fpem_swap_detach_env": false,
+    "fpem_use_swap_fallback_router_loss": false,
+    "fpem_lambda_swap_fallback_router": 0.0,
+    "fpem_use_grad_consensus": false,
+    "fpem_gc_pred_loss_only": true,
+    "fpem_use_observable_load_prior": true,
+    "fpem_observable_load_prior_cache": "/data/OuXiaoyu/STEVE_CODE/STEVE/data/NYCTaxi/observable_load_prior_k3_v1.npz",
+    "fpem_observable_load_random_seed": 314159,
+    "fpem_use_random_balanced_assignment": false,
+    "fpem_use_hard_environment_router": false,
+    "git_commit": "1b38ed8",
+    "log_dir": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_observable_load_hard_router_0727_v1_obs_k3_original_learned_experts_seed2025",
+    "fpem_observable_load_prior_summary": {
+      "path": "/data/OuXiaoyu/STEVE_CODE/STEVE/data/NYCTaxi/observable_load_prior_k3_v1.npz",
+      "cache_version": 1,
+      "created": false,
+      "CP_shape": [
+        200,
+        2
+      ],
+      "CP_zero_count": 0,
+      "thresholds": [
+        0.165,
+        0.20350000000000001
+      ],
+      "random_assignment_seed": 314159,
+      "metadata": {
+        "cache_version": 1,
+        "formula": "c_obs=clip(ceil(5*x[:,-1]/CP),0,5); CP=max(train_x,axis=(0,1)); CP==0 -> c_obs=0",
+        "load_score": "mean(c_obs/5 over nodes and channels)",
+        "quantiles": [
+          0.3333333333333333,
+          0.6666666666666666
+        ],
+        "random_assignment_seed": 314159,
+        "source_x_shapes": {
+          "test": [
+            546,
+            35,
+            200,
+            2
+          ],
+          "train": [
+            1912,
+            35,
+            200,
+            2
+          ],
+          "val": [
+            274,
+            35,
+            200,
+            2
+          ]
+        },
+        "threshold_fit_split": "train",
+        "uses_stored_c": false,
+        "uses_target_y": false
+      },
+      "splits": {
+        "train": {
+          "samples": 1912,
+          "c_obs_shape": [
+            1912,
+            200,
+            2
+          ],
+          "score_min": 0.005,
+          "score_max": 0.32,
+          "expert_counts": [
+            639,
+            636,
+            637
+          ],
+          "random_expert_counts": [
+            639,
+            636,
+            637
+          ]
+        },
+        "val": {
+          "samples": 274,
+          "c_obs_shape": [
+            274,
+            200,
+            2
+          ],
+          "score_min": 0.0925,
+          "score_max": 0.311,
+          "expert_counts": [
+            73,
+            81,
+            120
+          ],
+          "random_expert_counts": [
+            73,
+            81,
+            120
+          ]
+        },
+        "test": {
+          "samples": 546,
+          "c_obs_shape": [
+            546,
+            200,
+            2
+          ],
+          "score_min": 0.08850000000000001,
+          "score_max": 0.331,
+          "expert_counts": [
+            125,
+            183,
+            238
+          ],
+          "random_expert_counts": [
+            125,
+            183,
+            238
+          ]
+        }
+      }
+    },
+    "fpem_load_level_thresholds": [
+      0.165,
+      0.20350000000000001
+    ],
+    "fpem_load_level_train_counts": [
+      639,
+      636,
+      637
+    ],
+    "fpem_load_level_source": "cached c_obs=clip(ceil(5*x[:, -1]/train-only CP),0,5)",
+    "fpem_load_level_threshold_fit_split": "raw train",
+    "fpem_load_level_uses_target_or_future_load": false,
+    "fpem_input_scaler_mean": 38.57557819125603,
+    "fpem_input_scaler_std": 103.88843068867193
+  },
+  "counts": {
+    "train_total": 1680,
+    "train_workday": 1200,
+    "train_holiday": 480,
+    "train_workday_holiday_ratio": 2.5,
+    "val_total": 274,
+    "val_workday": 178,
+    "val_holiday": 96,
+    "test_total": 546,
+    "test_workday": 354,
+    "test_holiday": 192,
+    "train_shuffle": true,
+    "train_chronological_for_env_sinkhorn_temporal": false,
+    "traffic_load_c_audit": {
+      "ignored": true,
+      "loaded_into_training_or_inference": false,
+      "reason": "stored c is derived from future y[:,0]"
+    },
+    "observable_load_prior": {
+      "path": "/data/OuXiaoyu/STEVE_CODE/STEVE/data/NYCTaxi/observable_load_prior_k3_v1.npz",
+      "cache_version": 1,
+      "created": false,
+      "CP_shape": [
+        200,
+        2
+      ],
+      "CP_zero_count": 0,
+      "thresholds": [
+        0.165,
+        0.20350000000000001
+      ],
+      "random_assignment_seed": 314159,
+      "metadata": {
+        "cache_version": 1,
+        "formula": "c_obs=clip(ceil(5*x[:,-1]/CP),0,5); CP=max(train_x,axis=(0,1)); CP==0 -> c_obs=0",
+        "load_score": "mean(c_obs/5 over nodes and channels)",
+        "quantiles": [
+          0.3333333333333333,
+          0.6666666666666666
+        ],
+        "random_assignment_seed": 314159,
+        "source_x_shapes": {
+          "test": [
+            546,
+            35,
+            200,
+            2
+          ],
+          "train": [
+            1912,
+            35,
+            200,
+            2
+          ],
+          "val": [
+            274,
+            35,
+            200,
+            2
+          ]
+        },
+        "threshold_fit_split": "train",
+        "uses_stored_c": false,
+        "uses_target_y": false
+      },
+      "splits": {
+        "train": {
+          "samples": 1912,
+          "c_obs_shape": [
+            1912,
+            200,
+            2
+          ],
+          "score_min": 0.005,
+          "score_max": 0.32,
+          "expert_counts": [
+            639,
+            636,
+            637
+          ],
+          "random_expert_counts": [
+            639,
+            636,
+            637
+          ]
+        },
+        "val": {
+          "samples": 274,
+          "c_obs_shape": [
+            274,
+            200,
+            2
+          ],
+          "score_min": 0.0925,
+          "score_max": 0.311,
+          "expert_counts": [
+            73,
+            81,
+            120
+          ],
+          "random_expert_counts": [
+            73,
+            81,
+            120
+          ]
+        },
+        "test": {
+          "samples": 546,
+          "c_obs_shape": [
+            546,
+            200,
+            2
+          ],
+          "score_min": 0.08850000000000001,
+          "score_max": 0.331,
+          "expert_counts": [
+            125,
+            183,
+            238
+          ],
+          "random_expert_counts": [
+            125,
+            183,
+            238
+          ]
+        }
+      }
+    },
+    "load_level_source": "cached c_obs=clip(ceil(5*x[:, -1]/train-only CP),0,5)",
+    "load_level_threshold_fit_split": "raw train",
+    "load_level_thresholds": [
+      0.165,
+      0.20350000000000001
+    ],
+    "load_level_train_counts": [
+      639,
+      636,
+      637
+    ],
+    "load_level_uses_target_or_future_load": false
+  },
+  "trainable_params": 889985,
+  "frozen_params": 1704924,
+  "optimizer_params": 889985,
+  "resume_start_epoch": 1,
+  "top_level_prediction_source": "model_forward_prediction",
+  "frozen_invariant_parameters": [
+    "encoder_inv.node_embeddings",
+    "encoder_inv.cells.0.gate.weights_pool",
+    "encoder_inv.cells.0.gate.bias_pool",
+    "encoder_inv.cells.0.update.weights_pool",
+    "encoder_inv.cells.0.update.bias_pool",
+    "encoder_inv.cells.1.gate.weights_pool",
+    "encoder_inv.cells.1.gate.bias_pool",
+    "encoder_inv.cells.1.update.weights_pool",
+    "encoder_inv.cells.1.update.bias_pool",
+    "tcl4h.weight",
+    "tcl4h.bias",
+    "invariant_predict_conv_2.weight",
+    "invariant_predict_conv_2.bias"
+  ],
+  "trainable_invariant_parameters": [],
+  "invariant_candidate_val": {
+    "mae": 11.224043846130371,
+    "mape": 0.21232888102531433
+  }
+}
+EPOCH {"epoch": 1, "train_loss": 125.57149836222331, "val": {"loss": 20.600030687120224, "mae": 20.55499267578125, "mape": 0.7451285123825073}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "lr": 0.001, "fpem_logs": {"fpem/fpem_env_use_exogenous": 1.0, "fpem/env_exogenous_available": 1.0, "fpem/env_exogenous_time_available": 1.0, "fpem/env_exogenous_load_available": 1.0, "fpem/env_exogenous_feature_dim": 32.0, "fpem/env_exogenous_embedding_norm": 2.2497866925739105, "fpem/env_exogenous_load_embedding_norm": 1.579473008428301, "fpem/env_rep_ablation_normal": 1.0, "fpem/env_rep_ablation_zero": 0.0, "fpem/env_rep_ablation_shuffle_batch": 0.0, "fpem/env_rep_ablation_mode_id": 0.0, "fpem/mask_loss": 0.0, "fpem/mask_sparse_loss": 0.0, "fpem/mask_entropy_loss": 0.0, "fpem/mask_mean": 1.0, "fpem/mask_entropy": 0.0, "fpem/mask_active_ratio": 1.0, "fpem/fusion_alpha_mean": 0.0, "fpem/fusion_alpha_std": 0.0, "fpem/fusion_alpha_min": 0.0, "fpem/fusion_alpha_max": 0.0, "fpem/env_route_loss": 79.39088979448591, "fpem/env_route_L_final": 46.18056368146624, "fpem/env_route_L_global": 9.064515790485201, "fpem/env_route_L_route_soft": 46.18056368146624, "fpem/env_route_L_expert": 46.25762755984352, "fpem/env_route_L_router_oracle": 0.8490995489415668, "fpem/env_route_L_balance": 0.050659730427321935, "fpem/env_route_L_diverse": 0.8417557747591109, "fpem/env_route_L_proto_align": -0.2482431137346707, "fpem/env_route_entropy": 0.7736179079328265, "fpem/env_route_q_max_mean": 0.6156969121524266, "fpem/env_route_train_mode_gradient_compat": 0.0, "fpem/env_route_train_mode_hard_prediction_sinkhorn": 0.0, "fpem/env_route_gradient_compat_aux": 0.0, "fpem/hard_sinkhorn_enabled": 0.0, "fpem/sinkhorn_soft_entropy": 0.0, "fpem/sinkhorn_selected_loss": 0.0, "fpem/router_assignment_accuracy": 0.0, "fpem/router_assignment_agreement": 0.0, "fpem/oracle_hard_mae": 0.0, "fpem/router_hard_mae": 0.0, "fpem/router_regret": 0.0, "fpem/hard_sinkhorn_balance_repaired": 0.0, "fpem/sinkhorn_soft_row_sum_mean": 0.0, "fpem/hyper_alpha_mean": 1.0, "fpem/hyper_delta_norm": 0.4445509257313062, "fpem/hyper_route_proto_mode_uniform_warmup": 1.0, "fpem/hyper_route_proto_mode_uniform_fixed": 0.0, "fpem/hyper_route_proto_mode_sinkhorn": 0.0, "fpem/hyper_route_proto_mode_softmax": 0.0, "fpem/fallback_q_mean": 0.0, "fpem/fallback_q_max": 0.0, "fpem/env_q_sum_mean": 0.0, "fpem/oracle_fallback_rate": 0.0, "fpem/route_count_fallback": 0.0, "fpem/env_route_head_mode": 1.0, "fpem/route_entropy_mean": 0.7736179079328265, "fpem/route_mean_distribution_entropy": 0.8137350888479323, "fpem/effective_expert_number": 2.2613142796925136, "fpem/max_expert_usage_ratio": 0.7517857142857143, "fpem/min_expert_usage_ratio": 0.0, "fpem/prototype_pairwise_cosine": 0.026886945184586303, "fpem/expert_prediction_pairwise_cosine": 0.8417557747591109, "fpem/expert_collapse_warning": 0.9809523809523809, "fpem/env_route_target_mode_env_prototype": 0.0, "fpem/env_route_target_mode_hybrid": 0.0, "fpem/env_route_hybrid_alpha": 0.0, "fpem/env_route_count_head_0": 10.257142857142858, "fpem/env_route_oracle_count_head_0": 7.695238095238095, "fpem/route_count_env_head_0": 10.257142857142858, "fpem/route_soft_mean_expert_0": 0.5297856424536024, "fpem/route_hard_count_expert_0": 10.257142857142858, "fpem/hard_count_expert_0": 0.0, "fpem/sinkhorn_soft_col_mass_expert_0": 0.0, "fpem/hyper_alpha_head_0": 1.0, "fpem/hyper_gamma_norm_head_0": 5.030667816946793, "fpem/hyper_beta_norm_head_0": 1.282740952554048, "fpem/expert_cross_mae_group_0_expert_0": 0.0, "fpem/expert_cross_mae_group_0_expert_1": 0.0, "fpem/expert_cross_mae_group_0_expert_2": 0.0, "fpem/env_route_count_head_1": 0.780952380952381, "fpem/env_route_oracle_count_head_1": 0.8857142857142857, "fpem/route_count_env_head_1": 0.780952380952381, "fpem/route_soft_mean_expert_1": 0.0855017982778095, "fpem/route_hard_count_expert_1": 0.780952380952381, "fpem/hard_count_expert_1": 0.0, "fpem/sinkhorn_soft_col_mass_expert_1": 0.0, "fpem/hyper_alpha_head_1": 1.0, "fpem/hyper_gamma_norm_head_1": 2.5696334781474435, "fpem/hyper_beta_norm_head_1": 1.2192154658198844, "fpem/expert_cross_mae_group_1_expert_0": 0.0, "fpem/expert_cross_mae_group_1_expert_1": 0.0, "fpem/expert_cross_mae_group_1_expert_2": 0.0, "fpem/env_route_count_head_2": 4.961904761904762, "fpem/env_route_oracle_count_head_2": 7.419047619047619, "fpem/route_count_env_head_2": 4.961904761904762, "fpem/route_soft_mean_expert_2": 0.384712564093726, "fpem/route_hard_count_expert_2": 4.961904761904762, "fpem/hard_count_expert_2": 0.0, "fpem/sinkhorn_soft_col_mass_expert_2": 0.0, "fpem/hyper_alpha_head_2": 1.0, "fpem/hyper_gamma_norm_head_2": 5.826901192528506, "fpem/hyper_beta_norm_head_2": 1.3914175764901475, "fpem/expert_cross_mae_group_2_expert_0": 0.0, "fpem/expert_cross_mae_group_2_expert_1": 0.0, "fpem/expert_cross_mae_group_2_expert_2": 0.0, "fpem/future_mi_loss": 0.0, "fpem/future_mi_valid": 0.0, "fpem/future_mi_logvar_mean": 0.0, "fpem/future_mi_target_mode_env_encoder": 0.0, "fpem/swap_loss": 0.0, "fpem/swap_diff_loss": 0.0, "fpem/swap_same_loss": 0.0, "fpem/swap_gain_mean": 0.0, "fpem/swap_s_gain_mean": 0.0, "fpem/swap_fallback_router_loss": 0.0, "fpem/swap_fallback_q_mean": 0.0, "fpem/swap_prediction_delta": 0.0, "fpem/swap_route_delta": 0.0, "fpem/swap_hyper_alpha_delta": 0.0, "fpem/swap_hyper_delta_norm": 0.0, "fpem/loss_env_day": 0.0, "fpem/loss_env_hour": 0.0, "fpem/loss_env_rush": 0.0, "fpem/env_day_acc": 0.0, "fpem/env_hour_acc": 0.0, "fpem/env_rush_acc": 0.0, "fpem/loss_env_supcon": 0.0, "fpem/env_supcon_valid_pairs": 0.0, "fpem/loss_inv_env_adv": 0.0, "fpem/inv_day_acc": 0.0, "fpem/inv_hour_acc": 0.0, "fpem/inv_rush_acc": 0.0, "fpem/loss_cross_cov_sep": 0.0, "fpem/primary_loss": 46.18056368146624, "fpem/inv_pred_loss": 9.064515790485201, "fpem/primary_uses_route": 1.0, "fpem/primary_uses_env_fusion": 0.0, "fpem/backbone_agcrn": 1.0, "fpem/backbone_graphwavenet": 0.0, "fpem/backbone_staeformer": 0.0, "fpem/gc_pred_loss_only": 1.0, "fpem/env_route_head_mode_hyper_proto": 1.0, "fpem/fpem_force_uniform_route": 0.0, "fpem/hard_prediction_sinkhorn_total_replaces_primary": 0.0, "fpem/hard_prediction_environment_sinkhorn_total_replaces_primary": 0.0, "fpem/warmup_risk_sinkhorn_total_replaces_primary": 0.0, "fpem/progressive_gmm_environment_total_replaces_primary": 0.0, "fpem/lambda_club_mi": 0.0}}
+EPOCH {"epoch": 2, "train_loss": 51.09792832874116, "val": {"loss": 18.33124770058526, "mae": 18.337215423583984, "mape": 0.6561318039894104}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "lr": 0.001, "fpem_logs": {"fpem/fpem_env_use_exogenous": 1.0, "fpem/env_exogenous_available": 1.0, "fpem/env_exogenous_time_available": 1.0, "fpem/env_exogenous_load_available": 1.0, "fpem/env_exogenous_feature_dim": 32.0, "fpem/env_exogenous_embedding_norm": 2.2627514884585427, "fpem/env_exogenous_load_embedding_norm": 1.590050267037891, "fpem/env_rep_ablation_normal": 1.0, "fpem/env_rep_ablation_zero": 0.0, "fpem/env_rep_ablation_shuffle_batch": 0.0, "fpem/env_rep_ablation_mode_id": 0.0, "fpem/mask_loss": 0.0, "fpem/mask_sparse_loss": 0.0, "fpem/mask_entropy_loss": 0.0, "fpem/mask_mean": 1.0, "fpem/mask_entropy": 0.0, "fpem/mask_active_ratio": 1.0, "fpem/fusion_alpha_mean": 0.0, "fpem/fusion_alpha_std": 0.0, "fpem/fusion_alpha_min": 0.0, "fpem/fusion_alpha_max": 0.0, "fpem/env_route_loss": 32.44733717782157, "fpem/env_route_L_final": 18.650505038670133, "fpem/env_route_L_global": 9.069609042576381, "fpem/env_route_L_route_soft": 18.650505038670133, "fpem/env_route_L_expert": 18.90628099895659, "fpem/env_route_L_router_oracle": 0.673986212696348, "fpem/env_route_L_balance": 0.04898240573349453, "fpem/env_route_L_diverse": 0.9130377593494597, "fpem/env_route_L_proto_align": -0.6822133864675249, "fpem/env_route_entropy": 0.7613692811557224, "fpem/env_route_q_max_mean": 0.5879120179585048, "fpem/env_route_train_mode_gradient_compat": 0.0, "fpem/env_route_train_mode_hard_prediction_sinkhorn": 0.0, "fpem/env_route_gradient_compat_aux": 0.0, "fpem/hard_sinkhorn_enabled": 0.0, "fpem/sinkhorn_soft_entropy": 0.0, "fpem/sinkhorn_selected_loss": 0.0, "fpem/router_assignment_accuracy": 0.0, "fpem/router_assignment_agreement": 0.0, "fpem/oracle_hard_mae": 0.0, "fpem/router_hard_mae": 0.0, "fpem/router_regret": 0.0, "fpem/hard_sinkhorn_balance_repaired": 0.0, "fpem/sinkhorn_soft_row_sum_mean": 0.0, "fpem/hyper_alpha_mean": 1.0, "fpem/hyper_delta_norm": 0.8626436886333284, "fpem/hyper_route_proto_mode_uniform_warmup": 1.0, "fpem/hyper_route_proto_mode_uniform_fixed": 0.0, "fpem/hyper_route_proto_mode_sinkhorn": 0.0, "fpem/hyper_route_proto_mode_softmax": 0.0, "fpem/fallback_q_mean": 0.0, "fpem/fallback_q_max": 0.0, "fpem/env_q_sum_mean": 0.0, "fpem/oracle_fallback_rate": 0.0, "fpem/route_count_fallback": 0.0, "fpem/env_route_head_mode": 1.0, "fpem/route_entropy_mean": 0.7613692811557224, "fpem/route_mean_distribution_entropy": 0.7932510807400658, "fpem/effective_expert_number": 2.211045183454241, "fpem/max_expert_usage_ratio": 0.65, "fpem/min_expert_usage_ratio": 0.0, "fpem/prototype_pairwise_cosine": 0.4327292378459658, "fpem/expert_prediction_pairwise_cosine": 0.9130377593494597, "fpem/expert_collapse_warning": 1.0, "fpem/env_route_target_mode_env_prototype": 0.0, "fpem/env_route_target_mode_hybrid": 0.0, "fpem/env_route_hybrid_alpha": 0.0, "fpem/env_route_count_head_0": 6.095238095238095, "fpem/env_route_oracle_count_head_0": 7.809523809523809, "fpem/route_count_env_head_0": 6.095238095238095, "fpem/route_soft_mean_expert_0": 0.4484578257515317, "fpem/route_hard_count_expert_0": 6.095238095238095, "fpem/hard_count_expert_0": 0.0, "fpem/sinkhorn_soft_col_mass_expert_0": 0.0, "fpem/hyper_alpha_head_0": 1.0, "fpem/hyper_gamma_norm_head_0": 8.213379301343645, "fpem/hyper_beta_norm_head_0": 1.5438133126213438, "fpem/expert_cross_mae_group_0_expert_0": 0.0, "fpem/expert_cross_mae_group_0_expert_1": 0.0, "fpem/expert_cross_mae_group_0_expert_2": 0.0, "fpem/env_route_count_head_1": 0.0, "fpem/env_route_oracle_count_head_1": 0.0, "fpem/route_count_env_head_1": 0.0, "fpem/route_soft_mean_expert_1": 0.02780861776499521, "fpem/route_hard_count_expert_1": 0.0, "fpem/hard_count_expert_1": 0.0, "fpem/sinkhorn_soft_col_mass_expert_1": 0.0, "fpem/hyper_alpha_head_1": 1.0, "fpem/hyper_gamma_norm_head_1": 3.1525329181126187, "fpem/hyper_beta_norm_head_1": 1.1633312883831206, "fpem/expert_cross_mae_group_1_expert_0": 0.0, "fpem/expert_cross_mae_group_1_expert_1": 0.0, "fpem/expert_cross_mae_group_1_expert_2": 0.0, "fpem/env_route_count_head_2": 9.904761904761905, "fpem/env_route_oracle_count_head_2": 8.19047619047619, "fpem/route_count_env_head_2": 9.904761904761905, "fpem/route_soft_mean_expert_2": 0.5237335636502221, "fpem/route_hard_count_expert_2": 9.904761904761905, "fpem/hard_count_expert_2": 0.0, "fpem/sinkhorn_soft_col_mass_expert_2": 0.0, "fpem/hyper_alpha_head_2": 1.0, "fpem/hyper_gamma_norm_head_2": 8.99574940999349, "fpem/hyper_beta_norm_head_2": 1.7092147986094157, "fpem/expert_cross_mae_group_2_expert_0": 0.0, "fpem/expert_cross_mae_group_2_expert_1": 0.0, "fpem/expert_cross_mae_group_2_expert_2": 0.0, "fpem/future_mi_loss": 0.0, "fpem/future_mi_valid": 0.0, "fpem/future_mi_logvar_mean": 0.0, "fpem/future_mi_target_mode_env_encoder": 0.0, "fpem/swap_loss": 0.0, "fpem/swap_diff_loss": 0.0, "fpem/swap_same_loss": 0.0, "fpem/swap_gain_mean": 0.0, "fpem/swap_s_gain_mean": 0.0, "fpem/swap_fallback_router_loss": 0.0, "fpem/swap_fallback_q_mean": 0.0, "fpem/swap_prediction_delta": 0.0, "fpem/swap_route_delta": 0.0, "fpem/swap_hyper_alpha_delta": 0.0, "fpem/swap_hyper_delta_norm": 0.0, "fpem/loss_env_day": 0.0, "fpem/loss_env_hour": 0.0, "fpem/loss_env_rush": 0.0, "fpem/env_day_acc": 0.0, "fpem/env_hour_acc": 0.0, "fpem/env_rush_acc": 0.0, "fpem/loss_env_supcon": 0.0, "fpem/env_supcon_valid_pairs": 0.0, "fpem/loss_inv_env_adv": 0.0, "fpem/inv_day_acc": 0.0, "fpem/inv_hour_acc": 0.0, "fpem/inv_rush_acc": 0.0, "fpem/loss_cross_cov_sep": 0.0, "fpem/primary_loss": 18.650505038670133, "fpem/inv_pred_loss": 9.069609042576381, "fpem/primary_uses_route": 1.0, "fpem/primary_uses_env_fusion": 0.0, "fpem/backbone_agcrn": 1.0, "fpem/backbone_graphwavenet": 0.0, "fpem/backbone_staeformer": 0.0, "fpem/gc_pred_loss_only": 1.0, "fpem/env_route_head_mode_hyper_proto": 1.0, "fpem/fpem_force_uniform_route": 0.0, "fpem/hard_prediction_sinkhorn_total_replaces_primary": 0.0, "fpem/hard_prediction_environment_sinkhorn_total_replaces_primary": 0.0, "fpem/warmup_risk_sinkhorn_total_replaces_primary": 0.0, "fpem/progressive_gmm_environment_total_replaces_primary": 0.0, "fpem/lambda_club_mi": 0.0}}
+EPOCH {"epoch": 3, "train_loss": 42.69591224307106, "val": {"loss": 17.26650751961602, "mae": 16.658859252929688, "mape": 0.5746932029724121}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "lr": 0.001, "fpem_logs": {"fpem/fpem_env_use_exogenous": 1.0, "fpem/env_exogenous_available": 1.0, "fpem/env_exogenous_time_available": 1.0, "fpem/env_exogenous_load_available": 1.0, "fpem/env_exogenous_feature_dim": 32.0, "fpem/env_exogenous_embedding_norm": 2.277923463639759, "fpem/env_exogenous_load_embedding_norm": 1.6138726881572178, "fpem/env_rep_ablation_normal": 1.0, "fpem/env_rep_ablation_zero": 0.0, "fpem/env_rep_ablation_shuffle_batch": 0.0, "fpem/env_rep_ablation_mode_id": 0.0, "fpem/mask_loss": 0.0, "fpem/mask_sparse_loss": 0.0, "fpem/mask_entropy_loss": 0.0, "fpem/mask_mean": 1.0, "fpem/mask_entropy": 0.0, "fpem/mask_active_ratio": 1.0, "fpem/fusion_alpha_mean": 0.0, "fpem/fusion_alpha_std": 0.0, "fpem/fusion_alpha_min": 0.0, "fpem/fusion_alpha_max": 0.0, "fpem/env_route_loss": 28.26546966916039, "fpem/env_route_L_final": 16.112343397594632, "fpem/env_route_L_global": 9.065380232674736, "fpem/env_route_L_route_soft": 16.112343397594632, "fpem/env_route_L_expert": 17.284030605497815, "fpem/env_route_L_router_oracle": 0.6246750473976135, "fpem/env_route_L_balance": 0.05757683707135064, "fpem/env_route_L_diverse": 0.9274607011250087, "fpem/env_route_L_proto_align": -0.8833525424911862, "fpem/env_route_entropy": 0.7482346898033505, "fpem/env_route_q_max_mean": 0.6176053138006301, "fpem/env_route_train_mode_gradient_compat": 0.0, "fpem/env_route_train_mode_hard_prediction_sinkhorn": 0.0, "fpem/env_route_gradient_compat_aux": 0.0, "fpem/hard_sinkhorn_enabled": 0.0, "fpem/sinkhorn_soft_entropy": 0.0, "fpem/sinkhorn_selected_loss": 0.0, "fpem/router_assignment_accuracy": 0.0, "fpem/router_assignment_agreement": 0.0, "fpem/oracle_hard_mae": 0.0, "fpem/router_hard_mae": 0.0, "fpem/router_regret": 0.0, "fpem/hard_sinkhorn_balance_repaired": 0.0, "fpem/sinkhorn_soft_row_sum_mean": 0.0, "fpem/hyper_alpha_mean": 1.0, "fpem/hyper_delta_norm": 0.9975678426878792, "fpem/hyper_route_proto_mode_uniform_warmup": 1.0, "fpem/hyper_route_proto_mode_uniform_fixed": 0.0, "fpem/hyper_route_proto_mode_sinkhorn": 0.0, "fpem/hyper_route_proto_mode_softmax": 0.0, "fpem/fallback_q_mean": 0.0, "fpem/fallback_q_max": 0.0, "fpem/env_q_sum_mean": 0.0, "fpem/oracle_fallback_rate": 0.0, "fpem/route_count_fallback": 0.0, "fpem/env_route_head_mode": 1.0, "fpem/route_entropy_mean": 0.7482346898033505, "fpem/route_mean_distribution_entropy": 0.7728563325745719, "fpem/effective_expert_number": 2.1696962231681463, "fpem/max_expert_usage_ratio": 0.794047619047619, "fpem/min_expert_usage_ratio": 0.0, "fpem/prototype_pairwise_cosine": 0.7666117872510637, "fpem/expert_prediction_pairwise_cosine": 0.9274607011250087, "fpem/expert_collapse_warning": 1.0, "fpem/env_route_target_mode_env_prototype": 0.0, "fpem/env_route_target_mode_hybrid": 0.0, "fpem/env_route_hybrid_alpha": 0.0, "fpem/env_route_count_head_0": 3.3714285714285714, "fpem/env_route_oracle_count_head_0": 6.066666666666666, "fpem/route_count_env_head_0": 3.3714285714285714, "fpem/route_soft_mean_expert_0": 0.3789312242042451, "fpem/route_hard_count_expert_0": 3.3714285714285714, "fpem/hard_count_expert_0": 0.0, "fpem/sinkhorn_soft_col_mass_expert_0": 0.0, "fpem/hyper_alpha_head_0": 1.0, "fpem/hyper_gamma_norm_head_0": 8.887105269659132, "fpem/hyper_beta_norm_head_0": 1.5561620178676787, "fpem/expert_cross_mae_group_0_expert_0": 0.0, "fpem/expert_cross_mae_group_0_expert_1": 0.0, "fpem/expert_cross_mae_group_0_expert_2": 0.0, "fpem/env_route_count_head_1": 0.0, "fpem/env_route_oracle_count_head_1": 0.02857142857142857, "fpem/route_count_env_head_1": 0.0, "fpem/route_soft_mean_expert_1": 0.03199925999201479, "fpem/route_hard_count_expert_1": 0.0, "fpem/hard_count_expert_1": 0.0, "fpem/sinkhorn_soft_col_mass_expert_1": 0.0, "fpem/hyper_alpha_head_1": 1.0, "fpem/hyper_gamma_norm_head_1": 3.1849863234020415, "fpem/hyper_beta_norm_head_1": 1.0799073202269418, "fpem/expert_cross_mae_group_1_expert_0": 0.0, "fpem/expert_cross_mae_group_1_expert_1": 0.0, "fpem/expert_cross_mae_group_1_expert_2": 0.0, "fpem/env_route_count_head_2": 12.628571428571428, "fpem/env_route_oracle_count_head_2": 9.904761904761905, "fpem/route_count_env_head_2": 12.628571428571428, "fpem/route_soft_mean_expert_2": 0.5890695211433229, "fpem/route_hard_count_expert_2": 12.628571428571428, "fpem/hard_count_expert_2": 0.0, "fpem/sinkhorn_soft_col_mass_expert_2": 0.0, "fpem/hyper_alpha_head_2": 1.0, "fpem/hyper_gamma_norm_head_2": 9.748980322338285, "fpem/hyper_beta_norm_head_2": 1.7693143583479383, "fpem/expert_cross_mae_group_2_expert_0": 0.0, "fpem/expert_cross_mae_group_2_expert_1": 0.0, "fpem/expert_cross_mae_group_2_expert_2": 0.0, "fpem/future_mi_loss": 0.0, "fpem/future_mi_valid": 0.0, "fpem/future_mi_logvar_mean": 0.0, "fpem/future_mi_target_mode_env_encoder": 0.0, "fpem/swap_loss": 0.0, "fpem/swap_diff_loss": 0.0, "fpem/swap_same_loss": 0.0, "fpem/swap_gain_mean": 0.0, "fpem/swap_s_gain_mean": 0.0, "fpem/swap_fallback_router_loss": 0.0, "fpem/swap_fallback_q_mean": 0.0, "fpem/swap_prediction_delta": 0.0, "fpem/swap_route_delta": 0.0, "fpem/swap_hyper_alpha_delta": 0.0, "fpem/swap_hyper_delta_norm": 0.0, "fpem/loss_env_day": 0.0, "fpem/loss_env_hour": 0.0, "fpem/loss_env_rush": 0.0, "fpem/env_day_acc": 0.0, "fpem/env_hour_acc": 0.0, "fpem/env_rush_acc": 0.0, "fpem/loss_env_supcon": 0.0, "fpem/env_supcon_valid_pairs": 0.0, "fpem/loss_inv_env_adv": 0.0, "fpem/inv_day_acc": 0.0, "fpem/inv_hour_acc": 0.0, "fpem/inv_rush_acc": 0.0, "fpem/loss_cross_cov_sep": 0.0, "fpem/primary_loss": 16.112343397594632, "fpem/inv_pred_loss": 9.065380232674736, "fpem/primary_uses_route": 1.0, "fpem/primary_uses_env_fusion": 0.0, "fpem/backbone_agcrn": 1.0, "fpem/backbone_graphwavenet": 0.0, "fpem/backbone_staeformer": 0.0, "fpem/gc_pred_loss_only": 1.0, "fpem/env_route_head_mode_hyper_proto": 1.0, "fpem/fpem_force_uniform_route": 0.0, "fpem/hard_prediction_sinkhorn_total_replaces_primary": 0.0, "fpem/hard_prediction_environment_sinkhorn_total_replaces_primary": 0.0, "fpem/warmup_risk_sinkhorn_total_replaces_primary": 0.0, "fpem/progressive_gmm_environment_total_replaces_primary": 0.0, "fpem/lambda_club_mi": 0.0}}
+EPOCH {"epoch": 4, "train_loss": 37.582497042701355, "val": {"loss": 14.354346646202934, "mae": 14.22743034362793, "mape": 0.39244773983955383}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "lr": 0.001, "fpem_logs": {"fpem/fpem_env_use_exogenous": 1.0, "fpem/env_exogenous_available": 1.0, "fpem/env_exogenous_time_available": 1.0, "fpem/env_exogenous_load_available": 1.0, "fpem/env_exogenous_feature_dim": 32.0, "fpem/env_exogenous_embedding_norm": 2.318323142187936, "fpem/env_exogenous_load_embedding_norm": 1.6787032456625075, "fpem/env_rep_ablation_normal": 1.0, "fpem/env_rep_ablation_zero": 0.0, "fpem/env_rep_ablation_shuffle_batch": 0.0, "fpem/env_rep_ablation_mode_id": 0.0, "fpem/mask_loss": 0.0, "fpem/mask_sparse_loss": 0.0, "fpem/mask_entropy_loss": 0.0, "fpem/mask_mean": 1.0, "fpem/mask_entropy": 0.0, "fpem/mask_active_ratio": 1.0, "fpem/fusion_alpha_mean": 0.0, "fpem/fusion_alpha_std": 0.0, "fpem/fusion_alpha_min": 0.0, "fpem/fusion_alpha_max": 0.0, "fpem/env_route_loss": 24.144562548682803, "fpem/env_route_L_final": 13.769401077997117, "fpem/env_route_L_global": 9.068025470915295, "fpem/env_route_L_route_soft": 13.769401077997117, "fpem/env_route_L_expert": 14.29572406950451, "fpem/env_route_L_router_oracle": 0.6169267126492092, "fpem/env_route_L_balance": 0.05238124337934312, "fpem/env_route_L_diverse": 0.9463282954125177, "fpem/env_route_L_proto_align": -0.9775248748915536, "fpem/env_route_entropy": 0.7615313501585097, "fpem/env_route_q_max_mean": 0.5825911635444277, "fpem/env_route_train_mode_gradient_compat": 0.0, "fpem/env_route_train_mode_hard_prediction_sinkhorn": 0.0, "fpem/env_route_gradient_compat_aux": 0.0, "fpem/hard_sinkhorn_enabled": 0.0, "fpem/sinkhorn_soft_entropy": 0.0, "fpem/sinkhorn_selected_loss": 0.0, "fpem/router_assignment_accuracy": 0.0, "fpem/router_assignment_agreement": 0.0, "fpem/oracle_hard_mae": 0.0, "fpem/router_hard_mae": 0.0, "fpem/router_regret": 0.0, "fpem/hard_sinkhorn_balance_repaired": 0.0, "fpem/sinkhorn_soft_row_sum_mean": 0.0, "fpem/hyper_alpha_mean": 1.0, "fpem/hyper_delta_norm": 1.1082479783466883, "fpem/hyper_route_proto_mode_uniform_warmup": 1.0, "fpem/hyper_route_proto_mode_uniform_fixed": 0.0, "fpem/hyper_route_proto_mode_sinkhorn": 0.0, "fpem/hyper_route_proto_mode_softmax": 0.0, "fpem/fallback_q_mean": 0.0, "fpem/fallback_q_max": 0.0, "fpem/env_q_sum_mean": 0.0, "fpem/oracle_fallback_rate": 0.0, "fpem/route_count_fallback": 0.0, "fpem/env_route_head_mode": 1.0, "fpem/route_entropy_mean": 0.7615313501585097, "fpem/route_mean_distribution_entropy": 0.7787802633785066, "fpem/effective_expert_number": 2.1792524655659995, "fpem/max_expert_usage_ratio": 0.825595238095238, "fpem/min_expert_usage_ratio": 0.0, "fpem/prototype_pairwise_cosine": 0.9540351544107709, "fpem/expert_prediction_pairwise_cosine": 0.9463282954125177, "fpem/expert_collapse_warning": 1.0, "fpem/env_route_target_mode_env_prototype": 0.0, "fpem/env_route_target_mode_hybrid": 0.0, "fpem/env_route_hybrid_alpha": 0.0, "fpem/env_route_count_head_0": 2.7904761904761903, "fpem/env_route_oracle_count_head_0": 6.742857142857143, "fpem/route_count_env_head_0": 2.7904761904761903, "fpem/route_soft_mean_expert_0": 0.4074881020046416, "fpem/route_hard_count_expert_0": 2.7904761904761903, "fpem/hard_count_expert_0": 0.0, "fpem/sinkhorn_soft_col_mass_expert_0": 0.0, "fpem/hyper_alpha_head_0": 1.0, "fpem/hyper_gamma_norm_head_0": 9.46193131946382, "fpem/hyper_beta_norm_head_0": 1.587881733122326, "fpem/expert_cross_mae_group_0_expert_0": 0.0, "fpem/expert_cross_mae_group_0_expert_1": 0.0, "fpem/expert_cross_mae_group_0_expert_2": 0.0, "fpem/env_route_count_head_1": 0.0, "fpem/env_route_oracle_count_head_1": 0.0, "fpem/route_count_env_head_1": 0.0, "fpem/route_soft_mean_expert_1": 0.025807665048965384, "fpem/route_hard_count_expert_1": 0.0, "fpem/hard_count_expert_1": 0.0, "fpem/sinkhorn_soft_col_mass_expert_1": 0.0, "fpem/hyper_alpha_head_1": 1.0, "fpem/hyper_gamma_norm_head_1": 3.2499552204495386, "fpem/hyper_beta_norm_head_1": 0.9797760066531953, "fpem/expert_cross_mae_group_1_expert_0": 0.0, "fpem/expert_cross_mae_group_1_expert_1": 0.0, "fpem/expert_cross_mae_group_1_expert_2": 0.0, "fpem/env_route_count_head_2": 13.209523809523809, "fpem/env_route_oracle_count_head_2": 9.257142857142858, "fpem/route_count_env_head_2": 13.209523809523809, "fpem/route_soft_mean_expert_2": 0.5667042377449217, "fpem/route_hard_count_expert_2": 13.209523809523809, "fpem/hard_count_expert_2": 0.0, "fpem/sinkhorn_soft_col_mass_expert_2": 0.0, "fpem/hyper_alpha_head_2": 1.0, "fpem/hyper_gamma_norm_head_2": 10.265829376947313, "fpem/hyper_beta_norm_head_2": 1.7847651969818843, "fpem/expert_cross_mae_group_2_expert_0": 0.0, "fpem/expert_cross_mae_group_2_expert_1": 0.0, "fpem/expert_cross_mae_group_2_expert_2": 0.0, "fpem/future_mi_loss": 0.0, "fpem/future_mi_valid": 0.0, "fpem/future_mi_logvar_mean": 0.0, "fpem/future_mi_target_mode_env_encoder": 0.0, "fpem/swap_loss": 0.0, "fpem/swap_diff_loss": 0.0, "fpem/swap_same_loss": 0.0, "fpem/swap_gain_mean": 0.0, "fpem/swap_s_gain_mean": 0.0, "fpem/swap_fallback_router_loss": 0.0, "fpem/swap_fallback_q_mean": 0.0, "fpem/swap_prediction_delta": 0.0, "fpem/swap_route_delta": 0.0, "fpem/swap_hyper_alpha_delta": 0.0, "fpem/swap_hyper_delta_norm": 0.0, "fpem/loss_env_day": 0.0, "fpem/loss_env_hour": 0.0, "fpem/loss_env_rush": 0.0, "fpem/env_day_acc": 0.0, "fpem/env_hour_acc": 0.0, "fpem/env_rush_acc": 0.0, "fpem/loss_env_supcon": 0.0, "fpem/env_supcon_valid_pairs": 0.0, "fpem/loss_inv_env_adv": 0.0, "fpem/inv_day_acc": 0.0, "fpem/inv_hour_acc": 0.0, "fpem/inv_rush_acc": 0.0, "fpem/loss_cross_cov_sep": 0.0, "fpem/primary_loss": 13.769401077997117, "fpem/inv_pred_loss": 9.068025470915295, "fpem/primary_uses_route": 1.0, "fpem/primary_uses_env_fusion": 0.0, "fpem/backbone_agcrn": 1.0, "fpem/backbone_graphwavenet": 0.0, "fpem/backbone_staeformer": 0.0, "fpem/gc_pred_loss_only": 1.0, "fpem/env_route_head_mode_hyper_proto": 1.0, "fpem/fpem_force_uniform_route": 0.0, "fpem/hard_prediction_sinkhorn_total_replaces_primary": 0.0, "fpem/hard_prediction_environment_sinkhorn_total_replaces_primary": 0.0, "fpem/warmup_risk_sinkhorn_total_replaces_primary": 0.0, "fpem/progressive_gmm_environment_total_replaces_primary": 0.0, "fpem/lambda_club_mi": 0.0}}
+EPOCH {"epoch": 5, "train_loss": 38.806956100463864, "val": {"loss": 14.213436921437582, "mae": 13.993889808654785, "mape": 0.4123036563396454}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "lr": 0.001, "fpem_logs": {"fpem/fpem_env_use_exogenous": 1.0, "fpem/env_exogenous_available": 1.0, "fpem/env_exogenous_time_available": 1.0, "fpem/env_exogenous_load_available": 1.0, "fpem/env_exogenous_feature_dim": 32.0, "fpem/env_exogenous_embedding_norm": 2.3503340085347495, "fpem/env_exogenous_load_embedding_norm": 1.7258975505828857, "fpem/env_rep_ablation_normal": 1.0, "fpem/env_rep_ablation_zero": 0.0, "fpem/env_rep_ablation_shuffle_batch": 0.0, "fpem/env_rep_ablation_mode_id": 0.0, "fpem/mask_loss": 0.0, "fpem/mask_sparse_loss": 0.0, "fpem/mask_entropy_loss": 0.0, "fpem/mask_mean": 1.0, "fpem/mask_entropy": 0.0, "fpem/mask_active_ratio": 1.0, "fpem/fusion_alpha_mean": 0.0, "fpem/fusion_alpha_std": 0.0, "fpem/fusion_alpha_min": 0.0, "fpem/fusion_alpha_max": 0.0, "fpem/env_route_loss": 24.90748380025228, "fpem/env_route_L_final": 14.247883596874418, "fpem/env_route_L_global": 9.06281740551903, "fpem/env_route_L_route_soft": 14.247883596874418, "fpem/env_route_L_expert": 14.369191978091285, "fpem/env_route_L_router_oracle": 0.6472050357432593, "fpem/env_route_L_balance": 0.05489175919265974, "fpem/env_route_L_diverse": 0.9544203763916379, "fpem/env_route_L_proto_align": -0.9962727961086092, "fpem/env_route_entropy": 0.7500382820765178, "fpem/env_route_q_max_mean": 0.5942326006435212, "fpem/env_route_train_mode_gradient_compat": 0.0, "fpem/env_route_train_mode_hard_prediction_sinkhorn": 0.0, "fpem/env_route_gradient_compat_aux": 0.0, "fpem/hard_sinkhorn_enabled": 0.0, "fpem/sinkhorn_soft_entropy": 0.0, "fpem/sinkhorn_selected_loss": 0.0, "fpem/router_assignment_accuracy": 0.0, "fpem/router_assignment_agreement": 0.0, "fpem/oracle_hard_mae": 0.0, "fpem/router_hard_mae": 0.0, "fpem/router_regret": 0.0, "fpem/hard_sinkhorn_balance_repaired": 0.0, "fpem/sinkhorn_soft_row_sum_mean": 0.0, "fpem/hyper_alpha_mean": 1.0, "fpem/hyper_delta_norm": 1.1345788955688476, "fpem/hyper_route_proto_mode_uniform_warmup": 1.0, "fpem/hyper_route_proto_mode_uniform_fixed": 0.0, "fpem/hyper_route_proto_mode_sinkhorn": 0.0, "fpem/hyper_route_proto_mode_softmax": 0.0, "fpem/fallback_q_mean": 0.0, "fpem/fallback_q_max": 0.0, "fpem/env_q_sum_mean": 0.0, "fpem/oracle_fallback_rate": 0.0, "fpem/route_count_fallback": 0.0, "fpem/env_route_head_mode": 1.0, "fpem/route_entropy_mean": 0.7500382820765178, "fpem/route_mean_distribution_entropy": 0.7654375768843151, "fpem/effective_expert_number": 2.1502918220701672, "fpem/max_expert_usage_ratio": 0.8898809523809523, "fpem/min_expert_usage_ratio": 0.0, "fpem/prototype_pairwise_cosine": 0.9928641387394497, "fpem/expert_prediction_pairwise_cosine": 0.9544203763916379, "fpem/expert_collapse_warning": 1.0, "fpem/env_route_target_mode_env_prototype": 0.0, "fpem/env_route_target_mode_hybrid": 0.0, "fpem/env_route_hybrid_alpha": 0.0, "fpem/env_route_count_head_0": 1.7619047619047619, "fpem/env_route_oracle_count_head_0": 6.895238095238096, "fpem/route_count_env_head_0": 1.7619047619047619, "fpem/route_soft_mean_expert_0": 0.3921966044675736, "fpem/route_hard_count_expert_0": 1.7619047619047619, "fpem/hard_count_expert_0": 0.0, "fpem/sinkhorn_soft_col_mass_expert_0": 0.0, "fpem/hyper_alpha_head_0": 1.0, "fpem/hyper_gamma_norm_head_0": 9.722436141967773, "fpem/hyper_beta_norm_head_0": 1.5972149826231457, "fpem/expert_cross_mae_group_0_expert_0": 0.0, "fpem/expert_cross_mae_group_0_expert_1": 0.0, "fpem/expert_cross_mae_group_0_expert_2": 0.0, "fpem/env_route_count_head_1": 0.0, "fpem/env_route_oracle_count_head_1": 0.0, "fpem/route_count_env_head_1": 0.0, "fpem/route_soft_mean_expert_1": 0.023013482695179326, "fpem/route_hard_count_expert_1": 0.0, "fpem/hard_count_expert_1": 0.0, "fpem/sinkhorn_soft_col_mass_expert_1": 0.0, "fpem/hyper_alpha_head_1": 1.0, "fpem/hyper_gamma_norm_head_1": 3.319687709354219, "fpem/hyper_beta_norm_head_1": 0.8911567551749093, "fpem/expert_cross_mae_group_1_expert_0": 0.0, "fpem/expert_cross_mae_group_1_expert_1": 0.0, "fpem/expert_cross_mae_group_1_expert_2": 0.0, "fpem/env_route_count_head_2": 14.238095238095237, "fpem/env_route_oracle_count_head_2": 9.104761904761904, "fpem/route_count_env_head_2": 14.238095238095237, "fpem/route_soft_mean_expert_2": 0.5847899215562004, "fpem/route_hard_count_expert_2": 14.238095238095237, "fpem/hard_count_expert_2": 0.0, "fpem/sinkhorn_soft_col_mass_expert_2": 0.0, "fpem/hyper_alpha_head_2": 1.0, "fpem/hyper_gamma_norm_head_2": 10.254702350071499, "fpem/hyper_beta_norm_head_2": 1.7592973084676833, "fpem/expert_cross_mae_group_2_expert_0": 0.0, "fpem/expert_cross_mae_group_2_expert_1": 0.0, "fpem/expert_cross_mae_group_2_expert_2": 0.0, "fpem/future_mi_loss": 0.0, "fpem/future_mi_valid": 0.0, "fpem/future_mi_logvar_mean": 0.0, "fpem/future_mi_target_mode_env_encoder": 0.0, "fpem/swap_loss": 0.0, "fpem/swap_diff_loss": 0.0, "fpem/swap_same_loss": 0.0, "fpem/swap_gain_mean": 0.0, "fpem/swap_s_gain_mean": 0.0, "fpem/swap_fallback_router_loss": 0.0, "fpem/swap_fallback_q_mean": 0.0, "fpem/swap_prediction_delta": 0.0, "fpem/swap_route_delta": 0.0, "fpem/swap_hyper_alpha_delta": 0.0, "fpem/swap_hyper_delta_norm": 0.0, "fpem/loss_env_day": 0.0, "fpem/loss_env_hour": 0.0, "fpem/loss_env_rush": 0.0, "fpem/env_day_acc": 0.0, "fpem/env_hour_acc": 0.0, "fpem/env_rush_acc": 0.0, "fpem/loss_env_supcon": 0.0, "fpem/env_supcon_valid_pairs": 0.0, "fpem/loss_inv_env_adv": 0.0, "fpem/inv_day_acc": 0.0, "fpem/inv_hour_acc": 0.0, "fpem/inv_rush_acc": 0.0, "fpem/loss_cross_cov_sep": 0.0, "fpem/primary_loss": 14.247883596874418, "fpem/inv_pred_loss": 9.06281740551903, "fpem/primary_uses_route": 1.0, "fpem/primary_uses_env_fusion": 0.0, "fpem/backbone_agcrn": 1.0, "fpem/backbone_graphwavenet": 0.0, "fpem/backbone_staeformer": 0.0, "fpem/gc_pred_loss_only": 1.0, "fpem/env_route_head_mode_hyper_proto": 1.0, "fpem/fpem_force_uniform_route": 0.0, "fpem/hard_prediction_sinkhorn_total_replaces_primary": 0.0, "fpem/hard_prediction_environment_sinkhorn_total_replaces_primary": 0.0, "fpem/warmup_risk_sinkhorn_total_replaces_primary": 0.0, "fpem/progressive_gmm_environment_total_replaces_primary": 0.0, "fpem/lambda_club_mi": 0.0}}
+EPOCH {"epoch": 6, "train_loss": 36.446093695504324, "val": {"loss": 13.399547735850016, "mae": 13.170894622802734, "mape": 0.35981443524360657}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "lr": 0.001, "fpem_logs": {"fpem/fpem_env_use_exogenous": 1.0, "fpem/env_exogenous_available": 1.0, "fpem/env_exogenous_time_available": 1.0, "fpem/env_exogenous_load_available": 1.0, "fpem/env_exogenous_feature_dim": 32.0, "fpem/env_exogenous_embedding_norm": 2.3824134304409936, "fpem/env_exogenous_load_embedding_norm": 1.757620104153951, "fpem/env_rep_ablation_normal": 1.0, "fpem/env_rep_ablation_zero": 0.0, "fpem/env_rep_ablation_shuffle_batch": 0.0, "fpem/env_rep_ablation_mode_id": 0.0, "fpem/mask_loss": 0.0, "fpem/mask_sparse_loss": 0.0, "fpem/mask_entropy_loss": 0.0, "fpem/mask_mean": 1.0, "fpem/mask_entropy": 0.0, "fpem/mask_active_ratio": 1.0, "fpem/fusion_alpha_mean": 0.0, "fpem/fusion_alpha_std": 0.0, "fpem/fusion_alpha_min": 0.0, "fpem/fusion_alpha_max": 0.0, "fpem/env_route_loss": 23.16966251191639, "fpem/env_route_L_final": 13.193122019086566, "fpem/env_route_L_global": 9.05902525583903, "fpem/env_route_L_route_soft": 13.193122019086566, "fpem/env_route_L_expert": 13.965089225769043, "fpem/env_route_L_router_oracle": 0.5716419659909748, "fpem/env_route_L_balance": 0.05925603157707623, "fpem/env_route_L_diverse": 0.969474136261713, "fpem/env_route_L_proto_align": -0.9995258586747305, "fpem/env_route_entropy": 0.7411247906230745, "fpem/env_route_q_max_mean": 0.6185266750199454, "fpem/env_route_train_mode_gradient_compat": 0.0, "fpem/env_route_train_mode_hard_prediction_sinkhorn": 0.0, "fpem/env_route_gradient_compat_aux": 0.0, "fpem/hard_sinkhorn_enabled": 0.0, "fpem/sinkhorn_soft_entropy": 0.0, "fpem/sinkhorn_selected_loss": 0.0, "fpem/router_assignment_accuracy": 0.0, "fpem/router_assignment_agreement": 0.0, "fpem/oracle_hard_mae": 0.0, "fpem/router_hard_mae": 0.0, "fpem/router_regret": 0.0, "fpem/hard_sinkhorn_balance_repaired": 0.0, "fpem/sinkhorn_soft_row_sum_mean": 0.0, "fpem/hyper_alpha_mean": 1.0, "fpem/hyper_delta_norm": 1.1402687390645345, "fpem/hyper_route_proto_mode_uniform_warmup": 0.0, "fpem/hyper_route_proto_mode_uniform_fixed": 0.0, "fpem/hyper_route_proto_mode_sinkhorn": 0.0, "fpem/hyper_route_proto_mode_softmax": 1.0, "fpem/fallback_q_mean": 0.0, "fpem/fallback_q_max": 0.0, "fpem/env_q_sum_mean": 0.0, "fpem/oracle_fallback_rate": 0.0, "fpem/route_count_fallback": 0.0, "fpem/env_route_head_mode": 1.0, "fpem/route_entropy_mean": 0.7411247906230745, "fpem/route_mean_distribution_entropy": 0.7530687939553034, "fpem/effective_expert_number": 2.123842530023484, "fpem/max_expert_usage_ratio": 0.9541666666666667, "fpem/min_expert_usage_ratio": 0.0, "fpem/prototype_pairwise_cosine": 0.999276906535739, "fpem/expert_prediction_pairwise_cosine": 0.969474136261713, "fpem/expert_collapse_warning": 1.0, "fpem/env_route_target_mode_env_prototype": 0.0, "fpem/env_route_target_mode_hybrid": 0.0, "fpem/env_route_hybrid_alpha": 0.0, "fpem/env_route_count_head_0": 0.7333333333333333, "fpem/env_route_oracle_count_head_0": 5.266666666666667, "fpem/route_count_env_head_0": 0.7333333333333333, "fpem/route_soft_mean_expert_0": 0.3611323427586328, "fpem/route_hard_count_expert_0": 0.7333333333333333, "fpem/hard_count_expert_0": 0.0, "fpem/sinkhorn_soft_col_mass_expert_0": 0.0, "fpem/hyper_alpha_head_0": 1.0, "fpem/hyper_gamma_norm_head_0": 9.869112123761859, "fpem/hyper_beta_norm_head_0": 1.6091541188103813, "fpem/expert_cross_mae_group_0_expert_0": 0.0, "fpem/expert_cross_mae_group_0_expert_1": 0.0, "fpem/expert_cross_mae_group_0_expert_2": 0.0, "fpem/env_route_count_head_1": 0.0, "fpem/env_route_oracle_count_head_1": 0.01904761904761905, "fpem/route_count_env_head_1": 0.0, "fpem/route_soft_mean_expert_1": 0.023607887753418513, "fpem/route_hard_count_expert_1": 0.0, "fpem/hard_count_expert_1": 0.0, "fpem/sinkhorn_soft_col_mass_expert_1": 0.0, "fpem/hyper_alpha_head_1": 1.0, "fpem/hyper_gamma_norm_head_1": 3.401377587091355, "fpem/hyper_beta_norm_head_1": 0.7712299681845165, "fpem/expert_cross_mae_group_1_expert_0": 0.0, "fpem/expert_cross_mae_group_1_expert_1": 0.0, "fpem/expert_cross_mae_group_1_expert_2": 0.0, "fpem/env_route_count_head_2": 15.266666666666667, "fpem/env_route_oracle_count_head_2": 10.714285714285714, "fpem/route_count_env_head_2": 15.266666666666667, "fpem/route_soft_mean_expert_2": 0.6152597784996032, "fpem/route_hard_count_expert_2": 15.266666666666667, "fpem/hard_count_expert_2": 0.0, "fpem/sinkhorn_soft_col_mass_expert_2": 0.0, "fpem/hyper_alpha_head_2": 1.0, "fpem/hyper_gamma_norm_head_2": 10.1532256262643, "fpem/hyper_beta_norm_head_2": 1.7309200968061174, "fpem/expert_cross_mae_group_2_expert_0": 0.0, "fpem/expert_cross_mae_group_2_expert_1": 0.0, "fpem/expert_cross_mae_group_2_expert_2": 0.0, "fpem/future_mi_loss": 0.0, "fpem/future_mi_valid": 0.0, "fpem/future_mi_logvar_mean": 0.0, "fpem/future_mi_target_mode_env_encoder": 0.0, "fpem/swap_loss": 0.0, "fpem/swap_diff_loss": 0.0, "fpem/swap_same_loss": 0.0, "fpem/swap_gain_mean": 0.0, "fpem/swap_s_gain_mean": 0.0, "fpem/swap_fallback_router_loss": 0.0, "fpem/swap_fallback_q_mean": 0.0, "fpem/swap_prediction_delta": 0.0, "fpem/swap_route_delta": 0.0, "fpem/swap_hyper_alpha_delta": 0.0, "fpem/swap_hyper_delta_norm": 0.0, "fpem/loss_env_day": 0.0, "fpem/loss_env_hour": 0.0, "fpem/loss_env_rush": 0.0, "fpem/env_day_acc": 0.0, "fpem/env_hour_acc": 0.0, "fpem/env_rush_acc": 0.0, "fpem/loss_env_supcon": 0.0, "fpem/env_supcon_valid_pairs": 0.0, "fpem/loss_inv_env_adv": 0.0, "fpem/inv_day_acc": 0.0, "fpem/inv_hour_acc": 0.0, "fpem/inv_rush_acc": 0.0, "fpem/loss_cross_cov_sep": 0.0, "fpem/primary_loss": 13.193122019086566, "fpem/inv_pred_loss": 9.05902525583903, "fpem/primary_uses_route": 1.0, "fpem/primary_uses_env_fusion": 0.0, "fpem/backbone_agcrn": 1.0, "fpem/backbone_graphwavenet": 0.0, "fpem/backbone_staeformer": 0.0, "fpem/gc_pred_loss_only": 1.0, "fpem/env_route_head_mode_hyper_proto": 1.0, "fpem/fpem_force_uniform_route": 0.0, "fpem/hard_prediction_sinkhorn_total_replaces_primary": 0.0, "fpem/hard_prediction_environment_sinkhorn_total_replaces_primary": 0.0, "fpem/warmup_risk_sinkhorn_total_replaces_primary": 0.0, "fpem/progressive_gmm_environment_total_replaces_primary": 0.0, "fpem/lambda_club_mi": 0.0}}

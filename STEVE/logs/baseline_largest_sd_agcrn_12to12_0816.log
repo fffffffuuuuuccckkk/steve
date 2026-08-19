@@ -1,0 +1,100 @@
+[baseline] name=AGCRN
+[baseline] paper=Adaptive Graph Convolutional Recurrent Network for Traffic Forecasting
+[baseline] original_repository=https://github.com/LeiBAI/AGCRN
+[baseline] original_commit=7fbbf2aeb099242098a3cf482b55cd45d7295c28
+[baseline] dataset=LargeST-SD_TDS
+[baseline] train_period=2019
+[baseline] val_period=2020 first half
+[baseline] test_period=2020 second half / OOD
+[baseline] dataset_dir=data/LargeST-SD_TDS
+[baseline] graph_file=data/LargeST-SD_TDS/adj_mx.npz
+[baseline] batch_size=4 test_batch_size=8
+[baseline] seed=2024
+[baseline] scaler=train x only
+[baseline] checkpoint_selection=lowest validation MAE
+{
+  "checkpoint_selection": "lowest validation MAE",
+  "dataset": "LargeST-SD_TDS",
+  "fixed_graph": false,
+  "graph_file": "data/LargeST-SD_TDS/adj_mx.npz",
+  "input_length": 12,
+  "method": "AGCRN",
+  "num_nodes": 716,
+  "official_repo": "https://github.com/LeiBAI/AGCRN",
+  "output_length": 12,
+  "paper": "Adaptive Graph Convolutional Recurrent Network for Traffic Forecasting",
+  "parameter_count": 71876,
+  "scaler": {
+    "fit_split": "train",
+    "mean": 244.3837890625,
+    "std": 184.0395050048828
+  },
+  "seed": 2024,
+  "source_commit": "7fbbf2aeb099242098a3cf482b55cd45d7295c28",
+  "target_channels": 1,
+  "test_period": "2020 second half",
+  "train_period": "2019",
+  "trainable_parameter_count": 71876,
+  "uses_environment_labels": false,
+  "uses_external_features": false,
+  "uses_test_time_adaptation": false,
+  "val_period": "2020 first half"
+}
+EPOCH {"epoch": 1, "train_loss": 0.14967104610889, "val_loss": 0.19556556656734778, "val_mae": 37.36377636231098, "val_mape": 0.5041653411716803, "val_rmse": 53.867898670559214}
+EPOCH {"epoch": 2, "train_loss": 0.10953338786197504, "val_loss": 0.15461522974031214, "val_mae": 29.445610285624607, "val_mape": 0.3619423760683676, "val_rmse": 44.162147242315584}
+EPOCH {"epoch": 3, "train_loss": 0.10084961963170709, "val_loss": 0.14503996827792193, "val_mae": 27.552574602325894, "val_mape": 0.2895571749832349, "val_rmse": 40.862857188501174}
+EPOCH {"epoch": 4, "train_loss": 0.09731063278131899, "val_loss": 0.14086689583419523, "val_mae": 26.767379037566474, "val_mape": 0.2782467138760415, "val_rmse": 40.321115351324096}
+EPOCH {"epoch": 5, "train_loss": 0.09483472170510311, "val_loss": 0.13219244702370306, "val_mae": 25.076656818499135, "val_mape": 0.2421667454646898, "val_rmse": 37.52856865191378}
+EPOCH {"epoch": 6, "train_loss": 0.09346326571830789, "val_loss": 0.13533114460120907, "val_mae": 25.666078761080012, "val_mape": 0.24078390469597513, "val_rmse": 37.797905918221836}
+EPOCH {"epoch": 7, "train_loss": 0.092162168813306, "val_loss": 0.13111011373030634, "val_mae": 24.856975476329406, "val_mape": 0.2408999425985286, "val_rmse": 37.32276453190789}
+EPOCH {"epoch": 8, "train_loss": 0.09116405756333384, "val_loss": 0.1307552265376706, "val_mae": 24.79497617522739, "val_mape": 0.23795598180706423, "val_rmse": 36.83165684860597}
+EPOCH {"epoch": 9, "train_loss": 0.09054850256870778, "val_loss": 0.13489637729057877, "val_mae": 25.607614588437073, "val_mape": 0.24223346844196048, "val_rmse": 38.421737957109976}
+EPOCH {"epoch": 10, "train_loss": 0.09008543855290249, "val_loss": 0.13797852490331983, "val_mae": 26.150834572520044, "val_mape": 0.23497049016504626, "val_rmse": 39.24506253901216}
+EPOCH {"epoch": 11, "train_loss": 0.08942681233121935, "val_loss": 0.12146397785274024, "val_mae": 23.022514830695258, "val_mape": 0.2072868116362125, "val_rmse": 34.86902738966619}
+EPOCH {"epoch": 12, "train_loss": 0.08903053564765767, "val_loss": 0.12810246234019323, "val_mae": 24.32443336845127, "val_mape": 0.2425911789890144, "val_rmse": 36.34309188868991}
+EPOCH {"epoch": 13, "train_loss": 0.08854746312553226, "val_loss": 0.12539180457882182, "val_mae": 23.811586185992788, "val_mape": 0.22487775894033404, "val_rmse": 35.88372985778669}
+EPOCH {"epoch": 14, "train_loss": 0.08814082614762382, "val_loss": 0.1318274064759755, "val_mae": 25.0132947091521, "val_mape": 0.25157584493546686, "val_rmse": 38.01680455027577}
+EPOCH {"epoch": 15, "train_loss": 0.087693501949935, "val_loss": 0.12948423315176713, "val_mae": 24.561340084709524, "val_mape": 0.22408759647047943, "val_rmse": 37.236531500799956}
+EPOCH {"epoch": 16, "train_loss": 0.08760020613630348, "val_loss": 0.13363281163341129, "val_mae": 25.19971144786542, "val_mape": 0.26442226421553106, "val_rmse": 37.9541820539232}
+EPOCH {"epoch": 17, "train_loss": 0.08763367932477183, "val_loss": 0.1266938925600202, "val_mae": 23.981111339031624, "val_mape": 0.23392936202941755, "val_rmse": 36.24540519058909}
+EPOCH {"epoch": 18, "train_loss": 0.08722366555722234, "val_loss": 0.1290280630865389, "val_mae": 24.474249638123748, "val_mape": 0.22527541185538247, "val_rmse": 37.18097204053252}
+EPOCH {"epoch": 19, "train_loss": 0.08738684186906964, "val_loss": 0.12701886440931318, "val_mae": 24.11974294363155, "val_mape": 0.2282122848984302, "val_rmse": 36.60028060834432}
+EPOCH {"epoch": 20, "train_loss": 0.08690492033526086, "val_loss": 0.1216046088630118, "val_mae": 23.06848045274837, "val_mape": 0.22870965185068454, "val_rmse": 35.16341101437773}
+EPOCH {"epoch": 21, "train_loss": 0.08714215453396786, "val_loss": 0.12426401535123757, "val_mae": 23.590675767808982, "val_mape": 0.2288891765430894, "val_rmse": 35.865704966629224}
+EPOCH {"epoch": 22, "train_loss": 0.08764910733852653, "val_loss": 0.12534936552297618, "val_mae": 23.77805079627283, "val_mape": 0.23295011289784726, "val_rmse": 36.19169748749793}
+EPOCH {"epoch": 23, "train_loss": 0.08727988652987302, "val_loss": 0.12762780110826472, "val_mae": 24.215134296876048, "val_mape": 0.2281387345897373, "val_rmse": 37.135417356633106}
+EPOCH {"epoch": 24, "train_loss": 0.08762421567408644, "val_loss": 0.12489028022734433, "val_mae": 23.6553624466659, "val_mape": 0.2325097921890082, "val_rmse": 36.62450595475554}
+EPOCH {"epoch": 25, "train_loss": 0.08679157380496264, "val_loss": 0.13041919958089634, "val_mae": 24.757646371244974, "val_mape": 0.2355104217585283, "val_rmse": 38.00664676653151}
+EPOCH {"epoch": 26, "train_loss": 0.08675870461768206, "val_loss": 0.12669746109283395, "val_mae": 24.094093688711403, "val_mape": 0.23809316976749065, "val_rmse": 36.780462881134135}
+EPOCH {"epoch": 27, "train_loss": 0.08645111387000043, "val_loss": 0.12819719039424315, "val_mae": 24.330363457582525, "val_mape": 0.25326664735224924, "val_rmse": 37.240426548349355}
+EPOCH {"epoch": 28, "train_loss": 0.08646828106027084, "val_loss": 0.1212899766051619, "val_mae": 22.972546407037584, "val_mape": 0.21435466474274179, "val_rmse": 35.72726283996512}
+EPOCH {"epoch": 29, "train_loss": 0.0862023905574957, "val_loss": 0.12436897282713741, "val_mae": 23.634781778036253, "val_mape": 0.21795837791446696, "val_rmse": 37.275533971098284}
+EPOCH {"epoch": 30, "train_loss": 0.08602767985303598, "val_loss": 0.13316271093771084, "val_mae": 25.318199514714575, "val_mape": 0.24459058246729984, "val_rmse": 39.408609648941585}
+EPOCH {"epoch": 31, "train_loss": 0.08660799901133845, "val_loss": 0.12429811728847259, "val_mae": 23.576246278419802, "val_mape": 0.22442409088419066, "val_rmse": 36.36777420743088}
+EPOCH {"epoch": 32, "train_loss": 0.08748601780018733, "val_loss": 0.13189294796697326, "val_mae": 25.037120976617384, "val_mape": 0.2507188003053643, "val_rmse": 38.30829503997768}
+EPOCH {"epoch": 33, "train_loss": 0.08672892330041239, "val_loss": 0.12244804316847868, "val_mae": 23.293160734143864, "val_mape": 0.23000909831686392, "val_rmse": 36.63252622728905}
+EPOCH {"epoch": 34, "train_loss": 0.08644759096497794, "val_loss": 0.12301499361315271, "val_mae": 23.37256512876775, "val_mape": 0.21696792860586891, "val_rmse": 36.58352742582935}
+EPOCH {"epoch": 35, "train_loss": 0.08624110900693942, "val_loss": 0.11585669204643911, "val_mae": 21.997461684708743, "val_mape": 0.19176926683348616, "val_rmse": 34.59782463458259}
+EPOCH {"epoch": 36, "train_loss": 0.08620905720720262, "val_loss": 0.1313393593739125, "val_mae": 25.001755488724505, "val_mape": 0.2379927482289547, "val_rmse": 39.11420981329604}
+EPOCH {"epoch": 37, "train_loss": 0.08619041354460744, "val_loss": 0.12709827289104736, "val_mae": 24.17273140215792, "val_mape": 0.2310008895919495, "val_rmse": 37.87989961639439}
+EPOCH {"epoch": 38, "train_loss": 0.08613233138088033, "val_loss": 0.13145635077838635, "val_mae": 24.971301758712645, "val_mape": 0.24960405687286272, "val_rmse": 39.10409235173211}
+EPOCH {"epoch": 39, "train_loss": 0.08744016089834498, "val_loss": 0.1224994140511799, "val_mae": 23.278778772911256, "val_mape": 0.21109949678762946, "val_rmse": 36.372391527925295}
+EPOCH {"epoch": 40, "train_loss": 0.08707985249667008, "val_loss": 0.12417425368352444, "val_mae": 23.594328448807932, "val_mape": 0.2214602475347934, "val_rmse": 37.29187027187282}
+EPOCH {"epoch": 41, "train_loss": 0.08650048448518462, "val_loss": 0.12739112586773002, "val_mae": 24.204511051680488, "val_mape": 0.2336788211184269, "val_rmse": 37.63718700955141}
+EPOCH {"epoch": 42, "train_loss": 0.08605983357691535, "val_loss": 0.12105666344381553, "val_mae": 23.01917824717868, "val_mape": 0.20973023829420545, "val_rmse": 37.087606998981066}
+EPOCH {"epoch": 43, "train_loss": 0.0857620908037689, "val_loss": 0.1257024872019665, "val_mae": 23.915381834897524, "val_mape": 0.22224368030740907, "val_rmse": 37.659746619680085}
+EPOCH {"epoch": 44, "train_loss": 0.08607522994990514, "val_loss": 0.12188781082954467, "val_mae": 23.15552663245971, "val_mape": 0.2189464578701595, "val_rmse": 35.83152765053381}
+EPOCH {"epoch": 45, "train_loss": 0.0856299481824903, "val_loss": 0.11839507578233127, "val_mae": 22.478065844226677, "val_mape": 0.20333391136456738, "val_rmse": 34.80416451068542}
+EPOCH {"epoch": 46, "train_loss": 0.08490013896505766, "val_loss": 0.13034223553309598, "val_mae": 24.78774323348737, "val_mape": 0.2390118510162571, "val_rmse": 38.07503432834271}
+EPOCH {"epoch": 47, "train_loss": 0.08546980176646858, "val_loss": 0.12711427100813538, "val_mae": 24.08960424665733, "val_mape": 0.22455403610534821, "val_rmse": 37.03790236229476}
+EPOCH {"epoch": 48, "train_loss": 0.08579885805792255, "val_loss": 0.11997743502668909, "val_mae": 22.76679576314465, "val_mape": 0.20392044011806432, "val_rmse": 35.564550819702845}
+EPOCH {"epoch": 49, "train_loss": 0.0851854797800887, "val_loss": 0.12092806918616966, "val_mae": 22.932598774266545, "val_mape": 0.2149357241948582, "val_rmse": 35.813225799245934}
+EPOCH {"epoch": 50, "train_loss": 0.08520905937998742, "val_loss": 0.1244868993810362, "val_mae": 23.625440278987295, "val_mape": 0.22758065003812109, "val_rmse": 36.74079839568777}
+EPOCH {"epoch": 51, "train_loss": 0.09023799665067338, "val_loss": 0.1283633663021412, "val_mae": 24.354424427465066, "val_mape": 0.225780913846531, "val_rmse": 38.09526420890398}
+EPOCH {"epoch": 52, "train_loss": 0.0960567825762335, "val_loss": 0.13038111561557272, "val_mae": 24.72035035442514, "val_mape": 0.25344591230870933, "val_rmse": 38.149955843022056}
+EPOCH {"epoch": 53, "train_loss": 0.0932478696978308, "val_loss": 0.1278125953855247, "val_mae": 24.246074670614654, "val_mape": 0.24435660010897145, "val_rmse": 39.960300527705904}
+EPOCH {"epoch": 54, "train_loss": 0.09051420483754674, "val_loss": 0.119404928494599, "val_mae": 22.668649981521657, "val_mape": 0.22341679648025747, "val_rmse": 35.757357982535}
+EPOCH {"epoch": 55, "train_loss": 0.08890981814756836, "val_loss": 0.12516919233732754, "val_mae": 23.778324553674302, "val_mape": 0.2310927007326009, "val_rmse": 38.20086624040636}
+/data/OuXiaoyu/STEVE_CODE/STEVE/baselines/agcrn/trainer.py:238: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ckpt = torch.load(best_path, map_location=device)
+SUMMARY {"best_epoch": 35, "checkpoint_selection": "lowest validation MAE", "dataset": "LargeST-SD_TDS", "fixed_graph": false, "graph_file": "data/LargeST-SD_TDS/adj_mx.npz", "input_length": 12, "method": "AGCRN", "num_nodes": 716, "official_repo": "https://github.com/LeiBAI/AGCRN", "output_length": 12, "paper": "Adaptive Graph Convolutional Recurrent Network for Traffic Forecasting", "parameter_count": 71876, "peak_gpu_memory_mb": 480.23828125, "scaler": {"fit_split": "train", "mean": 244.3837890625, "std": 184.0395050048828}, "seed": 2024, "smoke": false, "source_commit": "7fbbf2aeb099242098a3cf482b55cd45d7295c28", "target_channels": 1, "test_mae": 22.025528184902416, "test_mape": 0.14454055725413872, "test_period": "2020 second half", "test_rmse": 34.253946235167476, "train_period": "2019", "train_shapes": {"test": {"x": [17652, 12, 716, 1], "y": [17652, 12, 716, 1]}, "train": {"x": [35017, 12, 716, 1], "y": [35017, 12, 716, 1]}, "val": {"x": [17460, 12, 716, 1], "y": [17460, 12, 716, 1]}}, "trainable_parameter_count": 71876, "training_time": 36708.395399570465, "uses_environment_labels": false, "uses_external_features": false, "uses_test_time_adaptation": false, "val_mae": 21.997461684708743, "val_mape": 0.19176926683348616, "val_period": "2020 first half", "val_rmse": 34.59782463458259}

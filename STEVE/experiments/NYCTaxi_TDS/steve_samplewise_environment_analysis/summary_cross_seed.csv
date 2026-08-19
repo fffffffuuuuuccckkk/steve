@@ -1,0 +1,2 @@
+num_samples,full_consistently_better_count,full_consistently_better_prop,inv_consistently_better_count,inv_consistently_better_prop,mixed_count,mixed_prop,full_at_least_two_count,full_at_least_two_prop,inv_at_least_two_count,inv_at_least_two_prop,mean_of_mean_delta,median_of_mean_delta,tie_threshold,relative_threshold
+546,1,0.0018315018315018315,260,0.47619047619047616,285,0.521978021978022,79,0.1446886446886447,467,0.8553113553113553,-1.8764352355975664,-2.704151153564453,1e-06,0.01

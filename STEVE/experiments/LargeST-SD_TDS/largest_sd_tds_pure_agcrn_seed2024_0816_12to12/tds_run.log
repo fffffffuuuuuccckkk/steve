@@ -1,0 +1,366 @@
+{
+  "args": {
+    "seed": 2024,
+    "device": "cuda:0",
+    "mode": "train",
+    "best_path": "",
+    "debug": false,
+    "dataset": "LargeST-SD_TDS",
+    "data_dir": "/data/OuXiaoyu/STEVE_CODE/STEVE/data",
+    "graph_file": "/data/OuXiaoyu/STEVE_CODE/STEVE/data/LargeST-SD_TDS/adj_mx.npz",
+    "num_nodes": 716,
+    "input_length": 12,
+    "output_T_dim": 12,
+    "batch_size": 4,
+    "test_batch_size": 8,
+    "len_closeness": 8,
+    "len_period": 4,
+    "len_trend": 0,
+    "result_root": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/LargeST-SD_TDS",
+    "d_input": 1,
+    "d_output": 1,
+    "d_model": 32,
+    "dropout": 0.1,
+    "percent": 0.1,
+    "shm_temp": 0.5,
+    "nmb_prototype": 4,
+    "yita": 0.5,
+    "layers": 3,
+    "K": 64,
+    "bank_gamma": 0.2,
+    "kw": 1,
+    "mi_w": 2,
+    "epochs": 100,
+    "lr_init": 0.001,
+    "early_stop": true,
+    "early_stop_patience": 20,
+    "grad_norm": true,
+    "max_grad_norm": 5,
+    "use_dwa": true,
+    "temp": 2,
+    "MMI": false,
+    "lr_patience": 20,
+    "lr_mode": "only",
+    "use_RevIN": true,
+    "confounder_dep_mode": "none",
+    "confounder_extractor": "token_attention",
+    "confounder_dim": 8,
+    "confounder_num_heads": 4,
+    "confounder_attention_dropout": 0.0,
+    "confounder_graph_embed_dim": 16,
+    "confounder_variational": true,
+    "confounder_kl_weight": 0.0001,
+    "confounder_dep_warmup_epochs": 5,
+    "confounder_dep_ramp_epochs": 10,
+    "confounder_projection_ridge": 0.001,
+    "confounder_dep_detach_target": true,
+    "gci_weight": 0.001,
+    "gci_graph_align_weight": 0.1,
+    "gci_edge_preserve_beta": 0.1,
+    "gci_graph_hops": 1,
+    "gci_symmetrize_adj": true,
+    "gci_add_self_loops": true,
+    "scd_weight": 0.001,
+    "dep_eps": 1e-06,
+    "confounder_injection": "none",
+    "ablation": "full",
+    "config_filename": "/data/OuXiaoyu/STEVE_CODE/STEVE/configs/LargeST_SD_TDS.yaml",
+    "model": "agcrn",
+    "data_seed": 2024,
+    "early_stop_test_avg_mae_epoch": 0,
+    "early_stop_test_avg_mae_threshold": 0.0,
+    "train_work_per_holiday": 2.5,
+    "exp_name": "largest_sd_tds_pure_agcrn_seed2024_0816_12to12",
+    "run_name": "largest_sd_tds_pure_agcrn_seed2024_0816_12to12",
+    "resume": true,
+    "resume_reset_patience": true,
+    "best_selection_split": "val",
+    "max_train_batches": null,
+    "max_eval_batches": null,
+    "fpem_backbone": "agcrn",
+    "agcrn_lr": 0.003,
+    "agcrn_embed_dim": 10,
+    "agcrn_rnn_units": 32,
+    "agcrn_num_layers": 1,
+    "agcrn_cheb_k": 2,
+    "graphwavenet_layers": 4,
+    "graphwavenet_kernel_size": 2,
+    "graphwavenet_dropout": 0.1,
+    "staeformer_layers": 2,
+    "staeformer_heads": 4,
+    "staeformer_dropout": 0.1,
+    "staeformer_mlp_ratio": 2.0,
+    "staeformer_input_length_max": 512,
+    "fpem_use_pretrained_inv_agcrn": false,
+    "fpem_pretrained_inv_agcrn_path": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/pure_agcrn_seed2024/best_val_model.pth",
+    "fpem_use_env_supervision": false,
+    "fpem_lambda_env_day_cls": 0.0,
+    "fpem_lambda_env_hour_cls": 0.0,
+    "fpem_lambda_env_rush_cls": 0.0,
+    "fpem_env_use_exogenous": true,
+    "fpem_env_exogenous_hour_dim": 8,
+    "fpem_env_exogenous_day_dim": 4,
+    "fpem_env_exogenous_rush_dim": 4,
+    "fpem_env_exogenous_load_dim": 8,
+    "fpem_env_exogenous_load_num_embeddings": 6,
+    "fpem_env_exogenous_scale": 0.1,
+    "fpem_env_use_period_context": false,
+    "fpem_env_period_context_day_steps": 0,
+    "fpem_env_period_context_week_steps": 0,
+    "fpem_env_period_context_scale": 0.1,
+    "fpem_ignore_future_c": false,
+    "fpem_use_load_level_experts": false,
+    "fpem_load_level_k": 3,
+    "fpem_load_level_mode": "train_quantile",
+    "fpem_randomize_train_load_level": false,
+    "fpem_random_load_level_seed": 20260727,
+    "fpem_use_environment_gate": true,
+    "fpem_environment_gate_hidden_dim": 64,
+    "fpem_environment_gate_warmup_epochs": 5,
+    "fpem_environment_gate_margin_relative": 0.01,
+    "fpem_environment_gate_temperature": 0.05,
+    "fpem_lambda_environment_gate": 1.0,
+    "fpem_lambda_load_expert": 0.2,
+    "fpem_conservative_inv_override": false,
+    "fpem_override_margin": 0.0,
+    "fpem_override_threshold": 0.5,
+    "fpem_override_threshold_grid": "0.50,0.55,0.60,0.65,0.70,0.75,0.80,0.85,0.90,0.95",
+    "fpem_override_margin_grid": "",
+    "fpem_override_threshold_selection_split": "val",
+    "fpem_override_weight_min": 0.0,
+    "fpem_override_weight_max": 20.0,
+    "fpem_harmful_switch_weight": 2.0,
+    "fpem_override_router_loss_weight": 1.0,
+    "fpem_counterfactual_risk_router": false,
+    "fpem_counterfactual_risk_stage2_start_epoch": 20,
+    "fpem_counterfactual_risk_regression_weight": 1.0,
+    "fpem_counterfactual_risk_ranking_weight": 0.5,
+    "fpem_counterfactual_risk_router_loss_weight": 1.0,
+    "fpem_counterfactual_risk_weight_min": 0.0,
+    "fpem_counterfactual_risk_weight_max": 20.0,
+    "fpem_counterfactual_risk_ranking_temperature": 1.0,
+    "fpem_use_env_supcon": false,
+    "fpem_lambda_env_supcon": 0.0,
+    "fpem_env_supcon_temperature": 0.1,
+    "fpem_use_inv_projector": false,
+    "fpem_use_inv_env_adversarial": false,
+    "fpem_lambda_inv_env_adv": 0.0,
+    "fpem_grl_alpha": 1.0,
+    "fpem_env_route_head_mode": "concat_input",
+    "fpem_use_env_prototype_router": false,
+    "fpem_env_route_target_mode": "prediction_oracle",
+    "fpem_env_route_train_mode": "soft_oracle",
+    "fpem_env_route_inference_mode": "mlp",
+    "fpem_env_prototype_temperature": 1.0,
+    "fpem_env_route_hybrid_alpha": 1.0,
+    "fpem_env_route_hybrid_alpha_start": 1.0,
+    "fpem_env_route_hybrid_alpha_end": 0.5,
+    "fpem_env_route_hybrid_alpha_decay_epochs": 30,
+    "fpem_use_sinkhorn_route": false,
+    "fpem_force_uniform_route": false,
+    "fpem_env_rep_ablation": "normal",
+    "fpem_env_route_sinkhorn_tau": 1.0,
+    "fpem_env_route_sinkhorn_iters": 5,
+    "fpem_env_sinkhorn_prediction_alpha_start": 0.2,
+    "fpem_env_sinkhorn_prediction_alpha_final": 1.0,
+    "fpem_env_sinkhorn_environment_beta_start": 1.0,
+    "fpem_env_sinkhorn_environment_beta_final": 0.2,
+    "fpem_env_sinkhorn_schedule_start_epoch": 5,
+    "fpem_env_sinkhorn_schedule_end_epoch": 15,
+    "fpem_env_sinkhorn_temporal_lambda": 0.05,
+    "fpem_env_sinkhorn_gaussian_ema": 0.05,
+    "fpem_env_sinkhorn_gaussian_min_var": 0.0001,
+    "fpem_sinkhorn_warmup_epochs": 10,
+    "fpem_sinkhorn_soft_end_epoch": 20,
+    "fpem_sinkhorn_temperature_start": 1.0,
+    "fpem_sinkhorn_temperature_final": 0.3,
+    "fpem_sinkhorn_lambda_common": 0.1,
+    "fpem_risk_router_temperature": 1.0,
+    "fpem_risk_router_lambda": 0.5,
+    "fpem_risk_router_pairwise_lambda": 0.0,
+    "fpem_env_teacher_ema_momentum": 0.995,
+    "fpem_env_partition_start_epoch": 5,
+    "fpem_env_partition_update_interval": 5,
+    "fpem_env_partition_freeze_last_epochs": 15,
+    "fpem_env_partition_max_batches": -1,
+    "fpem_env_max_clusters": 6,
+    "fpem_env_min_cluster_ratio": 0.08,
+    "fpem_env_gmm_n_init": 10,
+    "fpem_env_gmm_variance_floor": 0.0001,
+    "fpem_env_progressive_lambda_common": 0.2,
+    "fpem_env_cluster_compactness_lambda": 0.01,
+    "fpem_env_cluster_consistency_lambda": 0.05,
+    "fpem_env_split_perturb_std": 1e-05,
+    "fpem_sinkhorn_iters": 3,
+    "fpem_sinkhorn_epsilon": 0.05,
+    "fpem_expert_uniform_warmup_epochs": 0,
+    "fpem_env_route_balance_warmup_epochs": 0,
+    "fpem_env_route_initial_temperature": 1.0,
+    "fpem_env_route_final_temperature": 0.3,
+    "fpem_use_cross_cov_sep": false,
+    "fpem_lambda_cross_cov_sep": 0.0,
+    "confounder_virtual_batch_enabled": false,
+    "confounder_virtual_batch_size": 8,
+    "gci_ridge": null,
+    "scd_ridge": null,
+    "gci_detach_target": null,
+    "scd_detach_target": null,
+    "scd_alignment_weight": null,
+    "save_test_selected_checkpoints": false,
+    "git_commit": "1b38ed8",
+    "log_dir": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/LargeST-SD_TDS/largest_sd_tds_pure_agcrn_seed2024_0816_12to12",
+    "fpem_env_period_context_day_steps_resolved": 96,
+    "fpem_env_period_context_week_steps_resolved": 672,
+    "fpem_load_level_thresholds": [],
+    "fpem_random_train_load_levels": [],
+    "fpem_load_level_train_counts": [],
+    "fpem_input_scaler_mean": 225.87516555057064,
+    "fpem_input_scaler_std": 178.6840098101831
+  },
+  "counts": {
+    "train_total": 34944,
+    "train_workday": 24960,
+    "train_holiday": 9984,
+    "train_workday_holiday_ratio": 2.5,
+    "val_total": 17460,
+    "val_workday": 12468,
+    "val_holiday": 4992,
+    "test_total": 17652,
+    "test_workday": 12660,
+    "test_holiday": 4992,
+    "train_shuffle": true,
+    "train_chronological_for_env_sinkhorn_temporal": false,
+    "traffic_load_c_audit": {
+      "train": {
+        "shape": [
+          35017,
+          12,
+          716,
+          1
+        ],
+        "min": 0.0,
+        "max": 5.0,
+        "unique_values": [
+          0.0,
+          1.0,
+          2.0,
+          3.0,
+          4.0,
+          5.0
+        ]
+      },
+      "val": {
+        "shape": [
+          17460,
+          12,
+          716,
+          1
+        ],
+        "min": 0.0,
+        "max": 5.0,
+        "unique_values": [
+          0.0,
+          1.0,
+          2.0,
+          3.0,
+          4.0,
+          5.0
+        ]
+      },
+      "test": {
+        "shape": [
+          17652,
+          12,
+          716,
+          1
+        ],
+        "min": 0.0,
+        "max": 5.0,
+        "unique_values": [
+          0.0,
+          1.0,
+          2.0,
+          3.0,
+          4.0,
+          5.0
+        ]
+      }
+    },
+    "observable_load_prior": null,
+    "load_level_source": null,
+    "load_level_threshold_fit_split": null,
+    "load_level_thresholds": [],
+    "load_level_train_counts": [],
+    "load_level_uses_target_or_future_load": false,
+    "fpem_env_use_period_context": false,
+    "fpem_env_period_context_day_steps": 96,
+    "fpem_env_period_context_week_steps": 672,
+    "fpem_env_period_context_train_day_coverage": 0.0,
+    "fpem_env_period_context_train_week_coverage": 0.0,
+    "fpem_env_period_context_val_day_coverage": 0.0,
+    "fpem_env_period_context_val_week_coverage": 0.0,
+    "fpem_env_period_context_test_day_coverage": 0.0,
+    "fpem_env_period_context_test_week_coverage": 0.0,
+    "fpem_env_period_context_computed_before_subset": false,
+    "fpem_env_period_context_index_source": "disabled",
+    "fpem_env_period_context_invalid_fill": "disabled"
+  },
+  "trainable_params": 71876,
+  "frozen_params": 0,
+  "optimizer_params": 71876,
+  "resume_start_epoch": 1,
+  "top_level_prediction_source": "model_forward_prediction",
+  "frozen_invariant_parameters": [],
+  "trainable_invariant_parameters": [],
+  "invariant_candidate_val": null
+}
+EPOCH {"epoch": 1, "train_loss": 27.87610647770075, "val": {"loss": 33.95679229844671, "mae": 33.75803756713867, "mape": 0.4268730878829956}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 33.95679229844671, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 2, "train_loss": 20.509460535678233, "val": {"loss": 27.10755816873366, "mae": 27.116762161254883, "mape": 0.2749011516571045}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 27.10755816873366, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 3, "train_loss": 18.89949872429336, "val": {"loss": 28.270964739577135, "mae": 28.20704460144043, "mape": 0.30368536710739136}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 28.270964739577135, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 4, "train_loss": 18.260320747946643, "val": {"loss": 25.178681233799683, "mae": 25.185951232910156, "mape": 0.2617254853248596}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 25.178681233799683, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 5, "train_loss": 17.86044676661928, "val": {"loss": 24.75356487107288, "mae": 24.783496856689453, "mape": 0.23845992982387543}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 24.75356487107288, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 6, "train_loss": 17.531144052307248, "val": {"loss": 24.472014339156942, "mae": 24.51658058166504, "mape": 0.22674214839935303}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 24.472014339156942, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 7, "train_loss": 17.323696181505593, "val": {"loss": 24.31135224924686, "mae": 24.333499908447266, "mape": 0.236976757645607}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 24.31135224924686, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 8, "train_loss": 17.14324867064918, "val": {"loss": 24.897232856435945, "mae": 24.9276123046875, "mape": 0.23382650315761566}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 24.897232856435945, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 9, "train_loss": 17.022660826916223, "val": {"loss": 23.866792518067022, "mae": 23.91424560546875, "mape": 0.2155742645263672}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 23.866792518067022, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 10, "train_loss": 16.902091828949285, "val": {"loss": 24.14033030917543, "mae": 24.185285568237305, "mape": 0.22689823806285858}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 24.14033030917543, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 11, "train_loss": 16.78802695843108, "val": {"loss": 23.452990999584397, "mae": 23.50758934020996, "mape": 0.21242481470108032}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 23.452990999584397, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 12, "train_loss": 16.704162174965436, "val": {"loss": 22.634635454353475, "mae": 22.679054260253906, "mape": 0.21012096107006073}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 22.634635454353475, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 13, "train_loss": 16.62758190280352, "val": {"loss": 24.573067549767977, "mae": 24.604961395263672, "mape": 0.22536419332027435}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 24.573067549767977, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 14, "train_loss": 16.53929279651834, "val": {"loss": 25.006458296887217, "mae": 25.040508270263672, "mape": 0.24898070096969604}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 25.006458296887217, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 15, "train_loss": 16.468185818511923, "val": {"loss": 23.842277212531755, "mae": 23.864032745361328, "mape": 0.22149032354354858}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 23.842277212531755, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 16, "train_loss": 16.423220806342343, "val": {"loss": 24.076665341608358, "mae": 24.117277145385742, "mape": 0.2263479232788086}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 24.076665341608358, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 17, "train_loss": 16.358328384575827, "val": {"loss": 22.470837974242535, "mae": 22.524944305419922, "mape": 0.20380637049674988}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 22.470837974242535, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 18, "train_loss": 16.311230948228975, "val": {"loss": 22.7190900810039, "mae": 22.751293182373047, "mape": 0.22224779427051544}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 22.7190900810039, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 19, "train_loss": 16.287317501865463, "val": {"loss": 23.20914285181861, "mae": 23.263364791870117, "mape": 0.21879766881465912}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 23.20914285181861, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 20, "train_loss": 16.22875704941077, "val": {"loss": 23.824343641362386, "mae": 23.847410202026367, "mape": 0.22144950926303864}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 23.824343641362386, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 21, "train_loss": 16.179641670468964, "val": {"loss": 25.299944921529352, "mae": 25.321372985839844, "mape": 0.25081074237823486}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 25.299944921529352, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 22, "train_loss": 16.150690670960987, "val": {"loss": 22.85718615951748, "mae": 22.906444549560547, "mape": 0.21583658456802368}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 22.85718615951748, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 23, "train_loss": 16.121857511855307, "val": {"loss": 22.86735356995342, "mae": 22.918113708496094, "mape": 0.20860038697719574}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 22.86735356995342, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 24, "train_loss": 16.090876321871203, "val": {"loss": 22.972067513599125, "mae": 23.01913070678711, "mape": 0.211049422621727}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 22.972067513599125, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 25, "train_loss": 16.061158943252686, "val": {"loss": 23.294991443422592, "mae": 23.332210540771484, "mape": 0.2150447517633438}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 23.294991443422592, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 26, "train_loss": 16.040783846607575, "val": {"loss": 24.0808604810962, "mae": 24.102819442749023, "mape": 0.23125344514846802}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 24.0808604810962, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 27, "train_loss": 16.018284404288718, "val": {"loss": 22.982907273165413, "mae": 23.019306182861328, "mape": 0.2238047569990158}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 22.982907273165413, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 28, "train_loss": 15.96866853600675, "val": {"loss": 22.337725064648545, "mae": 22.38458251953125, "mape": 0.21101310849189758}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 22.337725064648545, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 29, "train_loss": 15.956186308910995, "val": {"loss": 23.995854455071527, "mae": 24.036808013916016, "mape": 0.22506149113178253}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 23.995854455071527, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 30, "train_loss": 15.940319156144565, "val": {"loss": 23.927135541359327, "mae": 23.955896377563477, "mape": 0.22487975656986237}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 23.927135541359327, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 31, "train_loss": 15.915710610839037, "val": {"loss": 23.030012199980263, "mae": 23.06064224243164, "mape": 0.22954893112182617}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 23.030012199980263, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 32, "train_loss": 15.891944735478132, "val": {"loss": 23.365168596810285, "mae": 23.41023063659668, "mape": 0.2163899540901184}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 23.365168596810285, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 33, "train_loss": 15.880473397153638, "val": {"loss": 22.98739007892163, "mae": 23.039329528808594, "mape": 0.2128288894891739}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 22.98739007892163, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 34, "train_loss": 15.861006174277474, "val": {"loss": 22.89290796023031, "mae": 22.93903923034668, "mape": 0.21214257180690765}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 22.89290796023031, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 35, "train_loss": 15.87611938499924, "val": {"loss": 25.04294072276564, "mae": 25.067541122436523, "mape": 0.23129773139953613}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 25.04294072276564, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 36, "train_loss": 15.848408554117759, "val": {"loss": 22.49101516035135, "mae": 22.540956497192383, "mape": 0.20666205883026123}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 22.49101516035135, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 37, "train_loss": 15.840088994348006, "val": {"loss": 23.848358304578124, "mae": 23.889713287353516, "mape": 0.23410391807556152}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 23.848358304578124, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 38, "train_loss": 15.816803680180193, "val": {"loss": 24.452669430696467, "mae": 24.469829559326172, "mape": 0.2365662008523941}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 24.452669430696467, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 39, "train_loss": 15.843976975524383, "val": {"loss": 22.779736589413414, "mae": 22.82321548461914, "mape": 0.2108878791332245}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 22.779736589413414, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 40, "train_loss": 15.886373146331353, "val": {"loss": 22.965272700955875, "mae": 23.029327392578125, "mape": 0.20594792068004608}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 22.965272700955875, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 41, "train_loss": 15.802583956620195, "val": {"loss": 24.447085207119155, "mae": 24.48174285888672, "mape": 0.2340419441461563}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 24.447085207119155, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 42, "train_loss": 15.76881260471248, "val": {"loss": 23.18157875761765, "mae": 23.214757919311523, "mape": 0.219159334897995}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 23.18157875761765, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 43, "train_loss": 15.747485193304527, "val": {"loss": 24.801730729110513, "mae": 24.85851287841797, "mape": 0.22305835783481598}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 24.801730729110513, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 44, "train_loss": 15.753927652270367, "val": {"loss": 24.46604446178721, "mae": 24.504329681396484, "mape": 0.23625494539737701}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 24.46604446178721, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 45, "train_loss": 15.736387340249596, "val": {"loss": 23.221078727423354, "mae": 23.25662612915039, "mape": 0.2256309539079666}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 23.221078727423354, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 46, "train_loss": 15.733087359876423, "val": {"loss": 23.433226638030305, "mae": 23.4782772064209, "mape": 0.2224389612674713}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 23.433226638030305, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 47, "train_loss": 15.711716278350396, "val": {"loss": 22.828530550985995, "mae": 22.888593673706055, "mape": 0.20483990013599396}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 22.828530550985995, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EPOCH {"epoch": 48, "train_loss": 15.706885165401868, "val": {"loss": 23.05995382565836, "mae": 23.09308433532715, "mape": 0.2202581912279129}, "test_mixed": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_workday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_holiday": {"loss": NaN, "mae": NaN, "mape": NaN}, "test_avg_mae": NaN, "best_selection_value": 23.05995382565836, "best_selection_split": "val", "best_selection_metric": "val_loss", "lr": 0.003}
+EARLY_STOP epoch=48 patience=20
+SUMMARY {"exp_name": "largest_sd_tds_pure_agcrn_seed2024_0816_12to12", "model": "agcrn", "ablation": "full", "best_epoch": 28, "best_val_loss": 22.337725064648545, "best_checkpoint_selection_split": "val", "best_checkpoint_selection_metric": "val_loss", "test_mixed_mae": 23.054529190063477, "test_workday_mae": 25.541704177856445, "test_holiday_mae": 16.74030303955078, "test_avg_mae": 21.141003608703613, "top_level_prediction_source": "model_forward_prediction", "fpem_override_threshold": 0.5, "fpem_override_margin": 0.0, "finished": true}

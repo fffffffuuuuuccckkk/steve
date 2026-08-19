@@ -1,0 +1,2 @@
+epoch,train_loss,train_mse,train_regret_bce,test_avg_mae,val_learned_routing_mae,test_mixed_learned_routing_mae,test_mixed_all_environment_mae,test_mixed_net_gain,test_mixed_inv_route_ratio
+1,0.13033228541413944,0.13033228541413944,0.0,11.303436279296875,12.362518310546875,11.257920265197754,11.257920265197754,0.0,0.0

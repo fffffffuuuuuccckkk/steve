@@ -1,0 +1,10 @@
+name,model,seed,finished,best_epoch,best_val_loss,test_mixed_mae,test_workday_mae,test_holiday_mae,test_avg_mae,fpem_env_route_k,fpem_lambda_inv_pred,fpem_use_future_mi,fpem_use_swap,fpem_use_club_mi,fpem_use_confounder_extractor,fpem_env_route_head_mode,summary_path
+baseline,agcrn,2026,False,,,,,,,,,,,,,,
+full,steve,2026,False,,,,,,,,,,,,,,
+inv_only,steve,2026,False,,,,,,,,,,,,,,
+k3,steve,2026,True,37,12.307529067993164,11.922883987426758,11.835243225097656,12.074862480163574,11.955052852630615,3,0.0,True,True,True,True,concat_input,experiments/NYCTaxi_TDS/fpem_agcrn_aligned_k1_noinv_k3_seed2026/summary.json
+with_inv_loss,steve,2026,True,100,11.606655883789063,10.605498313903809,10.55406379699707,10.69468879699707,10.62437629699707,1,0.2,True,True,True,True,concat_input,experiments/NYCTaxi_TDS/fpem_agcrn_aligned_k1_noinv_with_inv_loss_seed2026/summary.json
+no_future_mi,steve,2026,False,,,,,,,,,,,,,,
+no_swap,steve,2026,True,100,11.673691368103027,10.70755672454834,10.696111679077148,10.727402687072754,10.711757183074951,1,0.0,True,False,True,True,concat_input,experiments/NYCTaxi_TDS/fpem_agcrn_aligned_k1_noinv_no_swap_seed2026/summary.json
+no_club,steve,2026,False,,,,,,,,,,,,,,
+no_confounder_extractor,steve,2026,True,100,11.610465240478515,10.549623489379883,10.5339994430542,10.5767183303833,10.55535888671875,1,0.0,True,True,True,False,concat_input,experiments/NYCTaxi_TDS/fpem_agcrn_aligned_k1_noinv_no_confounder_extractor_seed2026/summary.json

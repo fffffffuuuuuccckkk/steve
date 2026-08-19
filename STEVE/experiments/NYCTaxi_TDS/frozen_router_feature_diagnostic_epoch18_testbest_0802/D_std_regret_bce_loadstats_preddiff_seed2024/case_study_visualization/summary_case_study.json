@@ -1,0 +1,345 @@
+{
+  "stage1_checkpoint": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_counterfactual_risk_router_testbest_diagnostic_0802_obs_k1_counterfactual_risk_router_seed2024/best_test_avg_model.pth",
+  "stage1_epoch": 18,
+  "stage1_summary_test_avg_mae": 10.602606773376465,
+  "stage2_router_checkpoint": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/frozen_router_feature_diagnostic_epoch18_testbest_0802/D_std_regret_bce_loadstats_preddiff_seed2024/best_stage2_router_test_selected.pth",
+  "stage2_summary_path": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/frozen_router_feature_diagnostic_epoch18_testbest_0802/summary_all_frozen_router_cases.json",
+  "stage2_best_epoch": 36,
+  "output_dir": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/frozen_router_feature_diagnostic_epoch18_testbest_0802/D_std_regret_bce_loadstats_preddiff_seed2024/case_study_visualization",
+  "git_commit": "1b38ed8",
+  "command": "scripts/analyze_tds_nyctaxi_fpem_frozen_router_case_study.py --stage1_root /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_counterfactual_risk_router_testbest_diagnostic_0802 --stage2_root /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/frozen_router_feature_diagnostic_epoch18_testbest_0802 --case D_std_regret_bce_loadstats_preddiff --device cuda:0 --seed 2024 --batch_size 256",
+  "metrics_test_mixed": {
+    "num_samples": 546,
+    "all_environment_mae": 11.257920265197754,
+    "all_invariant_mae": 11.461053848266602,
+    "learned_routing_mae": 11.25318717956543,
+    "oracle_mae": 11.183935165405273,
+    "env_route_ratio": 0.9688644409179688,
+    "inv_route_ratio": 0.03113553114235401,
+    "target_inv_ratio": 0.311355322599411,
+    "router_accuracy": 0.7014651894569397,
+    "balanced_accuracy": 0.5286452174186707,
+    "inv_switch_precision": 0.7058823704719543,
+    "inv_switch_recall": 0.07058823853731155,
+    "correct_beneficial_inv_switches": 12,
+    "harmful_inv_switches": 5,
+    "saved_loss": 0.0066906725987792015,
+    "added_loss": 0.001956922234967351,
+    "net_gain": 0.004733085632324219,
+    "regret": 0.06925201416015625,
+    "oracle_gap_closed": 0.06397350132465363,
+    "delta_hat_min": -0.7472313642501831,
+    "delta_hat_mean": 0.9196826219558716,
+    "delta_hat_max": 4.708388805389404,
+    "delta_hat_std": 0.7578646540641785,
+    "inv_auroc": 0.5817428035043805,
+    "inv_auprc": 0.40515596842635027
+  },
+  "route_score_correlation": {
+    "delta_pearson": 0.21242243859608234,
+    "delta_spearman": 0.20377890897992196,
+    "inv_auroc": 0.5817428035043805,
+    "inv_auprc": 0.40515596842635027
+  },
+  "reproduction": {
+    "ok": true,
+    "checks": {
+      "all_env_mae": {
+        "actual": 11.257920265197754,
+        "expected": 11.257920265197754,
+        "diff": 0.0
+      },
+      "learned_mae": {
+        "actual": 11.25318717956543,
+        "expected": 11.253186225891113,
+        "diff": 9.5367431640625e-07
+      },
+      "predicted_invariant_ratio": {
+        "actual": 0.03113553114235401,
+        "expected": 0.03113553114235401,
+        "diff": 0.0
+      },
+      "target_invariant_ratio": {
+        "actual": 0.311355322599411,
+        "expected": 0.311355322599411,
+        "diff": 0.0
+      },
+      "invariant_switch_precision": {
+        "actual": 0.7058823704719543,
+        "expected": 0.7058823704719543,
+        "diff": 0.0
+      },
+      "invariant_switch_recall": {
+        "actual": 0.07058823853731155,
+        "expected": 0.07058823853731155,
+        "diff": 0.0
+      },
+      "correct_invariant_switches": {
+        "actual": 12,
+        "expected": 12,
+        "diff": 0.0
+      },
+      "harmful_switches": {
+        "actual": 5,
+        "expected": 5,
+        "diff": 0.0
+      }
+    },
+    "tolerance": 5e-05
+  },
+  "alignment": {
+    "stage2_npz_path": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/frozen_router_feature_diagnostic_epoch18_testbest_0802/D_std_regret_bce_loadstats_preddiff_seed2024/predictions_and_routes.npz",
+    "y_env_max_abs_diff": 0.00048828125,
+    "y_inv_max_abs_diff": 0.00042724609375,
+    "delta_true_max_abs_diff": 1.1444091796875e-05,
+    "delta_hat_max_abs_diff": 3.248453140258789e-05,
+    "prediction_tolerance": 0.001,
+    "delta_tolerance": 0.0001
+  },
+  "hash_check": {
+    "before": "77e47b371ab6b19c073a76a9652a2190bc2bd1d7ecdcd1a1d4952147c891b234",
+    "after": "77e47b371ab6b19c073a76a9652a2190bc2bd1d7ecdcd1a1d4952147c891b234",
+    "identical": true
+  },
+  "leakage_audit": {
+    "stored_future_c_seen_train": false,
+    "stored_future_c_seen_test": false,
+    "observable_load_prior_uses_target_or_future_load": false,
+    "router_input_uses_y": false,
+    "router_input_uses_future_c": false,
+    "y_used_only_for_offline_delta_true": true,
+    "test_loader_shuffle_false": true,
+    "observable_load_from_train_CP_and_x_last": true
+  },
+  "feature_standardization": {
+    "mean_shape": [
+      1,
+      210
+    ],
+    "std_shape": [
+      1,
+      210
+    ],
+    "std_min": 9.999999974752427e-07,
+    "std_max": 0.23514167964458466,
+    "train_std_feature_mean_abs_max": 0.1043081283569336
+  },
+  "representation_diagnostics": {
+    "probe_rows": [
+      {
+        "representation": "environment",
+        "task": "observable_load_regression",
+        "metric": "r2",
+        "value": 0.7940874099731445
+      },
+      {
+        "representation": "environment",
+        "task": "observable_load_regression",
+        "metric": "mae",
+        "value": 0.018716149032115936
+      },
+      {
+        "representation": "environment",
+        "task": "TOD",
+        "metric": "accuracy",
+        "value": 0.7857142857142857
+      },
+      {
+        "representation": "environment",
+        "task": "TOD",
+        "metric": "macro_f1",
+        "value": 0.7851568104806125
+      },
+      {
+        "representation": "environment",
+        "task": "TOD",
+        "metric": "knn5_accuracy",
+        "value": 0.684981684981685
+      },
+      {
+        "representation": "environment",
+        "task": "TOD",
+        "metric": "silhouette",
+        "value": -0.07503334432840347
+      },
+      {
+        "representation": "environment",
+        "task": "workday",
+        "metric": "accuracy",
+        "value": 0.6648351648351648
+      },
+      {
+        "representation": "environment",
+        "task": "workday",
+        "metric": "macro_f1",
+        "value": 0.4773807842583439
+      },
+      {
+        "representation": "environment",
+        "task": "workday",
+        "metric": "auroc",
+        "value": 0.6871027542372881
+      },
+      {
+        "representation": "environment",
+        "task": "workday",
+        "metric": "knn5_accuracy",
+        "value": 0.7912087912087912
+      },
+      {
+        "representation": "environment",
+        "task": "workday",
+        "metric": "silhouette",
+        "value": -0.0004361876635812223
+      },
+      {
+        "representation": "environment",
+        "task": "target_route",
+        "metric": "accuracy",
+        "value": 0.6886446886446886
+      },
+      {
+        "representation": "environment",
+        "task": "target_route",
+        "metric": "macro_f1",
+        "value": 0.4078091106290672
+      },
+      {
+        "representation": "environment",
+        "task": "target_route",
+        "metric": "auroc",
+        "value": 0.5749374217772216
+      },
+      {
+        "representation": "environment",
+        "task": "target_route",
+        "metric": "knn5_accuracy",
+        "value": 0.6721611721611722
+      },
+      {
+        "representation": "environment",
+        "task": "target_route",
+        "metric": "silhouette",
+        "value": -0.009734713472425938
+      },
+      {
+        "representation": "invariant",
+        "task": "observable_load_regression",
+        "metric": "r2",
+        "value": 0.947723388671875
+      },
+      {
+        "representation": "invariant",
+        "task": "observable_load_regression",
+        "metric": "mae",
+        "value": 0.009354840964078903
+      },
+      {
+        "representation": "invariant",
+        "task": "TOD",
+        "metric": "accuracy",
+        "value": 0.8809523809523809
+      },
+      {
+        "representation": "invariant",
+        "task": "TOD",
+        "metric": "macro_f1",
+        "value": 0.8810546271568175
+      },
+      {
+        "representation": "invariant",
+        "task": "TOD",
+        "metric": "knn5_accuracy",
+        "value": 0.8681318681318682
+      },
+      {
+        "representation": "invariant",
+        "task": "TOD",
+        "metric": "silhouette",
+        "value": -0.026557493954896927
+      },
+      {
+        "representation": "invariant",
+        "task": "workday",
+        "metric": "accuracy",
+        "value": 0.8003663003663004
+      },
+      {
+        "representation": "invariant",
+        "task": "workday",
+        "metric": "macro_f1",
+        "value": 0.762917933130699
+      },
+      {
+        "representation": "invariant",
+        "task": "workday",
+        "metric": "auroc",
+        "value": 0.8542549435028248
+      },
+      {
+        "representation": "invariant",
+        "task": "workday",
+        "metric": "knn5_accuracy",
+        "value": 0.86996336996337
+      },
+      {
+        "representation": "invariant",
+        "task": "workday",
+        "metric": "silhouette",
+        "value": 0.002243184484541416
+      },
+      {
+        "representation": "invariant",
+        "task": "target_route",
+        "metric": "accuracy",
+        "value": 0.6886446886446886
+      },
+      {
+        "representation": "invariant",
+        "task": "target_route",
+        "metric": "macro_f1",
+        "value": 0.4078091106290672
+      },
+      {
+        "representation": "invariant",
+        "task": "target_route",
+        "metric": "auroc",
+        "value": 0.5857165206508135
+      },
+      {
+        "representation": "invariant",
+        "task": "target_route",
+        "metric": "knn5_accuracy",
+        "value": 0.6684981684981685
+      },
+      {
+        "representation": "invariant",
+        "task": "target_route",
+        "metric": "silhouette",
+        "value": -0.01486350130289793
+      }
+    ],
+    "embedding_methods": {
+      "env": "PCA+t-SNE",
+      "inv": "PCA+t-SNE"
+    }
+  },
+  "swap_sensitivity": {
+    "status": "blocked",
+    "reason": "Current StableST forward path does not expose a safe inference-only API to inject swapped environment representation before the environment prediction head while keeping all parameters unchanged.",
+    "minimal_safe_change": "Add an analysis-only return_analysis_features/route_override or env_rep_override argument that is ignored by default and only used in analyze scripts; then recompute y_env from frozen heads with injected C_cur."
+  },
+  "answers": {
+    "route_score_correlates_with_true_gain": "weak_positive",
+    "low_recall_reason": "both_conservative_zero_boundary_and_limited_generalizable_separation; features show modest AUROC but zero-boundary keeps switch ratio low",
+    "larger_switch_coverage_may_help": "diagnostic_curve_required; see coverage_gain_curve.csv/png",
+    "observable_load_independent_information": "available_in_input; compare B vs C/D in diagnostic tables",
+    "env_rep_encodes_context_more_than_inv": "see representation_probe_comparison.csv/png",
+    "recommended_main_figures": [
+      "route_score_vs_true_delta.png",
+      "mae_vs_switch_budget.png",
+      "observable_load_conditioned_routing.png",
+      "representation_probe_comparison.png"
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "checkpoint_selection": "lowest validation MAE",
+  "dataset": "LargeST-SD_TDS",
+  "fixed_graph": false,
+  "graph_file": "data/LargeST-SD_TDS/adj_mx.npz",
+  "input_length": 35,
+  "method": "AGCRN",
+  "num_nodes": 716,
+  "official_repo": "https://github.com/LeiBAI/AGCRN",
+  "output_length": 1,
+  "paper": "Adaptive Graph Convolutional Recurrent Network for Traffic Forecasting",
+  "parameter_count": 4697,
+  "scaler": {
+    "fit_split": "train",
+    "mean": 244.42984008789062,
+    "std": 184.03782653808594
+  },
+  "seed": 2024,
+  "source_commit": "7fbbf2aeb099242098a3cf482b55cd45d7295c28",
+  "target_channels": 1,
+  "test_period": "2020 second half",
+  "train_period": "2019",
+  "trainable_parameter_count": 4697,
+  "uses_environment_labels": false,
+  "uses_external_features": false,
+  "uses_test_time_adaptation": false,
+  "val_period": "2020 first half"
+}

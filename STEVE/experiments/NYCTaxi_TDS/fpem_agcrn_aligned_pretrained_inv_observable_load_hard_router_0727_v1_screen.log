@@ -1,0 +1,552 @@
+{
+  "CP_shape": [
+    200,
+    2
+  ],
+  "CP_zero_count": 0,
+  "cache_version": 1,
+  "created": false,
+  "metadata": {
+    "cache_version": 1,
+    "formula": "c_obs=clip(ceil(5*x[:,-1]/CP),0,5); CP=max(train_x,axis=(0,1)); CP==0 -> c_obs=0",
+    "load_score": "mean(c_obs/5 over nodes and channels)",
+    "quantiles": [
+      0.3333333333333333,
+      0.6666666666666666
+    ],
+    "random_assignment_seed": 314159,
+    "source_x_shapes": {
+      "test": [
+        546,
+        35,
+        200,
+        2
+      ],
+      "train": [
+        1912,
+        35,
+        200,
+        2
+      ],
+      "val": [
+        274,
+        35,
+        200,
+        2
+      ]
+    },
+    "threshold_fit_split": "train",
+    "uses_stored_c": false,
+    "uses_target_y": false
+  },
+  "path": "/data/OuXiaoyu/STEVE_CODE/STEVE/data/NYCTaxi/observable_load_prior_k3_v1.npz",
+  "random_assignment_seed": 314159,
+  "splits": {
+    "test": {
+      "c_obs_shape": [
+        546,
+        200,
+        2
+      ],
+      "expert_counts": [
+        125,
+        183,
+        238
+      ],
+      "random_expert_counts": [
+        125,
+        183,
+        238
+      ],
+      "samples": 546,
+      "score_max": 0.331,
+      "score_min": 0.08850000000000001
+    },
+    "train": {
+      "c_obs_shape": [
+        1912,
+        200,
+        2
+      ],
+      "expert_counts": [
+        639,
+        636,
+        637
+      ],
+      "random_expert_counts": [
+        639,
+        636,
+        637
+      ],
+      "samples": 1912,
+      "score_max": 0.32,
+      "score_min": 0.005
+    },
+    "val": {
+      "c_obs_shape": [
+        274,
+        200,
+        2
+      ],
+      "expert_counts": [
+        73,
+        81,
+        120
+      ],
+      "random_expert_counts": [
+        73,
+        81,
+        120
+      ],
+      "samples": 274,
+      "score_max": 0.311,
+      "score_min": 0.0925
+    }
+  },
+  "thresholds": [
+    0.165,
+    0.20350000000000001
+  ]
+}
+[INFO] RUN_PREFIX=fpem_agcrn_aligned_pretrained_inv_observable_load_hard_router_0727_v1
+[INFO] cases=obs_k1_environment_hard_router,obs_k3_original_learned_experts,obs_k3_fixed_always_environment,obs_k3_fixed_hard_router,obs_k3_random_balanced_hard_router seeds=2024,2025,2026 gpu_ids=2,3,1 max_parallel=3 dry_run=false
+[INFO] pretrained_inv=true ckpt=/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/pure_agcrn_seed2024/best_val_model.pth
+[INFO] run_route_eval=false route_eval_only=false route_eval_checkpoint_prefix=fpem_agcrn_aligned_pretrained_inv_observable_load_hard_router_0727_v1 route_eval_cases=obs_k1_environment_hard_router,obs_k3_original_learned_experts,obs_k3_fixed_always_environment,obs_k3_fixed_hard_router,obs_k3_random_balanced_hard_router
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[LAUNCH] case=obs_k1_environment_hard_router seed=2024 gpu=2 exp_dir=/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_observable_load_hard_router_0727_v1_obs_k1_environment_hard_router_seed2024 backbone=agcrn head=hyper_inv_film_proto_input_add K=1 proto=false sinkhorn=false future_mi=false swap=false club=false env_ablation=normal force_uniform=false
+[LAUNCH] case=obs_k1_environment_hard_router seed=2025 gpu=3 exp_dir=/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_observable_load_hard_router_0727_v1_obs_k1_environment_hard_router_seed2025 backbone=agcrn head=hyper_inv_film_proto_input_add K=1 proto=false sinkhorn=false future_mi=false swap=false club=false env_ablation=normal force_uniform=false
+[RUN] case=obs_k1_environment_hard_router seed=2024 attempt=1 gpu=2 date=Mon Jul 27 09:25:34 UTC 2026
+[CLEANUP] gpu=2 date=Mon Jul 27 09:25:34 UTC 2026
+[RUN] case=obs_k1_environment_hard_router seed=2025 attempt=1 gpu=3 date=Mon Jul 27 09:25:34 UTC 2026
+[CLEANUP] gpu=3 date=Mon Jul 27 09:25:34 UTC 2026
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[LAUNCH] case=obs_k1_environment_hard_router seed=2026 gpu=1 exp_dir=/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_observable_load_hard_router_0727_v1_obs_k1_environment_hard_router_seed2026 backbone=agcrn head=hyper_inv_film_proto_input_add K=1 proto=false sinkhorn=false future_mi=false swap=false club=false env_ablation=normal force_uniform=false
+[RUN] case=obs_k1_environment_hard_router seed=2026 attempt=1 gpu=1 date=Mon Jul 27 09:51:33 UTC 2026
+[CLEANUP] gpu=1 date=Mon Jul 27 09:51:33 UTC 2026
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+scripts/run_tds_nyctaxi_fpem_input_add_module_validity_agcrn_aligned.sh: line 556: 17181 Terminated              CUDA_VISIBLE_DEVICES="$gpu_id" "${cmd[@]}" > "$attempt_log" 2>&1
+scripts/run_tds_nyctaxi_fpem_input_add_module_validity_agcrn_aligned.sh: line 556:  5300 Terminated              CUDA_VISIBLE_DEVICES="$gpu_id" "${cmd[@]}" > "$attempt_log" 2>&1
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[LAUNCH] case=obs_k3_original_learned_experts seed=2024 gpu=2 exp_dir=/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_observable_load_hard_router_0727_v1_obs_k3_original_learned_experts_seed2024 backbone=agcrn head=hyper_inv_film_proto_input_add K=3 proto=false sinkhorn=false future_mi=false swap=false club=false env_ablation=normal force_uniform=false
+[RUN] case=obs_k3_original_learned_experts seed=2024 attempt=1 gpu=2 date=Mon Jul 27 10:28:43 UTC 2026
+[CLEANUP] gpu=2 date=Mon Jul 27 10:28:43 UTC 2026
+[LAUNCH] case=obs_k3_original_learned_experts seed=2025 gpu=3 exp_dir=/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_observable_load_hard_router_0727_v1_obs_k3_original_learned_experts_seed2025 backbone=agcrn head=hyper_inv_film_proto_input_add K=3 proto=false sinkhorn=false future_mi=false swap=false club=false env_ablation=normal force_uniform=false
+[RUN] case=obs_k3_original_learned_experts seed=2025 attempt=1 gpu=3 date=Mon Jul 27 10:28:44 UTC 2026
+[CLEANUP] gpu=3 date=Mon Jul 27 10:28:44 UTC 2026
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=1 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[LAUNCH] case=obs_k3_original_learned_experts seed=2026 gpu=1 exp_dir=/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_observable_load_hard_router_0727_v1_obs_k3_original_learned_experts_seed2026 backbone=agcrn head=hyper_inv_film_proto_input_add K=3 proto=false sinkhorn=false future_mi=false swap=false club=false env_ablation=normal force_uniform=false
+[RUN] case=obs_k3_original_learned_experts seed=2026 attempt=1 gpu=1 date=Mon Jul 27 10:32:04 UTC 2026
+[CLEANUP] gpu=1 date=Mon Jul 27 10:32:04 UTC 2026
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB
+[WAIT_GPU] gpu=2 memory used above 1024MB

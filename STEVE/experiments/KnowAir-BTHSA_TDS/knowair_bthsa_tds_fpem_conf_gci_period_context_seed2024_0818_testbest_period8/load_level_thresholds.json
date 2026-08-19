@@ -1,0 +1,121 @@
+{
+  "source": "cached c_obs=clip(ceil(5*x[:, -1]/train-only CP),0,5)",
+  "mode": "train_quantile",
+  "k": 1,
+  "thresholds": [],
+  "fit_split": "raw train",
+  "train_level_counts": [
+    8749
+  ],
+  "uses_target_or_future_load": false,
+  "observable_load_prior": {
+    "path": "/data/OuXiaoyu/STEVE_CODE/STEVE/data/KnowAir-BTHSA_TDS/observable_load_prior_k3_v1.npz",
+    "cache_version": 1,
+    "created": true,
+    "CP_shape": [
+      228,
+      2
+    ],
+    "CP_zero_count": 0,
+    "thresholds": [
+      0.24824561403508777,
+      0.30175438596491233
+    ],
+    "random_assignment_seed": 314159,
+    "metadata": {
+      "cache_version": 1,
+      "formula": "c_obs=clip(ceil(5*x[:,-1]/CP),0,5); CP=max(train_x,axis=(0,1)); CP==0 -> c_obs=0",
+      "load_score": "mean(c_obs/5 over nodes and channels)",
+      "quantiles": [
+        0.3333333333333333,
+        0.6666666666666666
+      ],
+      "random_assignment_seed": 314159,
+      "source_x_shapes": {
+        "test": [
+          8759,
+          35,
+          228,
+          2
+        ],
+        "train": [
+          8749,
+          35,
+          228,
+          2
+        ],
+        "val": [
+          8759,
+          35,
+          228,
+          2
+        ]
+      },
+      "threshold_fit_split": "train",
+      "uses_stored_c": false,
+      "uses_target_y": false
+    },
+    "splits": {
+      "train": {
+        "samples": 8749,
+        "c_obs_shape": [
+          8749,
+          228,
+          2
+        ],
+        "score_min": 0.20000000000000004,
+        "score_max": 0.506578947368421,
+        "expert_counts": [
+          2920,
+          2917,
+          2912
+        ],
+        "random_expert_counts": [
+          2920,
+          2917,
+          2912
+        ]
+      },
+      "val": {
+        "samples": 8759,
+        "c_obs_shape": [
+          8759,
+          228,
+          2
+        ],
+        "score_min": 0.20000000000000004,
+        "score_max": 0.5543859649122808,
+        "expert_counts": [
+          2980,
+          2581,
+          3198
+        ],
+        "random_expert_counts": [
+          2980,
+          2581,
+          3198
+        ]
+      },
+      "test": {
+        "samples": 8759,
+        "c_obs_shape": [
+          8759,
+          228,
+          2
+        ],
+        "score_min": 0.20000000000000004,
+        "score_max": 0.5570175438596491,
+        "expert_counts": [
+          3042,
+          2553,
+          3164
+        ],
+        "random_expert_counts": [
+          3042,
+          2553,
+          3164
+        ]
+      }
+    }
+  }
+}

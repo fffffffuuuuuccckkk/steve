@@ -1,0 +1,35 @@
+{
+  "margin_aware": {
+    "balanced_accuracy": 0.5889715492108174,
+    "correct_route_count": 333,
+    "f1": 0.6835066864784547,
+    "false_negative": 113,
+    "false_positive": 100,
+    "harmful_environment_corrections_avoided": 0.5073891625615764,
+    "incorrect_route_count": 213,
+    "oracle_environment_ratio": 0.6282051282051282,
+    "precision": 0.696969696969697,
+    "predicted_environment_ratio": 0.6043956043956044,
+    "recall": 0.6705539358600583,
+    "route_accuracy": 0.6098901098901099,
+    "specificity": 0.5073891625615764,
+    "total_samples": 546,
+    "true_negative": 103,
+    "true_positive": 230,
+    "useful_environment_gains_captured": 0.6705539358600583
+  },
+  "margin_formula": "relative_margin * L_inv",
+  "no_margin_argmin": {
+    "correct_route_count": 332,
+    "incorrect_route_count": 214,
+    "oracle_environment_ratio": 0.717948717948718,
+    "route_accuracy": 0.608058608058608,
+    "total_samples": 546
+  },
+  "primary_oracle": "margin_aware_training_rule",
+  "relative_margin": 0.01,
+  "route_convention": {
+    "0": "invariant",
+    "1": "environment"
+  }
+}

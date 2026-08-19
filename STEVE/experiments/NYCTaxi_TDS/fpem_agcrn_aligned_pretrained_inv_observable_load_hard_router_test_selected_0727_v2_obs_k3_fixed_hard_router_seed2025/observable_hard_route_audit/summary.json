@@ -1,0 +1,262 @@
+{
+  "cache": {
+    "CP_shape": [
+      200,
+      2
+    ],
+    "CP_zero_count": 0,
+    "cache_version": 1,
+    "created": false,
+    "metadata": {
+      "cache_version": 1,
+      "formula": "c_obs=clip(ceil(5*x[:,-1]/CP),0,5); CP=max(train_x,axis=(0,1)); CP==0 -> c_obs=0",
+      "load_score": "mean(c_obs/5 over nodes and channels)",
+      "quantiles": [
+        0.3333333333333333,
+        0.6666666666666666
+      ],
+      "random_assignment_seed": 314159,
+      "source_x_shapes": {
+        "test": [
+          546,
+          35,
+          200,
+          2
+        ],
+        "train": [
+          1912,
+          35,
+          200,
+          2
+        ],
+        "val": [
+          274,
+          35,
+          200,
+          2
+        ]
+      },
+      "threshold_fit_split": "train",
+      "uses_stored_c": false,
+      "uses_target_y": false
+    },
+    "path": "/data/OuXiaoyu/STEVE_CODE/STEVE/data/NYCTaxi/observable_load_prior_k3_v1.npz",
+    "random_assignment_seed": 314159,
+    "splits": {
+      "test": {
+        "c_obs_shape": [
+          546,
+          200,
+          2
+        ],
+        "expert_counts": [
+          125,
+          183,
+          238
+        ],
+        "random_expert_counts": [
+          125,
+          183,
+          238
+        ],
+        "samples": 546,
+        "score_max": 0.331,
+        "score_min": 0.08850000000000001
+      },
+      "train": {
+        "c_obs_shape": [
+          1912,
+          200,
+          2
+        ],
+        "expert_counts": [
+          639,
+          636,
+          637
+        ],
+        "random_expert_counts": [
+          639,
+          636,
+          637
+        ],
+        "samples": 1912,
+        "score_max": 0.32,
+        "score_min": 0.005
+      },
+      "val": {
+        "c_obs_shape": [
+          274,
+          200,
+          2
+        ],
+        "expert_counts": [
+          73,
+          81,
+          120
+        ],
+        "random_expert_counts": [
+          73,
+          81,
+          120
+        ],
+        "samples": 274,
+        "score_max": 0.311,
+        "score_min": 0.0925
+      }
+    },
+    "thresholds": [
+      0.165,
+      0.20350000000000001
+    ]
+  },
+  "checkpoint": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_observable_load_hard_router_test_selected_0727_v2_obs_k3_fixed_hard_router_seed2025/best_val_model.pth",
+  "checkpoint_epoch": 76,
+  "expert_collapse_diagnostics": {
+    "collapsed_pair_count_at_mae_1e-6": 0,
+    "mean_off_diagonal_absolute_difference": 0.610195517539978,
+    "mean_off_diagonal_cosine": 0.9999796350797018,
+    "pairwise_prediction_cosine": [
+      [
+        1.0000001192092896,
+        0.9999830722808838,
+        0.9999727010726929
+      ],
+      [
+        0.9999830722808838,
+        1.0,
+        0.9999831318855286
+      ],
+      [
+        0.9999727010726929,
+        0.9999831318855286,
+        1.0
+      ]
+    ],
+    "pairwise_prediction_mean_absolute_difference": [
+      [
+        0.0,
+        0.520850419998169,
+        0.7053252458572388
+      ],
+      [
+        0.520850419998169,
+        0.0,
+        0.6044108867645264
+      ],
+      [
+        0.7053252458572388,
+        0.6044108867645264,
+        0.0
+      ]
+    ]
+  },
+  "expert_cross_regime_mae": [
+    [
+      6.388832795554723,
+      6.478233972392634,
+      6.4352455784343405
+    ],
+    [
+      11.060030158270127,
+      11.058216442746936,
+      11.064170733306481
+    ],
+    [
+      12.85909747765236,
+      12.886827493876186,
+      12.870228082019898
+    ]
+  ],
+  "forward_uses_target": false,
+  "per_load_level": {
+    "0": {
+      "count": 125,
+      "environment_route_ratio": 0.712,
+      "invariant_mae": 6.8311980849570615,
+      "native_hard_route_mae": 6.416726330156603,
+      "oracle_environment_ratio": 0.824,
+      "selected_environment_mae": 6.388832795554723
+    },
+    "1": {
+      "count": 183,
+      "environment_route_ratio": 0.6994535519125683,
+      "invariant_mae": 11.348852365644658,
+      "native_hard_route_mae": 11.110796712595857,
+      "oracle_environment_ratio": 0.6229508196721312,
+      "selected_environment_mae": 11.058216442746936
+    },
+    "2": {
+      "count": 238,
+      "environment_route_ratio": 0.46218487394957986,
+      "invariant_mae": 13.088718859388608,
+      "native_hard_route_mae": 12.910665073072987,
+      "oracle_environment_ratio": 0.5504201680672269,
+      "selected_environment_mae": 12.870228082019898
+    }
+  },
+  "prediction_is_weighted_complete_fusion": false,
+  "routes": {
+    "balanced_accuracy": 0.6092824799721351,
+    "environment_route_count": 327,
+    "environment_route_ratio": 0.5989010989010989,
+    "f1": 0.6992592592592592,
+    "false_negative": 112,
+    "false_positive": 91,
+    "invariant_route_count": 219,
+    "invariant_route_ratio": 0.4010989010989011,
+    "oracle_environment_ratio": 0.6373626373626373,
+    "oracle_gap_closed": 0.6933262528250403,
+    "precision": 0.7217125382262997,
+    "recall": 0.6781609195402298,
+    "regret": 0.11159321187655458,
+    "true_negative": 107,
+    "true_positive": 236
+  },
+  "selected_by": "best validation checkpoint; test not used for selection",
+  "stored_c_test_invariance": {
+    "shuffled_stored_c": {
+      "prediction_max_abs_difference": 0.0,
+      "predictions_exactly_identical": true,
+      "router_logits_exactly_identical": true,
+      "router_logits_max_abs_difference": 0.0,
+      "routes_exactly_identical": true
+    },
+    "zeroed_stored_c": {
+      "prediction_max_abs_difference": 0.0,
+      "predictions_exactly_identical": true,
+      "router_logits_exactly_identical": true,
+      "router_logits_max_abs_difference": 0.0,
+      "routes_exactly_identical": true
+    }
+  },
+  "strategies": {
+    "always_environment": {
+      "global_masked_mae": 11.103116035461426,
+      "samplewise_mean_mae": 10.779069582395174
+    },
+    "fixed_expert_0": {
+      "global_masked_mae": 11.098329544067383,
+      "samplewise_mean_mae": 10.77482567415574
+    },
+    "fixed_expert_1": {
+      "global_masked_mae": 11.125118255615234,
+      "samplewise_mean_mae": 10.806772525850366
+    },
+    "fixed_expert_2": {
+      "global_masked_mae": 11.112183570861816,
+      "samplewise_mean_mae": 10.791690888315225
+    },
+    "invariant_only": {
+      "global_masked_mae": 11.393658638000488,
+      "samplewise_mean_mae": 11.07299419792508
+    },
+    "native_hard_route": {
+      "global_masked_mae": 11.144037246704102,
+      "samplewise_mean_mae": 10.820704903051261
+    },
+    "oracle_hard_route": {
+      "global_masked_mae": 11.03068733215332,
+      "samplewise_mean_mae": 10.709111691174707
+    }
+  }
+}

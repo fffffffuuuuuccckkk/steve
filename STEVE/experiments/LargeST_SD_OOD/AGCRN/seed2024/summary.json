@@ -1,0 +1,82 @@
+{
+  "best_epoch": 35,
+  "checkpoint_selection": "lowest validation MAE",
+  "dataset": "LargeST-SD_TDS",
+  "fixed_graph": false,
+  "graph_file": "data/LargeST-SD_TDS/adj_mx.npz",
+  "input_length": 12,
+  "method": "AGCRN",
+  "num_nodes": 716,
+  "official_repo": "https://github.com/LeiBAI/AGCRN",
+  "output_length": 12,
+  "paper": "Adaptive Graph Convolutional Recurrent Network for Traffic Forecasting",
+  "parameter_count": 71876,
+  "peak_gpu_memory_mb": 480.23828125,
+  "scaler": {
+    "fit_split": "train",
+    "mean": 244.3837890625,
+    "std": 184.0395050048828
+  },
+  "seed": 2024,
+  "smoke": false,
+  "source_commit": "7fbbf2aeb099242098a3cf482b55cd45d7295c28",
+  "target_channels": 1,
+  "test_mae": 22.025528184902416,
+  "test_mape": 0.14454055725413872,
+  "test_period": "2020 second half",
+  "test_rmse": 34.253946235167476,
+  "train_period": "2019",
+  "train_shapes": {
+    "test": {
+      "x": [
+        17652,
+        12,
+        716,
+        1
+      ],
+      "y": [
+        17652,
+        12,
+        716,
+        1
+      ]
+    },
+    "train": {
+      "x": [
+        35017,
+        12,
+        716,
+        1
+      ],
+      "y": [
+        35017,
+        12,
+        716,
+        1
+      ]
+    },
+    "val": {
+      "x": [
+        17460,
+        12,
+        716,
+        1
+      ],
+      "y": [
+        17460,
+        12,
+        716,
+        1
+      ]
+    }
+  },
+  "trainable_parameter_count": 71876,
+  "training_time": 36708.395399570465,
+  "uses_environment_labels": false,
+  "uses_external_features": false,
+  "uses_test_time_adaptation": false,
+  "val_mae": 21.997461684708743,
+  "val_mape": 0.19176926683348616,
+  "val_period": "2020 first half",
+  "val_rmse": 34.59782463458259
+}

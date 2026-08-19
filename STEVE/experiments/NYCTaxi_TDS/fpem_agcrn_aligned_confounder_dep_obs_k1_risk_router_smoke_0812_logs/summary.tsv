@@ -1,0 +1,2 @@
+case	seed	status	run_name	test_avg_mae	best_epoch	confounder_dep_total	loss_gci	loss_scd	loss_conf_kl	detail
+conf_gci	2024	OK	fpem_agcrn_aligned_confounder_dep_obs_k1_risk_router_smoke_0812_conf_gci_seed2024	52.02194595336914	1	0.10001800954341888	2.689659517329801e-08	0.0	0.198662668466568	finished

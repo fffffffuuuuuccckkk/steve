@@ -1,0 +1,4 @@
+case	seed	status	run_name	test_avg_mae	best_epoch	confounder_dep_total	loss_gci	loss_scd	loss_conf_kl	detail
+conf_gci	2024	OK	fpem_agcrn_aligned_confounder_dep_norm_align_obs_k1_counterfactual_risk_router_0812_conf_gci_seed2024	10.604004383087158	17	0.09177765810773486	0.00013900279272569433	0.0	1.2462692601340158e-05	finished
+conf_scd	2024	OK	fpem_agcrn_aligned_confounder_dep_norm_align_obs_k1_counterfactual_risk_router_0812_conf_scd_seed2024	10.588173389434814	19	0.00013860737315207232	0.0	0.13860104573624474	6.320872122333164e-05	finished
+conf_both	2024	OK	fpem_agcrn_aligned_confounder_dep_norm_align_obs_k1_counterfactual_risk_router_0812_conf_both_seed2024	10.629118919372559	34	0.0	0.0	0.0	0.0	finished

@@ -1,0 +1,46 @@
+{
+  "rows": [
+    {
+      "method": "new_relative_gap_ema_huber",
+      "checkpoint": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_confounder_dep_norm_align_obs_k1_counterfactual_risk_router_period_context_0813_conf_gci_seed2024/best_val_model.pth",
+      "epoch": 18,
+      "all_env_mae": 11.275483131408691,
+      "all_inv_mae": 11.461053848266602,
+      "oracle_mae": 11.21999740600586,
+      "routed_mae": 11.274922370910645,
+      "router_gain": 0.000560760498046875,
+      "oracle_gain": 0.05548572540283203,
+      "captured_oracle_gain": 0.010106392204761505,
+      "inv_route_ratio": 0.06227106228470802,
+      "target_inv_ratio": 0.2765567898750305,
+      "inv_switch_precision": 0.5,
+      "correct_switch_count": 17,
+      "wrong_switch_count": 17,
+      "net_routing_gain": 0.000560760498046875,
+      "regret": 0.054924964904785156,
+      "test_avg_mae": 11.319976806640625
+    },
+    {
+      "method": "old_absolute_risk_last_model",
+      "checkpoint": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_confounder_dep_norm_align_obs_k1_counterfactual_risk_router_period_context_0813_conf_gci_seed2024/last_model.pth",
+      "epoch": 48,
+      "all_env_mae": 11.28650951385498,
+      "all_inv_mae": 11.461053848266602,
+      "oracle_mae": 11.207551002502441,
+      "routed_mae": 11.288749694824219,
+      "router_gain": -0.0022401809692382812,
+      "oracle_gain": null,
+      "captured_oracle_gain": -0.028371621131966084,
+      "inv_route_ratio": 0.06227106228470802,
+      "target_inv_ratio": 0.3076923191547394,
+      "inv_switch_precision": 0.4411764705882353,
+      "correct_switch_count": 15,
+      "wrong_switch_count": 19,
+      "net_routing_gain": -0.0022401809692382812,
+      "regret": 0.08119869232177734,
+      "test_avg_mae": 11.340182781219482
+    }
+  ],
+  "new_summary": "experiments/NYCTaxi_TDS/frozen_relative_gap_router_period_context_0814_conf_gci/relative_gap_ema_huber_loadstats_preddiff_seed2024/summary.json",
+  "old_audit": "experiments/NYCTaxi_TDS/fpem_agcrn_aligned_confounder_dep_norm_align_obs_k1_counterfactual_risk_router_period_context_0813_conf_gci_seed2024/old_absolute_risk_router_last_model_audit.json"
+}

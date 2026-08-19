@@ -1,0 +1,6 @@
+[GBA-12to12] launcher started at Sun Aug 16 04:44:07 UTC 2026
+[GBA-12to12] waiting for prepare_tds_external_datasets.py to finish...
+Sun Aug 16 04:44:08 UTC 2026
+-rw-rw-r-- 1 OuXiaoyu OuXiaoyu 2.1G Aug 12 11:01 data/LargeST-GBA_TDS/test.npz
+-rw-rw-r-- 1 OuXiaoyu OuXiaoyu 1.7G Aug 16 04:44 data/LargeST-GBA_TDS/train.npz
+-rw-rw-r-- 1 OuXiaoyu OuXiaoyu 2.1G Aug 12 10:43 data/LargeST-GBA_TDS/val.npz

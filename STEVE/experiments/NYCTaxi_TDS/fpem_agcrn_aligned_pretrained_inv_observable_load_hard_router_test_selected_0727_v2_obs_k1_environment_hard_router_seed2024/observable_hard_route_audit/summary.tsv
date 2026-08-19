@@ -1,0 +1,21 @@
+section	name	global_masked_mae	samplewise_mean_mae	value
+strategy	native_hard_route	11.60266399383545	11.250808377582857	
+strategy	invariant_only	11.819758415222168	11.46105457835085	
+strategy	always_environment	11.545790672302246	11.189340933327781	
+strategy	fixed_expert_0	11.545790672302246	11.189340933327781	
+strategy	oracle_hard_route	11.467216491699219	11.112435798813287	
+router	true_positive			205
+router	false_positive			93
+router	false_negative			136
+router	true_negative			112
+router	precision			0.6879194630872483
+router	recall			0.6011730205278593
+router	f1			0.6416275430359937
+router	balanced_accuracy			0.5737572419712467
+router	invariant_route_count			248
+router	environment_route_count			298
+router	invariant_route_ratio			0.4542124542124542
+router	environment_route_ratio			0.5457875457875457
+router	oracle_environment_ratio			0.6245421245421245
+router	regret			0.13837257876956954
+router	oracle_gap_closed			0.6030834054518857

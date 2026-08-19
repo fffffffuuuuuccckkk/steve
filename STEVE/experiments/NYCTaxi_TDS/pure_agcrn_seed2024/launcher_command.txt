@@ -1,0 +1,19 @@
+cd /data/OuXiaoyu/STEVE_CODE/STEVE
+source ~/miniconda3/etc/profile.d/conda.sh
+conda activate basicts
+export CUDA_VISIBLE_DEVICES=0
+export CUDA_MODULE_LOADING=LAZY
+export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True,garbage_collection_threshold:0.8
+python -u run_tds_nyctaxi.py \
+  --model agcrn \
+  --device cuda:0 \
+  --seed 2024 \
+  --epochs 100 \
+  --batch_size 64 \
+  --test_batch_size 64 \
+  --exp_name pure_agcrn_seed2024 \
+  --resume true \
+  --use-dwa false \
+  --MMI false \
+  --grad-norm false \
+  --early-stop false

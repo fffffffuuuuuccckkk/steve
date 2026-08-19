@@ -1,0 +1,354 @@
+{
+  "case": "C_std_regret_bce_loadstats",
+  "seed": 2024,
+  "base_exp_dir": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_counterfactual_risk_router_testbest_diagnostic_0802_obs_k1_counterfactual_risk_router_seed2024",
+  "stage1_checkpoint": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_counterfactual_risk_router_testbest_diagnostic_0802_obs_k1_counterfactual_risk_router_seed2024/best_test_avg_model.pth",
+  "stage1_checkpoint_epoch": 18,
+  "stage1_monitor_test_avg_mae": 10.602606773376465,
+  "stage1_summary_test_avg_mae": 10.602606773376465,
+  "best_stage2_epoch": 49,
+  "best_stage2_selection_metric": "test_avg_mae_DIAGNOSTIC",
+  "best_stage2_test_avg_mae": 11.300397396087646,
+  "router_input_dim": 205,
+  "router_param_count": 118785,
+  "optimizer_param_count": 118785,
+  "include_pred_diff": false,
+  "include_load_stats": true,
+  "standardize_features": true,
+  "scale_delta_by_train_std": true,
+  "mse_weight": 0.0,
+  "bce_weight": 1.0,
+  "temperature": 1.0,
+  "weight_max": 20.0,
+  "train_mean_abs_delta": 0.3511654734611511,
+  "train_delta_std": 0.35391634702682495,
+  "delta_scale": 0.35391634702682495,
+  "train_num_samples": 1680,
+  "train": {
+    "all_environment_mae": 9.391813278198242,
+    "all_invariant_mae": 9.662238121032715,
+    "learned_routing_mae": 9.382563591003418,
+    "oracle_mae": 9.351441383361816,
+    "env_route_ratio": 0.961904764175415,
+    "inv_route_ratio": 0.03809523954987526,
+    "target_inv_ratio": 0.20178571343421936,
+    "router_accuracy": 0.8232142925262451,
+    "balanced_accuracy": 0.5740696787834167,
+    "inv_switch_precision": 0.828125,
+    "inv_switch_recall": 0.15634217858314514,
+    "correct_beneficial_inv_switches": 53,
+    "harmful_inv_switches": 11,
+    "saved_loss": 0.010256944224238396,
+    "added_loss": 0.0010074098827317357,
+    "net_gain": 0.009249687194824219,
+    "regret": 0.031122207641601562,
+    "oracle_gap_closed": 0.22911204397678375,
+    "num_samples": 1680,
+    "over_selects_invariant": false,
+    "delta_hat_min": -3.867147445678711,
+    "delta_hat_mean": 1.0344804525375366,
+    "delta_hat_max": 6.803616046905518,
+    "delta_hat_std": 1.1108280420303345,
+    "inv_auroc": 0.7651468656992206,
+    "inv_auprc": 0.5257509660048848,
+    "delta_pearson": 0.41381482854454515,
+    "delta_spearman": 0.4906787199403554
+  },
+  "val": {
+    "all_environment_mae": 12.362518310546875,
+    "all_invariant_mae": 12.481095314025879,
+    "learned_routing_mae": 12.365983963012695,
+    "oracle_mae": 12.256524085998535,
+    "env_route_ratio": 0.9817517995834351,
+    "inv_route_ratio": 0.018248174339532852,
+    "target_inv_ratio": 0.37956205010414124,
+    "router_accuracy": 0.6240875720977783,
+    "balanced_accuracy": 0.5085407495498657,
+    "inv_switch_precision": 0.6000000238418579,
+    "inv_switch_recall": 0.028846153989434242,
+    "correct_beneficial_inv_switches": 3,
+    "harmful_inv_switches": 2,
+    "saved_loss": 0.003162902547046542,
+    "added_loss": 0.006628843955695629,
+    "net_gain": -0.0034656524658203125,
+    "regret": 0.10945987701416016,
+    "oracle_gap_closed": -0.032696615904569626,
+    "num_samples": 274,
+    "over_selects_invariant": false,
+    "delta_hat_min": -0.7483994960784912,
+    "delta_hat_mean": 0.9799095392227173,
+    "delta_hat_max": 6.1370625495910645,
+    "delta_hat_std": 0.836788535118103,
+    "inv_auroc": 0.5222850678733032,
+    "inv_auprc": 0.43316794041395074,
+    "delta_pearson": 0.07452895714706234,
+    "delta_spearman": 0.08976979225154408
+  },
+  "test_mixed": {
+    "all_environment_mae": 11.257920265197754,
+    "all_invariant_mae": 11.461053848266602,
+    "learned_routing_mae": 11.253836631774902,
+    "oracle_mae": 11.183935165405273,
+    "env_route_ratio": 0.9743589758872986,
+    "inv_route_ratio": 0.025641025975346565,
+    "target_inv_ratio": 0.311355322599411,
+    "router_accuracy": 0.6996337175369263,
+    "balanced_accuracy": 0.5240926146507263,
+    "inv_switch_precision": 0.7142857313156128,
+    "inv_switch_recall": 0.05882352963089943,
+    "correct_beneficial_inv_switches": 10,
+    "harmful_inv_switches": 4,
+    "saved_loss": 0.0057154810056090355,
+    "added_loss": 0.00163140834774822,
+    "net_gain": 0.0040836334228515625,
+    "regret": 0.0699014663696289,
+    "oracle_gap_closed": 0.05519535019993782,
+    "num_samples": 546,
+    "over_selects_invariant": false,
+    "delta_hat_min": -1.5426292419433594,
+    "delta_hat_mean": 1.0525901317596436,
+    "delta_hat_max": 6.852226257324219,
+    "delta_hat_std": 1.1241596937179565,
+    "inv_auroc": 0.5676001251564455,
+    "inv_auprc": 0.39855485434823446,
+    "delta_pearson": 0.21263173398913732,
+    "delta_spearman": 0.22670066293835642
+  },
+  "test_workday": {
+    "all_environment_mae": 11.150031089782715,
+    "all_invariant_mae": 11.337368965148926,
+    "learned_routing_mae": 11.143468856811523,
+    "oracle_mae": 11.067797660827637,
+    "env_route_ratio": 0.9632768630981445,
+    "inv_route_ratio": 0.03672316297888756,
+    "target_inv_ratio": 0.3192090392112732,
+    "router_accuracy": 0.700564980506897,
+    "balanced_accuracy": 0.5380237102508545,
+    "inv_switch_precision": 0.7692307829856873,
+    "inv_switch_recall": 0.08849557489156723,
+    "correct_beneficial_inv_switches": 10,
+    "harmful_inv_switches": 3,
+    "saved_loss": 0.00881540309637785,
+    "added_loss": 0.0022535889875143766,
+    "net_gain": 0.006562232971191406,
+    "regret": 0.07567119598388672,
+    "oracle_gap_closed": 0.0798000618815422,
+    "num_samples": 354,
+    "over_selects_invariant": false,
+    "delta_hat_min": -1.5426292419433594,
+    "delta_hat_mean": 1.0184863805770874,
+    "delta_hat_max": 6.852226257324219,
+    "delta_hat_std": 1.1903480291366577,
+    "inv_auroc": 0.5921492307127382,
+    "inv_auprc": 0.44397981670189646,
+    "delta_pearson": 0.25275221021298233,
+    "delta_spearman": 0.2559509358450603
+  },
+  "test_holiday": {
+    "all_environment_mae": 11.456841468811035,
+    "all_invariant_mae": 11.68909740447998,
+    "learned_routing_mae": 11.45732593536377,
+    "oracle_mae": 11.398064613342285,
+    "env_route_ratio": 0.9947916865348816,
+    "inv_route_ratio": 0.0052083334885537624,
+    "target_inv_ratio": 0.296875,
+    "router_accuracy": 0.6979166865348816,
+    "balanced_accuracy": 0.4962962865829468,
+    "inv_switch_precision": 0.0,
+    "inv_switch_recall": 0.0,
+    "correct_beneficial_inv_switches": 0,
+    "harmful_inv_switches": 1,
+    "saved_loss": 0.0,
+    "added_loss": 0.00048426291323266923,
+    "net_gain": -0.000484466552734375,
+    "regret": 0.059261322021484375,
+    "oracle_gap_closed": -0.008242471143603325,
+    "num_samples": 192,
+    "over_selects_invariant": false,
+    "delta_hat_min": -0.15685530006885529,
+    "delta_hat_mean": 1.1154688596725464,
+    "delta_hat_max": 6.345637798309326,
+    "delta_hat_std": 0.987515389919281,
+    "inv_auroc": 0.5181286549707602,
+    "inv_auprc": 0.3029932958300501,
+    "delta_pearson": 0.11850442038138523,
+    "delta_spearman": 0.16564034397634483
+  },
+  "test_avg_mae": 11.300397396087646,
+  "hash_check": {
+    "model_state_hash_before": "77e47b371ab6b19c073a76a9652a2190bc2bd1d7ecdcd1a1d4952147c891b234",
+    "model_state_hash_after": "77e47b371ab6b19c073a76a9652a2190bc2bd1d7ecdcd1a1d4952147c891b234",
+    "non_router_params_and_buffers_hash_identical": true
+  },
+  "prediction_consistency": {
+    "test_mixed_y_env_max_abs_diff": 0.0,
+    "test_mixed_y_inv_max_abs_diff": 0.0,
+    "test_mixed_delta_max_abs_diff": 0.0
+  },
+  "leakage_audit": {
+    "stored_future_c_seen_in_any_split": false,
+    "observable_load_prior_uses_target_or_future_load": false,
+    "router_features_use_target": false,
+    "pred_diff_features_use_target": false,
+    "observable_load_score_in_router_input": true,
+    "c_obs_channel_stats_in_router_input": true,
+    "inference_route_uses_target": false,
+    "fixed_zero_boundary_no_threshold_search": true,
+    "train_forward_prediction_default_environment": true
+  },
+  "feature_standardization": {
+    "feature_mean_shape": [
+      1,
+      205
+    ],
+    "feature_std_shape": [
+      1,
+      205
+    ],
+    "feature_std_min": 9.999999974752427e-07,
+    "feature_std_max": 0.23514167964458466,
+    "feature_train_standardized_mean_abs_max": 0.1043081283569336,
+    "feature_train_standardized_std_min": 0.0
+  },
+  "data_counts": {
+    "train_total": 1680,
+    "train_workday": 1200,
+    "train_holiday": 480,
+    "train_workday_holiday_ratio": 2.5,
+    "val_total": 274,
+    "val_workday": 178,
+    "val_holiday": 96,
+    "test_total": 546,
+    "test_workday": 354,
+    "test_holiday": 192,
+    "train_shuffle": true,
+    "train_chronological_for_env_sinkhorn_temporal": false,
+    "traffic_load_c_audit": {
+      "ignored": true,
+      "loaded_into_training_or_inference": false,
+      "reason": "stored c is derived from future y[:,0]"
+    },
+    "observable_load_prior": {
+      "path": "/data/OuXiaoyu/STEVE_CODE/STEVE/data/NYCTaxi/observable_load_prior_k3_v1.npz",
+      "cache_version": 1,
+      "created": false,
+      "CP_shape": [
+        200,
+        2
+      ],
+      "CP_zero_count": 0,
+      "thresholds": [
+        0.165,
+        0.20350000000000001
+      ],
+      "random_assignment_seed": 314159,
+      "metadata": {
+        "cache_version": 1,
+        "formula": "c_obs=clip(ceil(5*x[:,-1]/CP),0,5); CP=max(train_x,axis=(0,1)); CP==0 -> c_obs=0",
+        "load_score": "mean(c_obs/5 over nodes and channels)",
+        "quantiles": [
+          0.3333333333333333,
+          0.6666666666666666
+        ],
+        "random_assignment_seed": 314159,
+        "source_x_shapes": {
+          "test": [
+            546,
+            35,
+            200,
+            2
+          ],
+          "train": [
+            1912,
+            35,
+            200,
+            2
+          ],
+          "val": [
+            274,
+            35,
+            200,
+            2
+          ]
+        },
+        "threshold_fit_split": "train",
+        "uses_stored_c": false,
+        "uses_target_y": false
+      },
+      "splits": {
+        "train": {
+          "samples": 1912,
+          "c_obs_shape": [
+            1912,
+            200,
+            2
+          ],
+          "score_min": 0.005,
+          "score_max": 0.32,
+          "expert_counts": [
+            639,
+            636,
+            637
+          ],
+          "random_expert_counts": [
+            639,
+            636,
+            637
+          ]
+        },
+        "val": {
+          "samples": 274,
+          "c_obs_shape": [
+            274,
+            200,
+            2
+          ],
+          "score_min": 0.0925,
+          "score_max": 0.311,
+          "expert_counts": [
+            73,
+            81,
+            120
+          ],
+          "random_expert_counts": [
+            73,
+            81,
+            120
+          ]
+        },
+        "test": {
+          "samples": 546,
+          "c_obs_shape": [
+            546,
+            200,
+            2
+          ],
+          "score_min": 0.08850000000000001,
+          "score_max": 0.331,
+          "expert_counts": [
+            125,
+            183,
+            238
+          ],
+          "random_expert_counts": [
+            125,
+            183,
+            238
+          ]
+        }
+      }
+    },
+    "load_level_source": "cached c_obs=clip(ceil(5*x[:, -1]/train-only CP),0,5)",
+    "load_level_threshold_fit_split": "raw train",
+    "load_level_thresholds": [],
+    "load_level_train_counts": [
+      1912
+    ],
+    "load_level_uses_target_or_future_load": false
+  },
+  "artifacts": {
+    "best_stage2_router_test_selected": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/frozen_router_feature_diagnostic_epoch18_testbest_0802/C_std_regret_bce_loadstats_seed2024/best_stage2_router_test_selected.pth",
+    "predictions_and_routes": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/frozen_router_feature_diagnostic_epoch18_testbest_0802/C_std_regret_bce_loadstats_seed2024/predictions_and_routes.npz",
+    "router_training_curve": "/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/frozen_router_feature_diagnostic_epoch18_testbest_0802/C_std_regret_bce_loadstats_seed2024/router_training_curve.csv"
+  }
+}

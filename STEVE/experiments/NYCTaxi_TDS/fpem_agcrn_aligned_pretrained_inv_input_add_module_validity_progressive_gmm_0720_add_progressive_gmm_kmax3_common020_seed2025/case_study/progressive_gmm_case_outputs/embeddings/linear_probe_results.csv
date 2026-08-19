@@ -1,0 +1,7 @@
+feature,target,status,reason
+E_env,gmm_cluster,failed,LogisticRegression.__init__() got an unexpected keyword argument 'multi_class'
+Z_inv,gmm_cluster,failed,LogisticRegression.__init__() got an unexpected keyword argument 'multi_class'
+E_env,workday,failed,LogisticRegression.__init__() got an unexpected keyword argument 'multi_class'
+Z_inv,workday,failed,LogisticRegression.__init__() got an unexpected keyword argument 'multi_class'
+E_env,rush_hour,failed,LogisticRegression.__init__() got an unexpected keyword argument 'multi_class'
+Z_inv,rush_hour,failed,LogisticRegression.__init__() got an unexpected keyword argument 'multi_class'

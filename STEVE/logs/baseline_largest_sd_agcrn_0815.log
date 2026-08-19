@@ -1,0 +1,68 @@
+[baseline] name=AGCRN
+[baseline] paper=Adaptive Graph Convolutional Recurrent Network for Traffic Forecasting
+[baseline] original_repository=https://github.com/LeiBAI/AGCRN
+[baseline] original_commit=7fbbf2aeb099242098a3cf482b55cd45d7295c28
+[baseline] dataset=LargeST-SD_TDS
+[baseline] train_period=2019
+[baseline] val_period=2020 first half
+[baseline] test_period=2020 second half / OOD
+[baseline] dataset_dir=data/LargeST-SD_TDS
+[baseline] graph_file=data/LargeST-SD_TDS/adj_mx.npz
+[baseline] batch_size=4 test_batch_size=8
+[baseline] seed=2024
+[baseline] scaler=train x only
+[baseline] checkpoint_selection=lowest validation MAE
+{
+  "checkpoint_selection": "lowest validation MAE",
+  "dataset": "LargeST-SD_TDS",
+  "fixed_graph": false,
+  "graph_file": "data/LargeST-SD_TDS/adj_mx.npz",
+  "input_length": 35,
+  "method": "AGCRN",
+  "num_nodes": 716,
+  "official_repo": "https://github.com/LeiBAI/AGCRN",
+  "output_length": 1,
+  "paper": "Adaptive Graph Convolutional Recurrent Network for Traffic Forecasting",
+  "parameter_count": 71513,
+  "scaler": {
+    "fit_split": "train",
+    "mean": 244.42984008789062,
+    "std": 184.03782653808594
+  },
+  "seed": 2024,
+  "source_commit": "7fbbf2aeb099242098a3cf482b55cd45d7295c28",
+  "target_channels": 1,
+  "test_period": "2020 second half",
+  "train_period": "2019",
+  "trainable_parameter_count": 71513,
+  "uses_environment_labels": false,
+  "uses_external_features": false,
+  "uses_test_time_adaptation": false,
+  "val_period": "2020 first half"
+}
+EPOCH {"epoch": 1, "train_loss": 0.08000297578057805, "val_loss": 0.059655302905762084, "val_mae": 11.286878666712077, "val_mape": 0.08894512525465757, "val_rmse": 16.928598645638058}
+EPOCH {"epoch": 2, "train_loss": 0.07018874073357194, "val_loss": 0.05966962204829125, "val_mae": 11.284246450733916, "val_mape": 0.09084371641678281, "val_rmse": 16.960481895755517}
+EPOCH {"epoch": 3, "train_loss": 0.06738834556486416, "val_loss": 0.05801856512098585, "val_mae": 10.996362017613572, "val_mape": 0.09504619640689513, "val_rmse": 16.47496156243261}
+EPOCH {"epoch": 4, "train_loss": 0.08872904740683676, "val_loss": 0.3682146416433852, "val_mae": 67.92778837640559, "val_mape": 0.9692053809394398, "val_rmse": 91.58132473077316}
+EPOCH {"epoch": 5, "train_loss": 0.5131228155841863, "val_loss": 0.6176950608194471, "val_mae": 112.6407431191499, "val_mape": 1.5826603880349448, "val_rmse": 146.24610135625002}
+EPOCH {"epoch": 6, "train_loss": 0.6347778368142653, "val_loss": 0.6487028215044891, "val_mae": 120.07864911420734, "val_mape": 1.5110189533419236, "val_rmse": 150.52884441797354}
+EPOCH {"epoch": 7, "train_loss": 0.632973226682235, "val_loss": 0.5877057757636089, "val_mae": 107.32794296747626, "val_mape": 1.7201874099608299, "val_rmse": 138.1087036595703}
+EPOCH {"epoch": 8, "train_loss": 0.6372539686894454, "val_loss": 0.6411620560470781, "val_mae": 116.23087431491871, "val_mape": 1.8483415585296754, "val_rmse": 147.89091473183603}
+EPOCH {"epoch": 9, "train_loss": 0.7231415949332988, "val_loss": 0.6893184349980545, "val_mae": 125.19397241482034, "val_mape": 2.1146532367345814, "val_rmse": 158.63942165089816}
+EPOCH {"epoch": 10, "train_loss": 0.715480877811305, "val_loss": 0.6400865415942449, "val_mae": 117.32823892387812, "val_mape": 1.791409924705671, "val_rmse": 149.97826997081071}
+EPOCH {"epoch": 11, "train_loss": 0.7390559388559012, "val_loss": 0.6870086672828587, "val_mae": 125.4894339274503, "val_mape": 1.817071355724504, "val_rmse": 159.55640514653916}
+EPOCH {"epoch": 12, "train_loss": 0.7920683368208272, "val_loss": 0.7109433146615067, "val_mae": 129.99442953411383, "val_mape": 1.9028402735922103, "val_rmse": 164.70783438842767}
+EPOCH {"epoch": 13, "train_loss": 0.8137253447815854, "val_loss": 0.7128227918437756, "val_mae": 130.6843132764471, "val_mape": 1.8371670330323377, "val_rmse": 165.2800440953938}
+EPOCH {"epoch": 14, "train_loss": 0.8201533749178126, "val_loss": 0.7256164532767826, "val_mae": 132.18152414430745, "val_mape": 1.9519268243261387, "val_rmse": 167.19602489793493}
+EPOCH {"epoch": 15, "train_loss": 0.8233799794506573, "val_loss": 0.7554812392783994, "val_mae": 137.492377683325, "val_mape": 2.147600611812855, "val_rmse": 172.44786053261728}
+EPOCH {"epoch": 16, "train_loss": 0.8468091601032033, "val_loss": 0.769021491150531, "val_mae": 139.34878282217844, "val_mape": 2.150545455247998, "val_rmse": 174.39368288892686}
+EPOCH {"epoch": 17, "train_loss": 0.854175971598476, "val_loss": 0.8087260001144182, "val_mae": 146.32111936425872, "val_mape": 2.420039260580519, "val_rmse": 181.53636817218143}
+EPOCH {"epoch": 18, "train_loss": 0.8708277950030091, "val_loss": 0.7949046572442934, "val_mae": 144.43422024246345, "val_mape": 2.3383070943583593, "val_rmse": 180.13097531769165}
+EPOCH {"epoch": 19, "train_loss": 0.8712667419167693, "val_loss": 0.8035738416825086, "val_mae": 145.08158485683782, "val_mape": 2.425922276902626, "val_rmse": 180.10688335442063}
+EPOCH {"epoch": 20, "train_loss": 0.8743457315547384, "val_loss": 0.8194978964034683, "val_mae": 147.2882452276943, "val_mape": 2.5000648147546327, "val_rmse": 182.2216848002555}
+EPOCH {"epoch": 21, "train_loss": 0.8717394670134458, "val_loss": 0.819003053200988, "val_mae": 147.7760542272996, "val_mape": 2.477324540187536, "val_rmse": 183.20270309898032}
+EPOCH {"epoch": 22, "train_loss": 0.8645005780515492, "val_loss": 0.791054234310373, "val_mae": 143.34755569623076, "val_mape": 2.2899036635913665, "val_rmse": 178.13088393613938}
+EPOCH {"epoch": 23, "train_loss": 0.8636490672286145, "val_loss": 0.7878769920036178, "val_mae": 142.9725200318354, "val_mape": 2.250014027967306, "val_rmse": 177.8269056890397}
+/data/OuXiaoyu/STEVE_CODE/STEVE/baselines/agcrn/trainer.py:238: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ckpt = torch.load(best_path, map_location=device)
+SUMMARY {"best_epoch": 3, "checkpoint_selection": "lowest validation MAE", "dataset": "LargeST-SD_TDS", "fixed_graph": false, "graph_file": "data/LargeST-SD_TDS/adj_mx.npz", "input_length": 35, "method": "AGCRN", "num_nodes": 716, "official_repo": "https://github.com/LeiBAI/AGCRN", "output_length": 1, "paper": "Adaptive Graph Convolutional Recurrent Network for Traffic Forecasting", "parameter_count": 71513, "peak_gpu_memory_mb": 1368.2568359375, "scaler": {"fit_split": "train", "mean": 244.42984008789062, "std": 184.03782653808594}, "seed": 2024, "smoke": false, "source_commit": "7fbbf2aeb099242098a3cf482b55cd45d7295c28", "target_channels": 1, "test_mae": 11.273201176907342, "test_mape": 0.08598555937980543, "test_period": "2020 second half", "test_rmse": 16.952695173699702, "train_period": "2019", "train_shapes": {"test": {"x": [17663, 35, 716, 1], "y": [17663, 1, 716, 1]}, "train": {"x": [35005, 35, 716, 1], "y": [35005, 1, 716, 1]}, "val": {"x": [17471, 35, 716, 1], "y": [17471, 1, 716, 1]}}, "trainable_parameter_count": 71513, "training_time": 40064.857619524, "uses_environment_labels": false, "uses_external_features": false, "uses_test_time_adaptation": false, "val_mae": 10.996362017613572, "val_mape": 0.09504619640689513, "val_period": "2020 first half", "val_rmse": 16.47496156243261}

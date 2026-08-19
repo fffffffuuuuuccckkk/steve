@@ -1,0 +1,32 @@
+{
+  "ckpt_path": "experiments/NYCTaxi_TDS/fpem_agcrn_aligned_pretrained_inv_input_add_module_validity_warmup_risk_leakfix_0720_add_k3_warmup_risk_sinkhorn_common005_seed2024/best_val_model.pth",
+  "epoch": 3,
+  "top_level_prediction_source": "risk_router_soft",
+  "missing_keys": [],
+  "unexpected_keys": [],
+  "max_batches_per_split": 4,
+  "test_workday": {
+    "formal_mae": 25.029890060424805,
+    "manual_risk_routed_mae": 25.029888153076172,
+    "uniform_mae": 22.019611358642578,
+    "oracle_per_sample_mae": 25.02988052368164,
+    "formal_vs_manual_risk_max_abs_diff_scaled": 4.76837158203125e-07,
+    "route_row_sum_mean": 1.0,
+    "route_row_sum_min": 0.9999999403953552,
+    "route_row_sum_max": 1.0
+  },
+  "test_holiday": {
+    "formal_mae": 25.831274032592773,
+    "manual_risk_routed_mae": 25.831274032592773,
+    "uniform_mae": 22.24030303955078,
+    "oracle_per_sample_mae": 25.714998245239258,
+    "formal_vs_manual_risk_max_abs_diff_scaled": 4.76837158203125e-07,
+    "route_row_sum_mean": 1.0,
+    "route_row_sum_min": 0.9999999403953552,
+    "route_row_sum_max": 1.0
+  },
+  "formal_test_avg_mae": 25.43058204650879,
+  "manual_risk_routed_test_avg_mae": 25.430581092834473,
+  "uniform_test_avg_mae": 22.12995719909668,
+  "oracle_test_avg_mae": 25.37243938446045
+}

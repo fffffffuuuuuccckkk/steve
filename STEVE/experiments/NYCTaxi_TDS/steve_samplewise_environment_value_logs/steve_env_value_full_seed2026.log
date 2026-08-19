@@ -1,0 +1,36 @@
+2026-07-22 07:48:58: Experiment log path in: /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_env_value_full_seed2026
+2026-07-22 07:48:58: Experiment configs are: Namespace(seed=2026, device='cuda:0', mode='train', best_path='/home/zhangwt/remote/StableST/experiments/NYCTaxi/20240510-014845/best_model.pth', debug=False, data_dir='/data/OuXiaoyu/STEVE_CODE/STEVE/data', dataset='NYCTaxi_TDS', input_length=35, batch_size=64, test_batch_size=64, graph_file='/data/OuXiaoyu/STEVE_CODE/STEVE/data/NYCTaxi_TDS/adj_mx.npz', num_nodes=200, len_closeness=8, len_period=27, len_trend=0, d_input=2, d_output=2, d_model=64, dropout=0.1, percent=0.1, shm_temp=0.5, nmb_prototype=4, yita=0.5, layers=3, K=64, bank_gamma=0.2, kw=1, mi_w=2, epochs=3, lr_init=0.001, early_stop=True, early_stop_patience=50, grad_norm=True, max_grad_norm=5, use_dwa=True, temp=2, MMI=False, lr_patience=20, lr_mode='only', use_RevIN=True, ablation='all', log_dir='/data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_env_value_full_seed2026', resume=True, model_impl='steve_original', steve_prediction_mode='full', save_samplewise=True)
+2026-07-22 07:48:58: Resume requested, but no checkpoint found in /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_env_value_full_seed2026
+2026-07-22 07:48:58: loss weights: [1. 1. 1.]
+2026-07-22 07:49:09: *******Train Epoch 1: averaged Loss : 112.166956
+2026-07-22 07:49:09: *******Train Epoch 1: averaged lm : 0.000007
+2026-07-22 07:49:10: *******Val Epoch 1: averaged Loss : 72.956432 sep loss : [72.95643234  3.52416873  3.46938986]
+2026-07-22 07:49:10: **************Current 1 model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_env_value_full_seed2026/epoch1.pth
+2026-07-22 07:49:10: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_env_value_full_seed2026/best_model.pth
+2026-07-22 07:49:10: loss weights: [1. 1. 1.]
+2026-07-22 07:49:20: *******Train Epoch 2: averaged Loss : 65.589263
+2026-07-22 07:49:20: *******Train Epoch 2: averaged lm : -0.000040
+2026-07-22 07:49:20: *******Val Epoch 2: averaged Loss : 39.657854 sep loss : [39.65785408  3.49795622  3.20674729]
+2026-07-22 07:49:20: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_env_value_full_seed2026/best_model.pth
+2026-07-22 07:49:20: loss weights: [0.88087535 1.0463858  1.0727391 ]
+2026-07-22 07:49:31: *******Train Epoch 3: averaged Loss : 45.162005
+2026-07-22 07:49:31: *******Train Epoch 3: averaged lm : 0.000006
+2026-07-22 07:49:31: *******Val Epoch 3: averaged Loss : 33.486697 sep loss : [33.4866972   3.48453194  2.74385011]
+2026-07-22 07:49:31: **************Current best model saved to /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_env_value_full_seed2026/best_model.pth
+2026-07-22 07:49:31: == Training finished.
+Total training time: 0.56 min	best loss: 33.4867	best epoch: 3	
+2026-07-22 07:49:31: load best model from /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_env_value_full_seed2026/best_model.pth
+2026-07-22 07:49:31: == Test results.
+2026-07-22 07:49:31: 0.451399564743042
+2026-07-22 07:49:32: FLOW, MAE: 35.66, MAPE: 51.9593%
+2026-07-22 07:49:32: abulation is all
+2026-07-22 07:49:32: bank gradient!
+2026-07-22 07:49:32: gamma 0.2
+2026-07-22 07:49:32: kw 1
+Starting experiment with configurations in /data/OuXiaoyu/STEVE_CODE/STEVE/configs/NYCTaxi.yaml...
+Creat Log File in:  /data/OuXiaoyu/STEVE_CODE/STEVE/experiments/NYCTaxi_TDS/steve_env_value_full_seed2026/run.log
+train_time:0:00:11.668446
+train_time:0:00:10.170833
+train_time:0:00:10.270963
+1784706571.5172448
+0.451399564743042

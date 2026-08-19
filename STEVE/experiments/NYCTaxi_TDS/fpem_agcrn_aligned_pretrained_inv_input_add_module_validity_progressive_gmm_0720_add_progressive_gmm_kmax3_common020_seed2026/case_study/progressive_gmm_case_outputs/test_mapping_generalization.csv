@@ -1,0 +1,4 @@
+cluster,hungarian_selected_expert,identity_expert,independent_validation_best_expert,best_test_expert_diagnostic_only,selected_expert_test_mae,best_test_expert_mae_diagnostic_only,mae_gap_selected_minus_best_test,validation_mapping_generalized_to_test
+0,0,0,0,0,9.408049149131209,9.408049149131209,0.0,True
+1,2,1,2,2,8.051352353542491,8.051352353542491,0.0,True
+2,1,2,1,1,5.300553043946525,5.300553043946525,0.0,True
